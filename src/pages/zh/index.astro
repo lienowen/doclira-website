@@ -22,14 +22,17 @@ const purchaseLink = brand.purchaseUrl || "#pricing";
   <Header locale="zh" />
   <main>
     <section class="hero">
-      <div class="hero-media"><img src="/assets/demo_text_edit_zh.png" alt="Doclira PDF 简单文字修改前后结果对照" /></div>
+      <div class="hero-media">
+        <img src="/media/doclira_app_watermark_result_en.png" alt="Doclira PDF 软件真实界面，展示已加入水印的 PDF" />
+        <p class="media-caption">真实软件界面截图：示例文件已添加平铺保密水印。界面支持切换为中文。</p>
+      </div>
       <div class="hero-content">
         <p class="kicker">WINDOWS 本地 PDF 工具</p>
         <h1>{brand.product}</h1>
         <p class="hero-copy">把高频 PDF 工作集中在一处：批量水印、格式转换、压缩、合并拆分和少量文字填改。</p>
         <div class="actions">
           <a class="primary" href={purchaseLink} target="_blank" rel="noreferrer">立即购买</a>
-          <a class="secondary" href="#examples">查看真实效果</a>
+          <a class="secondary" href="#walkthrough">查看操作视频</a>
         </div>
         <div class="requirements"><span>本机处理</span><span>Windows 10 / 11 64位</span><span>一次购买</span></div>
       </div>
@@ -38,6 +41,27 @@ const purchaseLink = brand.purchaseUrl || "#pricing";
       <div class="section-head"><p class="kicker">核心功能</p><h2>真正会反复使用的 PDF 工具</h2></div>
       <div class="feature-grid">
         {features.map(([title, text], index) => <article><span class="feature-index">0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}
+      </div>
+    </section>
+    <section id="walkthrough" class="app-demo">
+      <div class="section-head">
+        <p class="kicker">使用视频教程 / 01</p>
+        <h2>批量水印：观看一份 PDF 如何加上水印</h2>
+        <p class="intro">以下 30 秒英文讲解视频来自实际 Windows 软件操作：打开示例 PDF、设置平铺水印并查看新生成的文件。</p>
+      </div>
+      <video class="walkthrough-video" controls playsinline preload="metadata" poster="/media/doclira_app_watermark_result_en.png">
+        <source src="/media/doclira_watermark_tutorial_en_1920x1080_voice.mp4" type="video/mp4" />
+        当前浏览器无法播放视频。
+      </video>
+      <div class="app-shot-grid">
+        <figure>
+          <img src="/media/doclira_app_source_document_en.png" alt="Doclira PDF 打开水印处理前的示例文档" loading="lazy" />
+          <figcaption>原始文档在软件中的预览效果</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/doclira_app_watermark_settings_en.png" alt="Doclira PDF 水印参数设置窗口" loading="lazy" />
+          <figcaption>生成前的水印设置界面</figcaption>
+        </figure>
       </div>
     </section>
     <section id="examples" class="examples">

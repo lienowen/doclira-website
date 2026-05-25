@@ -54,14 +54,13 @@ nav a:hover { color: var(--ink); }
 
 main { max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px) 58px; }
 .hero {
-  min-height: min(720px, calc(100vh - 70px));
-  padding: clamp(34px, 5vw, 68px) 0 48px;
-  display: grid;
-  grid-template-columns: 1.04fr .96fr;
-  align-items: center;
-  gap: clamp(38px, 5vw, 74px);
+  padding: clamp(34px, 5vw, 56px) 0 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 38px;
 }
-.hero-media { order: 2; }
+.hero-media { order: 2; width: 100%; }
 .hero-media img {
   width: 100%;
   display: block;
@@ -75,7 +74,7 @@ main { max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px) 58px
   font-size: 13px;
   line-height: 1.55;
 }
-.hero-content { order: 1; }
+.hero-content { order: 1; max-width: 780px; }
 .kicker {
   color: var(--mint);
   font-size: 12px;
@@ -84,8 +83,8 @@ main { max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px) 58px
   margin-bottom: 18px;
 }
 h1 { font-size: 64px; line-height: 1.02; margin-bottom: 18px; }
-.hero-copy { font-size: 20px; line-height: 1.58; max-width: 520px; margin-bottom: 32px; }
-.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 37px; }
+.hero-copy { font-size: 20px; line-height: 1.58; max-width: 700px; margin-bottom: 26px; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
 .primary, .secondary {
   min-height: 50px;
   display: inline-flex;
@@ -104,7 +103,7 @@ h1 { font-size: 64px; line-height: 1.02; margin-bottom: 18px; }
 .requirements span { padding-right: 16px; margin-right: 16px; border-right: 1px solid var(--line); }
 .requirements span:last-child { border: 0; }
 
-.band, .examples, .workflow, .pricing, .faq { padding: 68px 0; border-top: 1px solid var(--line); }
+.band, .app-demo, .examples, .workflow, .pricing, .faq { padding: 68px 0; border-top: 1px solid var(--line); }
 .section-head { max-width: 700px; margin-bottom: 36px; }
 .section-head h2 { font-size: 37px; line-height: 1.17; margin-bottom: 13px; }
 .intro { font-size: 17px; }
@@ -123,6 +122,42 @@ h1 { font-size: 64px; line-height: 1.02; margin-bottom: 18px; }
 .feature-index { display: block; margin-bottom: 22px; color: var(--coral); font-size: 13px; font-weight: 750; }
 .feature-grid h3 { font-size: 20px; margin-bottom: 11px; }
 .feature-grid p { line-height: 1.58; }
+
+.walkthrough-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #0f172a;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.app-shot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+.app-shot-grid figure {
+  margin: 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.app-shot-grid img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #f7f9fb;
+}
+.app-shot-grid figcaption {
+  padding: 13px 15px 15px;
+  color: var(--soft-ink);
+  font-size: 14px;
+  font-weight: 600;
+}
 
 .demo-list {
   display: grid;
@@ -300,9 +335,7 @@ footer a { color: var(--mint); font-weight: 650; }
 
 @media (max-width: 980px) {
   nav a:not(.nav-buy):not(.language-link) { display: none; }
-  .hero { grid-template-columns: 1fr; min-height: 0; }
-  .hero-content { order: 1; }
-  .hero-media { order: 2; }
+  .hero { gap: 30px; }
   .feature-grid, .workflow ol, .guide-grid { grid-template-columns: repeat(2, 1fr); }
   .demo-row { grid-template-columns: 1fr; }
   .pricing { grid-template-columns: 1fr; }
@@ -319,9 +352,9 @@ footer a { color: var(--mint); font-weight: 650; }
   .hero-copy { font-size: 18px; }
   .requirements { display: grid; gap: 9px; }
   .requirements span { border: 0; }
-  .band, .examples, .workflow, .pricing, .faq { padding-top: 48px; padding-bottom: 48px; }
+  .band, .app-demo, .examples, .workflow, .pricing, .faq { padding-top: 48px; padding-bottom: 48px; }
   .section-head h2 { font-size: 29px; }
-  .feature-grid, .workflow ol, .faq-grid, .guide-grid { grid-template-columns: 1fr; }
+  .feature-grid, .workflow ol, .faq-grid, .guide-grid, .app-shot-grid { grid-template-columns: 1fr; }
   .demo-row { padding: 15px; gap: 20px; }
   .demo-content h3 { font-size: 23px; }
   .guide-intro { padding-top: 48px; }

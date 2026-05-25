@@ -31,7 +31,8 @@ const faq = [
   <main>
     <section class="hero">
       <div class="hero-media">
-        <img src="/assets/demo_text_edit_en.png" alt="Doclira PDF lightweight text edit before and after comparison" />
+        <img src="/media/doclira_app_watermark_result_en.png" alt="Doclira PDF desktop application displaying a watermarked PDF document" />
+        <p class="media-caption">Actual desktop application view: a sample PDF after a tiled confidential watermark was applied.</p>
       </div>
       <div class="hero-content">
         <p class="kicker">OFFLINE WINDOWS PDF TOOLKIT</p>
@@ -39,7 +40,7 @@ const faq = [
         <p class="hero-copy">Batch watermark, convert, compress, merge and split PDFs with a focused desktop tool for everyday document work.</p>
         <div class="actions">
           <a class="primary" href={purchaseLink} target="_blank" rel="noreferrer">{hasPurchaseLink ? `Buy for ${brand.price}` : "Launch pricing"}</a>
-          <a class="secondary" href="#examples">See real outputs</a>
+          <a class="secondary" href="#walkthrough">Watch it work</a>
         </div>
         <div class="requirements">
           <span>Local processing</span>
@@ -62,6 +63,28 @@ const faq = [
             <p>{text}</p>
           </article>
         ))}
+      </div>
+    </section>
+
+    <section id="walkthrough" class="app-demo">
+      <div class="section-head">
+        <p class="kicker">VIDEO TUTORIALS / 01</p>
+        <h2>Batch Watermark: watch one PDF become a protected file</h2>
+        <p class="intro">This 30-second walkthrough is recorded from the actual Windows app. It opens a sample document, configures a tiled watermark and shows the generated PDF.</p>
+      </div>
+      <video class="walkthrough-video" controls playsinline preload="metadata" poster="/media/doclira_app_watermark_result_en.png">
+        <source src="/media/doclira_watermark_tutorial_en_1920x1080_voice.mp4" type="video/mp4" />
+        Your browser does not support embedded video.
+      </video>
+      <div class="app-shot-grid">
+        <figure>
+          <img src="/media/doclira_app_source_document_en.png" alt="Doclira PDF displaying the source document before watermarking" loading="lazy" />
+          <figcaption>Source document open inside Doclira PDF</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/doclira_app_watermark_settings_en.png" alt="Doclira PDF batch watermark settings window" loading="lazy" />
+          <figcaption>Watermark settings before generating the output</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -104,7 +127,7 @@ const faq = [
             <p class="demo-index">04 / ORGANIZE</p>
             <h3>Merge and Split</h3>
             <p>Separate a multi-page document into individual PDFs, or combine page files for delivery.</p>
-            <div class="demo-tags"><span>1 ↔ 3</span><strong>Pages</strong><span>PDF files</span></div>
+            <div class="demo-tags"><span>1 to 3</span><strong>Pages</strong><span>PDF files</span></div>
           </div>
           <img src="/assets/demo_merge_split_en.png" alt="Merge and split PDF input output comparison" />
         </article>
