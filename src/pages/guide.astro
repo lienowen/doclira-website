@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="User Guide - Doclira PDF" description="How to install, activate and use Doclira PDF on Windows.">
+  <Header />
+  <main class="guide-page">
+    <section class="guide-intro">
+      <p class="kicker">USER GUIDE</p>
+      <h1>Get useful output without guesswork</h1>
+      <p>Install, activate and handle the most common PDF jobs with a visible file list and local output folder.</p>
+    </section>
+    <section class="guide-grid">
+      <article>
+        <p class="step-number">01</p>
+        <h2>Install and activate</h2>
+        <p>Download the Windows installer after purchase, complete setup, open the app from the desktop or Start menu and enter the activation key supplied with your order.</p>
+      </article>
+      <article>
+        <p class="step-number">02</p>
+        <h2>Add and select files</h2>
+        <p>Use the file list to add PDF files, then select one, several or all files for the next operation.</p>
+      </article>
+      <article>
+        <p class="step-number">03</p>
+        <h2>Choose an output folder</h2>
+        <p>Set where generated documents should be saved before processing, so results never disappear into an unknown folder.</p>
+      </article>
+      <article>
+        <p class="step-number">04</p>
+        <h2>Run and review</h2>
+        <p>Follow the progress bar, then open the output folder to review generated Word files, images or processed PDFs.</p>
+      </article>
+    </section>
+    <section class="task-guide">
+      <div>
+        <p class="kicker">LIGHT EDIT</p>
+        <h2>Replace a Short Field</h2>
+        <p>Select a short text field in preview and save a new PDF. This suits names, company details, dates and brief notes while leaving the original file untouched.</p>
+      </div>
+      <img src="/assets/demo_text_edit_en.png" alt="A company field replaced in a PDF and saved as a new PDF" />
+    </section>
+    <section class="task-guide">
+      <div>
+        <p class="kicker">POPULAR TASK</p>
+        <h2>Batch watermark</h2>
+        <p>Add selected documents, choose text or logo watermark, select centered or tiled placement, tune opacity, rotation and page range, then process the chosen files.</p>
+      </div>
+      <img src="/assets/demo_watermark_en.png" alt="Tiled watermark output example" />
+    </section>
+    <section class="task-guide reverse">
+      <div>
+        <p class="kicker">CONVERSION</p>
+        <h2>PDF to Images</h2>
+        <p>A multi-page PDF exports into one PNG per page, making the change in file format and output count easy to verify.</p>
+      </div>
+      <img src="/assets/demo_pdf_to_images_en.png" alt="Three-page PDF exported into three PNG files" />
+    </section>
+    <section class="limit-note">
+      <h2>Before you process important documents</h2>
+      <p>Keep the original PDF. Lightweight text edits are for short corrections and additions; this product does not promise Word-style rebuilding of every complex or scanned PDF.</p>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,164 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { brand } from "../brand.js";
+
+const purchaseLink = brand.purchaseUrl || "#pricing";
+const hasPurchaseLink = Boolean(brand.purchaseUrl);
+const features = [
+  ["Batch Watermark", "Apply text or logo watermarks to selected PDFs with tiling, opacity, rotation and page range control."],
+  ["PDF to Word", "Convert text-based PDF files into editable DOCX documents for copying, revising and sharing."],
+  ["Export and Compress", "Export clear page images or reduce file size with practical quality presets."],
+  ["Organize Pages", "Merge, split and combine image files into PDFs through a visible batch file list."],
+];
+const steps = [
+  "Add one or more files.",
+  "Select only the files you need.",
+  "Choose a tool and output folder.",
+  "Check the generated result locally.",
+];
+const faq = [
+  ["Does it upload my documents?", "No. Watermarking, conversion, compression and page tasks run locally on your Windows computer."],
+  ["Can it edit every PDF like Word?", "No. Light text replacement and additions suit short corrections. Complex layouts, special fonts and scanned PDFs may need manual cleanup."],
+  ["What systems are supported?", "The current release supports Windows 10 and Windows 11 on 64-bit systems."],
+  ["How is it delivered?", "After purchase, you receive a Windows installer download and an activation key."],
+];
+---
+
+<Layout>
+  <Header />
+  <main>
+    <section class="hero">
+      <div class="hero-media">
+        <img src="/assets/demo_text_edit_en.png" alt="Doclira PDF lightweight text edit before and after comparison" />
+      </div>
+      <div class="hero-content">
+        <p class="kicker">OFFLINE WINDOWS PDF TOOLKIT</p>
+        <h1>{brand.product}</h1>
+        <p class="hero-copy">Batch watermark, convert, compress, merge and split PDFs with a focused desktop tool for everyday document work.</p>
+        <div class="actions">
+          <a class="primary" href={purchaseLink} target="_blank" rel="noreferrer">{hasPurchaseLink ? `Buy for ${brand.price}` : "Launch pricing"}</a>
+          <a class="secondary" href="#examples">See real outputs</a>
+        </div>
+        <div class="requirements">
+          <span>Local processing</span>
+          <span>{brand.platform}</span>
+          <span>One-time license</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="band">
+      <div class="section-head">
+        <p class="kicker">FEATURES</p>
+        <h2>Tools for PDF jobs that keep coming back</h2>
+      </div>
+      <div class="feature-grid">
+        {features.map(([title, text], index) => (
+          <article>
+            <span class="feature-index">0{index + 1}</span>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="examples" class="examples">
+      <div class="section-head">
+        <p class="kicker">OUTPUT EXAMPLES</p>
+        <h2>One task, one visible result</h2>
+        <p class="intro">Each example distinguishes source files from generated files, with large before-and-after results you can inspect directly.</p>
+      </div>
+      <div class="demo-list">
+        <article class="demo-row featured">
+          <div class="demo-content">
+            <p class="demo-index">01 / LIGHT EDIT</p>
+            <h3>Edit Short Text</h3>
+            <p>Select a short field and save a new PDF, suitable for correcting a name, company, date or short note.</p>
+            <div class="demo-tags"><span>Original PDF</span><strong>Replace one field</strong><span>New PDF</span></div>
+          </div>
+          <img src="/assets/demo_text_edit_en.png" alt="One PDF customer field replaced and saved as a new PDF" />
+        </article>
+        <article class="demo-row">
+          <div class="demo-content">
+            <p class="demo-index">02 / EXPORT</p>
+            <h3>PDF to Images</h3>
+            <p>A multi-page PDF becomes individual PNG files for uploads, single-page sharing and archiving.</p>
+            <div class="demo-tags"><span>3-page PDF</span><strong>Export</strong><span>3 PNG files</span></div>
+          </div>
+          <img src="/assets/demo_pdf_to_images_en.png" alt="Three-page PDF exported as three PNG image files" />
+        </article>
+        <article class="demo-row">
+          <div class="demo-content">
+            <p class="demo-index">03 / PROTECTION</p>
+            <h3>Batch Watermark</h3>
+            <p>Apply a visible ownership mark to material sent for review while keeping the document readable.</p>
+            <div class="demo-tags"><span>Clean PDF</span><strong>Add</strong><span>Tiled watermark</span></div>
+          </div>
+          <img src="/assets/demo_watermark_en.png" alt="Document before and after a tiled watermark" />
+        </article>
+        <article class="demo-row">
+          <div class="demo-content">
+            <p class="demo-index">04 / ORGANIZE</p>
+            <h3>Merge and Split</h3>
+            <p>Separate a multi-page document into individual PDFs, or combine page files for delivery.</p>
+            <div class="demo-tags"><span>1 ↔ 3</span><strong>Pages</strong><span>PDF files</span></div>
+          </div>
+          <img src="/assets/demo_merge_split_en.png" alt="Merge and split PDF input output comparison" />
+        </article>
+        <article class="demo-row compact">
+          <div class="demo-content">
+            <p class="demo-index">05 / EDITABLE OUTPUT</p>
+            <h3>PDF to Word</h3>
+            <p>Convert ordinary text PDFs into `.docx` files for reuse. Complex scans or unusual layouts should be reviewed after export.</p>
+            <div class="demo-tags"><span>PDF</span><strong>Convert</strong><span>DOCX</span></div>
+          </div>
+          <img src="/assets/demo_pdf_to_word_en.png" alt="PDF converted into Word output" />
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow" class="workflow">
+      <div class="section-head">
+        <p class="kicker">WORKFLOW</p>
+        <h2>From source file to output in four steps</h2>
+      </div>
+      <ol>
+        {steps.map((step, index) => <li><span>{index + 1}</span><p>{step}</p></li>)}
+      </ol>
+      <a class="text-link" href="/guide/">Read the full user guide</a>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div>
+        <p class="kicker">WINDOWS DESKTOP LICENSE</p>
+        <h2>{brand.product}</h2>
+        <p class="price">{brand.price}</p>
+        <p class="pricing-note">One-time Windows 64-bit license. Gumroad automatically delivers your activation key.</p>
+      </div>
+      <div class="included">
+        <p>Included</p>
+        <ul>
+          <li>Batch watermark and file tools</li>
+          <li>PDF to Word and page images</li>
+          <li>Light text changes and local exports</li>
+          <li>Activation key delivery after purchase</li>
+        </ul>
+        <a class="primary wide" href={purchaseLink} target="_blank" rel="noreferrer">{hasPurchaseLink ? "Purchase on Gumroad" : "Gumroad link added at launch"}</a>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="section-head">
+        <p class="kicker">FAQ</p>
+        <h2>Clear expectations, fewer surprises</h2>
+      </div>
+      <div class="faq-grid">
+        {faq.map(([question, answer]) => <article><h3>{question}</h3><p>{answer}</p></article>)}
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
