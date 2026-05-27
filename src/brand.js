@@ -5,5 +5,5 @@ export const brand = {
   price: "$19",
   purchaseUrl: "https://taixianglumark.gumroad.com/l/doclira-pdf",
   liteUrl: "https://github.com/lienowen/doclira-pdf-lite",
-  supportEmail: "taixianglumark@gmail.com",
+  supportEmail: "lienowen@outlook.com",
 };

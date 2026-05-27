@@ -3,7 +3,7 @@
 ## Before Publishing
 
 1. Confirm the Gumroad checkout URL opens correctly: `https://taixianglumark.gumroad.com/l/doclira-pdf`.
-2. Confirm support mail can receive customer questions: `taixianglumark@gmail.com`.
+2. Confirm support mail can receive customer questions: `lienowen@outlook.com`.
 3. Confirm `src/brand.js` still contains the final purchase URL and support email.
 4. Confirm the English and Chinese pages use the final price and delivery policy.
 5. Run `npm run build`.

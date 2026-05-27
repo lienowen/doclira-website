@@ -37,6 +37,6 @@ Deploy the generated Astro site to Vercel. Current launch settings in `src/brand
 
 - `purchaseUrl`: `https://taixianglumark.gumroad.com/l/doclira-pdf`
 - `liteUrl`: `https://github.com/lienowen/doclira-pdf-lite`
-- `supportEmail`: `taixianglumark@gmail.com`
+- `supportEmail`: `lienowen@outlook.com`
 
 The public website intentionally states the product limitations: Doclira PDF handles common local PDF work and lightweight text changes, but it is not advertised as full Word-style editing for every complex or scanned PDF.
