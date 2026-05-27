@@ -1,0 +1,40 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { brand } from "../../brand.js";
+---
+
+<Layout lang="zh-CN" title="支持 - Doclira PDF" description="Doclira PDF 购买、下载、安装与功能问题支持。">
+  <Header locale="zh" />
+  <main class="policy-page">
+    <section class="policy-hero">
+      <p class="kicker">支持</p>
+      <h1>获得 Doclira PDF 帮助</h1>
+      <p>购买、下载、安装或页面所介绍功能遇到问题时，请提供足够的信息，便于我们判断和处理。</p>
+    </section>
+    <section class="policy-content">
+      <article>
+        <h2>联系邮箱</h2>
+        <p>邮箱：<a href={`mailto:${brand.supportEmail}`}>{brand.supportEmail}</a></p>
+        <p class="note">品牌邮箱 `support@doclira.com` 计划后续启用；在邮箱开通并完成收发测试前，当前公开邮箱仍作为有效联系方式。</p>
+      </article>
+      <article>
+        <h2>请提供的信息</h2>
+        <ul>
+          <li>如已购买，请提供 Gumroad 购买邮箱或订单信息。</li>
+          <li>Windows 版本及你要完成的处理任务。</li>
+          <li>错误提示截图或问题现象说明。</li>
+        </ul>
+        <p class="note">请勿直接发送包含敏感信息的原始 PDF 文档。</p>
+      </article>
+      <article>
+        <h2>免费 Lite 版</h2>
+        <p>开源 Lite 版本的问题可在 GitHub 仓库提交可复现的问题说明。</p>
+        <a class="secondary inline-button" href={brand.liteUrl} target="_blank" rel="noreferrer">打开 Lite 仓库</a>
+      </article>
+    </section>
+  </main>
+  <Footer locale="zh" />
+</Layout>
+

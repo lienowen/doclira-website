@@ -40,13 +40,32 @@ const faq = [
         <p class="hero-copy">Batch watermark, convert, compress, merge and split PDFs with a focused desktop tool for everyday document work.</p>
         <div class="actions">
           <a class="primary" href={purchaseLink} target="_blank" rel="noreferrer">{hasPurchaseLink ? `Buy for ${brand.price}` : "Launch pricing"}</a>
-          <a class="secondary" href="#walkthrough">Watch it work</a>
+          <a class="secondary" href={brand.liteUrl} target="_blank" rel="noreferrer">Download free Lite</a>
         </div>
         <div class="requirements">
           <span>Local processing</span>
           <span>{brand.platform}</span>
           <span>One-time license</span>
         </div>
+      </div>
+    </section>
+
+    <section id="editions" class="editions">
+      <div class="section-head">
+        <p class="kicker">TRY FIRST, UPGRADE WHEN NEEDED</p>
+        <h2>Use Lite for simple PDF basics. Choose Pro for recurring work.</h2>
+        <p class="intro">The free Lite edition is public on GitHub. It lets you inspect the basic workflow before purchasing the commercial desktop edition.</p>
+      </div>
+      <div class="compare-table" role="table" aria-label="Doclira Lite and Pro comparison">
+        <div class="compare-row compare-head" role="row"><span>Capability</span><strong>Free Lite</strong><strong>Pro</strong></div>
+        <div class="compare-row" role="row"><span>Preview, merge, split, rotate and remove pages</span><strong>Included</strong><strong>Included</strong></div>
+        <div class="compare-row" role="row"><span>Basic single-file text watermark</span><strong>Included</strong><strong>Included</strong></div>
+        <div class="compare-row" role="row"><span>Batch workflow and advanced tiled/logo watermarks</span><strong>-</strong><strong>Included</strong></div>
+        <div class="compare-row" role="row"><span>PDF conversion and lightweight text correction</span><strong>-</strong><strong>Included</strong></div>
+      </div>
+      <div class="section-actions">
+        <a class="secondary" href={brand.liteUrl} target="_blank" rel="noreferrer">View Lite on GitHub</a>
+        <a class="primary" href={purchaseLink} target="_blank" rel="noreferrer">Get Pro on Gumroad</a>
       </div>
     </section>
 
@@ -159,15 +178,20 @@ const faq = [
         <p class="kicker">WINDOWS DESKTOP LICENSE</p>
         <h2>{brand.product}</h2>
         <p class="price">{brand.price}</p>
-        <p class="pricing-note">One-time Windows 64-bit license. Gumroad automatically delivers your activation key.</p>
+        <p class="pricing-note">One-time Windows 64-bit license. Secure checkout and digital delivery through Gumroad.</p>
+        <div class="policy-links">
+          <a href="/refund/">7-day refund policy</a>
+          <a href="/privacy/">Local processing and privacy</a>
+          <a href="/support/">Support before and after purchase</a>
+        </div>
       </div>
       <div class="included">
-        <p>Included</p>
+        <p>Delivered after purchase</p>
         <ul>
-          <li>Batch watermark and file tools</li>
-          <li>PDF to Word and page images</li>
-          <li>Light text changes and local exports</li>
-          <li>Activation key delivery after purchase</li>
+          <li>Windows 10 / 11 (64-bit) installer</li>
+          <li>Pro batch, conversion and local output tools</li>
+          <li>Activation and user guide instructions</li>
+          <li>Email support for installation issues</li>
         </ul>
         <a class="primary wide" href={purchaseLink} target="_blank" rel="noreferrer">{hasPurchaseLink ? "Purchase on Gumroad" : "Gumroad link added at launch"}</a>
       </div>
@@ -180,6 +204,12 @@ const faq = [
       </div>
       <div class="faq-grid">
         {faq.map(([question, answer]) => <article><h3>{question}</h3><p>{answer}</p></article>)}
+      </div>
+      <div class="trust-strip">
+        <span>Local document processing</span>
+        <span>Real app screenshots and walkthrough</span>
+        <span>Free open-source Lite edition</span>
+        <span>Refund policy published before purchase</span>
       </div>
     </section>
   </main>

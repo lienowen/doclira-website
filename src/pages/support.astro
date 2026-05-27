@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { brand } from "../brand.js";
+---
+
+<Layout title="Support - Doclira PDF" description="Installation, purchase and product support for Doclira PDF.">
+  <Header />
+  <main class="policy-page">
+    <section class="policy-hero">
+      <p class="kicker">SUPPORT</p>
+      <h1>Help with Doclira PDF</h1>
+      <p>For purchase, download, installation or advertised feature issues, contact us with enough detail to reproduce the problem.</p>
+    </section>
+    <section class="policy-content">
+      <article>
+        <h2>Contact</h2>
+        <p>Email: <a href={`mailto:${brand.supportEmail}`}>{brand.supportEmail}</a></p>
+        <p class="note">A branded `support@doclira.com` mailbox is planned. Until it is activated and tested, this published support inbox remains the working contact.</p>
+      </article>
+      <article>
+        <h2>Include in your message</h2>
+        <ul>
+          <li>Your Gumroad purchase email or order reference, if purchased.</li>
+          <li>Your Windows version and a brief description of the task.</li>
+          <li>A screenshot of any error message.</li>
+        </ul>
+        <p class="note">Do not email confidential source PDF files unless specifically requested for troubleshooting.</p>
+      </article>
+      <article>
+        <h2>Free Lite edition</h2>
+        <p>For the open-source Lite edition, reproducible software issues can be reported through GitHub Issues.</p>
+        <a class="secondary inline-button" href={brand.liteUrl} target="_blank" rel="noreferrer">Open Lite repository</a>
+      </article>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+

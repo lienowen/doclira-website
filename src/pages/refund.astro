@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { brand } from "../brand.js";
+---
+
+<Layout title="Refund Policy - Doclira PDF" description="Doclira PDF 7-day refund policy for supported Windows installations and advertised core features.">
+  <Header />
+  <main class="policy-page">
+    <section class="policy-hero">
+      <p class="kicker">REFUND POLICY</p>
+      <h1>7-day refund policy</h1>
+      <p>We want you to purchase with clear expectations, not guesswork.</p>
+    </section>
+    <section class="policy-content">
+      <article>
+        <h2>When to request a refund</h2>
+        <p>If Doclira PDF cannot be installed or activated on a supported Windows system, or an advertised core feature does not work as described with your document, email us within 7 days of purchase.</p>
+      </article>
+      <article>
+        <h2>How it is handled</h2>
+        <p>We may first ask for an error screenshot or a non-confidential sample that reproduces the issue. If the issue cannot be resolved appropriately, we will process the applicable refund through Gumroad.</p>
+      </article>
+      <article>
+        <h2>Scope to understand before purchase</h2>
+        <p>Doclira PDF is designed for practical local workflows. It does not guarantee Word-style, lossless rewriting of every scanned PDF, unusual embedded font or highly complex layout.</p>
+      </article>
+      <a class="primary inline-button" href={`mailto:${brand.supportEmail}`}>Contact support</a>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+

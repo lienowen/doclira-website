@@ -1,0 +1,34 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { brand } from "../../brand.js";
+---
+
+<Layout lang="zh-CN" title="退款政策 - Doclira PDF" description="Doclira PDF 面向受支持 Windows 系统与已宣传核心功能的 7 天退款政策。">
+  <Header locale="zh" />
+  <main class="policy-page">
+    <section class="policy-hero">
+      <p class="kicker">退款政策</p>
+      <h1>7 天退款政策</h1>
+      <p>我们希望用户在明确能力边界的情况下购买，而不是买后猜测是否适用。</p>
+    </section>
+    <section class="policy-content">
+      <article>
+        <h2>可申请退款的情况</h2>
+        <p>如果 Doclira PDF 无法在受支持的 Windows 系统中安装或激活，或者已明确宣传的核心功能无法按说明处理你的文档，请在购买后 7 天内联系支持邮箱。</p>
+      </article>
+      <article>
+        <h2>处理方式</h2>
+        <p>我们可能会先请求错误截图或不包含敏感信息的复现样本。如果问题无法合理解决，将通过 Gumroad 处理适当退款。</p>
+      </article>
+      <article>
+        <h2>购买前需要了解</h2>
+        <p>Doclira PDF 面向常见本地文档工作，不承诺所有扫描件、特殊字体或复杂排版文件都能像 Word 一样无损修改。</p>
+      </article>
+      <a class="primary inline-button" href={`mailto:${brand.supportEmail}`}>联系支持</a>
+    </section>
+  </main>
+  <Footer locale="zh" />
+</Layout>
+

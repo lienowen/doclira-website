@@ -4,6 +4,7 @@ const { locale = "en" } = Astro.props;
 const isZh = locale === "zh";
 const prefix = isZh ? "/zh" : "";
 const guide = isZh ? "/zh/guide/" : "/guide/";
+const support = isZh ? "/zh/support/" : "/support/";
 const swap = isZh ? "/" : "/zh/";
 ---
 
@@ -15,8 +16,9 @@ const swap = isZh ? "/" : "/zh/";
   <nav aria-label={isZh ? "导航" : "Primary"}>
     <a href={`${prefix}/#features`}>{isZh ? "功能" : "Features"}</a>
     <a href={`${prefix}/#walkthrough`}>{isZh ? "实机演示" : "Demo"}</a>
+    <a href={`${prefix}/#editions`}>{isZh ? "版本" : "Lite vs Pro"}</a>
     <a href={guide}>{isZh ? "使用指南" : "Guide"}</a>
-    <a href={`${prefix}/#faq`}>{isZh ? "常见问题" : "FAQ"}</a>
+    <a href={support}>{isZh ? "支持" : "Support"}</a>
     <a class="language-link" href={swap}>{isZh ? "EN" : "中文"}</a>
     <a class="nav-buy" href={brand.purchaseUrl} target="_blank" rel="noreferrer">{isZh ? "立即购买" : "Buy now"}</a>
   </nav>
