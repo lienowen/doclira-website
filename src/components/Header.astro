@@ -1,5 +1,6 @@
 ---
 import { brand } from "../brand.js";
+
 const { locale = "en" } = Astro.props;
 const isZh = locale === "zh";
 const prefix = isZh ? "/zh" : "";
@@ -13,13 +14,13 @@ const swap = isZh ? "/" : "/zh/";
     <span class="brand-mark">D</span>
     <span>{brand.product}</span>
   </a>
-  <nav aria-label={isZh ? "导航" : "Primary"}>
+  <nav aria-label={isZh ? "主导航" : "Primary navigation"}>
     <a href={`${prefix}/#features`}>{isZh ? "功能" : "Features"}</a>
-    <a href={`${prefix}/#walkthrough`}>{isZh ? "实机演示" : "Demo"}</a>
-    <a href={`${prefix}/#editions`}>{isZh ? "版本" : "Lite vs Pro"}</a>
+    <a href={`${prefix}/#examples`}>{isZh ? "效果" : "Examples"}</a>
+    <a href={`${prefix}/#pricing`}>{isZh ? "价格" : "Pricing"}</a>
     <a href={guide}>{isZh ? "使用指南" : "Guide"}</a>
     <a href={support}>{isZh ? "支持" : "Support"}</a>
-    <a class="language-link" href={swap}>{isZh ? "EN" : "中文"}</a>
-    <a class="nav-buy" href={brand.purchaseUrl} target="_blank" rel="noreferrer">{isZh ? "立即购买" : "Buy now"}</a>
+    <a class="language-link" href={swap}>{isZh ? "English" : "中文"}</a>
+    <a class="nav-buy" href={brand.purchaseUrl} target="_blank" rel="noreferrer">{isZh ? "购买" : "Buy now"}</a>
   </nav>
 </header>

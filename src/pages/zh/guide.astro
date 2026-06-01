@@ -4,31 +4,59 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 ---
 
-<Layout lang="zh-CN" title="使用指南 - Doclira PDF" description="Doclira PDF 安装、激活与常用功能图文操作说明。">
+<Layout lang="zh-CN" title="使用指南 - Doclira PDF" description="Doclira PDF 安装、激活和常用功能使用说明。">
   <Header locale="zh" />
   <main class="guide-page">
     <section class="guide-intro">
-      <p class="kicker">图文使用指南</p>
+      <p class="kicker">使用指南</p>
       <h1>从安装到输出，步骤清楚</h1>
-      <p>适用于购买后的首次使用，也适合作为淘宝、闲鱼自动发货中的教程链接。</p>
+      <p>适合购买后的首次使用，也适合作为自动发货邮件里的教程链接。</p>
     </section>
     <section class="guide-grid">
-      <article><p class="step-number">01</p><h2>下载安装并激活</h2><p>下载 Windows 安装程序，双击完成安装，从桌面或开始菜单打开软件，输入订单中收到的激活码。</p></article>
-      <article><p class="step-number">02</p><h2>添加并选择文件</h2><p>把一个或多个 PDF 加入文件列表，可只选择其中几个文件执行当前任务。</p></article>
-      <article><p class="step-number">03</p><h2>指定输出目录</h2><p>处理前选择结果保存位置，避免完成后找不到 Word、图片或新 PDF 文件。</p></article>
-      <article><p class="step-number">04</p><h2>查看处理结果</h2><p>关注进度条，完成后打开输出文件夹，核对水印、转换或整理后的文件。</p></article>
+      <article>
+        <p class="step-number">01</p>
+        <h2>安装并激活</h2>
+        <p>下载 Windows 安装包，完成安装后打开软件，输入订单里收到的 License Key。</p>
+      </article>
+      <article>
+        <p class="step-number">02</p>
+        <h2>添加并选择文件</h2>
+        <p>把一个或多个 PDF 加入文件列表。批量处理前可以只选择其中几个文件。</p>
+      </article>
+      <article>
+        <p class="step-number">03</p>
+        <h2>选择输出目录</h2>
+        <p>处理前先指定保存位置，避免生成 Word、图片或新 PDF 后找不到文件。</p>
+      </article>
+      <article>
+        <p class="step-number">04</p>
+        <h2>运行并检查结果</h2>
+        <p>查看进度条，完成后打开输出文件夹，核对生成的文件。</p>
+      </article>
     </section>
     <section class="task-guide">
-      <div><p class="kicker">简单修改</p><h2>替换少量文字</h2><p>在预览中选择短文字并替换，保存后生成新 PDF。适合姓名、公司名、日期和短备注等小范围修正，原文件请保留。</p></div>
-      <img src="/assets/demo_text_edit_zh.png" alt="PDF 客户名称修改前后真实效果对照" />
+      <div>
+        <p class="kicker">轻量修改</p>
+        <h2>替换短字段</h2>
+        <p>在预览里选择短文字并替换，保存后生成新 PDF。适合姓名、公司名称、日期和短备注等小范围修正。</p>
+      </div>
+      <img src="/assets/demo_text_edit_zh.png" alt="PDF 短字段修改前后的效果图" />
     </section>
     <section class="task-guide">
-      <div><p class="kicker">常用操作</p><h2>批量水印</h2><p>添加需要处理的 PDF，选择文字或 Logo 水印，设置平铺/居中、透明度、角度和页码范围，最后处理选中的文件。</p></div>
-      <img src="/assets/demo_watermark_zh.png" alt="平铺水印实际输出示例" />
+      <div>
+        <p class="kicker">常用功能</p>
+        <h2>批量水印</h2>
+        <p>添加需要处理的 PDF，选择文字或 Logo 水印，设置平铺/居中、透明度、角度和页码范围，然后处理选中的文件。</p>
+      </div>
+      <img src="/assets/demo_watermark_zh.png" alt="批量水印输出示例" />
     </section>
     <section class="task-guide reverse">
-      <div><p class="kicker">格式转换</p><h2>PDF 转图片</h2><p>多页 PDF 会按页生成多张 PNG 图片，文件名和页码一一对应，适合上传、发送单页材料或做预览图。</p></div>
-      <img src="/assets/demo_pdf_to_images_zh.png" alt="三页 PDF 导出为三张 PNG 的结果示例" />
+      <div>
+        <p class="kicker">格式转换</p>
+        <h2>PDF 转图片</h2>
+        <p>多页 PDF 会按页生成多张 PNG 图片，文件名和页码一一对应，适合上传、预览和单页发送。</p>
+      </div>
+      <img src="/assets/demo_pdf_to_images_zh.png" alt="PDF 页面导出为 PNG 的示例" />
     </section>
     <section class="limit-note">
       <h2>处理重要文件前请注意</h2>
