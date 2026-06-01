@@ -78,8 +78,21 @@ const faq = [
   <main>
     <section class="hero">
       <div class="hero-media">
-        <img src="/media/doclira_app_watermark_result_en.png" alt="Doclira PDF Windows 软件中显示已添加平铺水印的 PDF" />
-        <p class="media-caption">真实软件界面：给 PDF 添加平铺水印后的效果。</p>
+        <div class="product-showcase" aria-label="Doclira PDF 产品流程预览">
+          <div class="showcase-top"><span>Doclira PDF</span><strong>Batch tools</strong></div>
+          <div class="showcase-body">
+            <aside><b>Files</b><span>contract.pdf</span><span>report.pdf</span><span>invoice.pdf</span></aside>
+            <section>
+              <p class="doc-title">Internal review document</p>
+              <div class="doc-line wide"></div>
+              <div class="doc-line"></div>
+              <div class="doc-table"><span></span><span></span><span></span></div>
+              <p class="watermark-word">CONFIDENTIAL</p>
+            </section>
+            <aside><b>Output</b><span>Watermark</span><span>Convert</span><span>Compress</span></aside>
+          </div>
+        </div>
+        <p class="media-caption">首页使用更干净的产品预览图；真实操作放在下方演示视频里。</p>
       </div>
       <div class="hero-content">
         <p class="kicker">面向真实办公场景的 WINDOWS PDF 工具</p>
@@ -125,10 +138,11 @@ const faq = [
         <p class="intro">少量清晰真实图，比堆满对比海报更容易建立信任。</p>
       </div>
       <div class="proof-layout">
-        <figure class="proof-large">
-          <img src="/media/doclira_app_watermark_result_en.png" alt="Doclira PDF 软件中显示加水印后的 PDF 结果" />
-          <figcaption>Windows 软件内预览生成后的 PDF 结果</figcaption>
-        </figure>
+        <div class="workflow-visual" aria-label="Doclira PDF 工作流程">
+          <div><span>1</span><strong>添加 PDF</strong><p>选择一个或多个文件。</p></div>
+          <div><span>2</span><strong>选择任务</strong><p>水印、转换、压缩或整理。</p></div>
+          <div><span>3</span><strong>保存结果</strong><p>在本机检查输出文件。</p></div>
+        </div>
         <div class="proof-copy">
           <h3>围绕“可见输出”设计</h3>
           <p>用户选择文件、选择输出目录、执行任务，然后检查生成结果。对于日常 PDF 办公，这比复杂但不稳定的功能堆砌更重要。</p>
@@ -178,7 +192,7 @@ const faq = [
         <h2>从真实软件里演示批量水印流程</h2>
         <p class="intro">视频展示打开示例 PDF、设置平铺水印、检查生成结果的完整过程。</p>
       </div>
-      <video class="walkthrough-video" controls playsinline preload="metadata" poster="/media/doclira_app_watermark_result_en.png">
+      <video class="walkthrough-video" controls playsinline preload="metadata">
         <source src="/media/doclira_watermark_tutorial_en_1920x1080_voice.mp4" type="video/mp4" />
         当前浏览器不支持视频播放。
       </video>
