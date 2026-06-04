@@ -3,65 +3,75 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { brand } from "../brand.js";
+
+const downloads = [
+  {
+    name: "Doclira PDF Lite",
+    tag: "Free",
+    platform: "Windows 10 / 11, 64-bit",
+    bestFor: "Trying the basic interface and PDF workflow.",
+    delivery: "Public GitHub repository",
+    action: "Download Lite",
+    href: brand.liteUrl,
+    primary: true,
+  },
+  {
+    name: "Doclira PDF Pro",
+    tag: brand.price,
+    platform: "Windows 10 / 11, 64-bit",
+    bestFor: "Daily PDF work, batch tools and AI document help.",
+    delivery: "Installer and license key after Gumroad checkout",
+    action: "Buy Pro",
+    href: brand.purchaseUrl,
+  },
+  {
+    name: "User Guide",
+    tag: "Guide",
+    platform: "Online",
+    bestFor: "Installation, activation and common workflow steps.",
+    delivery: "Website guide",
+    action: "Open Guide",
+    href: "/guide/",
+  },
+];
 ---
 
 <Layout
   title="Download Doclira PDF - Windows PDF Toolkit"
-  description="Download the free Lite edition of Doclira PDF or purchase the full Windows PDF toolkit."
+  description="Download Doclira PDF Lite, purchase the full Windows edition, or open the user guide."
 >
   <Header />
-  <main class="guide-page">
-    <section class="guide-intro">
+  <main class="download-page">
+    <section class="download-hero">
       <p class="kicker">DOWNLOAD</p>
-      <h1>Start with the free Lite edition.</h1>
-      <p>Try the basic Doclira workflow first. When you need commercial use, larger allowances and advanced batch tools, upgrade to a paid plan.</p>
-      <div class="actions page-actions">
-        <a class="primary" href={brand.liteUrl} target="_blank" rel="noreferrer">Download free Lite</a>
-        <a class="secondary" href="/buy/">Compare paid plans</a>
-      </div>
+      <h1>Download Doclira PDF</h1>
+      <p>Choose the free Lite edition, purchase the full Windows toolkit, or open the guide.</p>
     </section>
 
-    <section class="guide-grid">
-      <article>
-        <p class="step-number">01</p>
-        <h2>Download Lite</h2>
-        <p>Open the public Lite repository and download the available Windows build or source package.</p>
-      </article>
-      <article>
-        <p class="step-number">02</p>
-        <h2>Install on Windows</h2>
-        <p>Doclira is designed for Windows 10 / 11 64-bit. Keep the installer and test with non-sensitive files first.</p>
-      </article>
-      <article>
-        <p class="step-number">03</p>
-        <h2>Try common tasks</h2>
-        <p>Preview PDFs, test basic workflows and confirm the app fits your daily document handling.</p>
-      </article>
-      <article>
-        <p class="step-number">04</p>
-        <h2>Upgrade if needed</h2>
-        <p>Paid plans unlock the commercial workflow, advanced batch processing and higher AI allowance.</p>
-      </article>
+    <section class="download-list" aria-label="Doclira PDF download options">
+      {downloads.map((item) => (
+        <article class="download-row">
+          <div>
+            <span class="download-tag">{item.tag}</span>
+            <h2>{item.name}</h2>
+            <p>{item.bestFor}</p>
+          </div>
+          <div>
+            <span>System</span>
+            <strong>{item.platform}</strong>
+          </div>
+          <div>
+            <span>Delivery</span>
+            <strong>{item.delivery}</strong>
+          </div>
+          <a class={item.primary ? "primary" : "secondary"} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>{item.action}</a>
+        </article>
+      ))}
     </section>
 
-    <section class="download-panel">
-      <div>
-        <p class="kicker">WHICH VERSION SHOULD I USE?</p>
-        <h2>Lite is for evaluation. Paid plans are for real work.</h2>
-        <p>Use Lite to inspect the basic experience. Choose a paid plan when you want a license key, broader batch workflow, AI credits and commercial usage.</p>
-      </div>
-      <div class="download-cards">
-        <article>
-          <h3>Free Lite</h3>
-          <p>Best for trying the interface and basic workflow.</p>
-          <a class="secondary inline-button" href={brand.liteUrl} target="_blank" rel="noreferrer">Open Lite download</a>
-        </article>
-        <article>
-          <h3>Paid edition</h3>
-          <p>Best for recurring office PDF work, AI assistance and commercial use.</p>
-          <a class="primary inline-button" href="/buy/">View paid plans</a>
-        </article>
-      </div>
+    <section class="download-note">
+      <h2>Recommended first step</h2>
+      <p>New users should try Lite first with non-sensitive PDFs. If the workflow fits your office tasks, use the paid edition for commercial work, batch processing and AI credits.</p>
     </section>
   </main>
   <Footer />

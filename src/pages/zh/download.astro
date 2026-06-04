@@ -3,66 +3,76 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { brand } from "../../brand.js";
+
+const downloads = [
+  {
+    name: "Doclira PDF Lite",
+    tag: "免费",
+    platform: "Windows 10 / 11，64 位",
+    bestFor: "先体验基础界面和 PDF 工作流。",
+    delivery: "公开 GitHub 仓库",
+    action: "下载 Lite",
+    href: brand.liteUrl,
+    primary: true,
+  },
+  {
+    name: "Doclira PDF Pro",
+    tag: brand.price,
+    platform: "Windows 10 / 11，64 位",
+    bestFor: "日常 PDF 办公、批量处理和 AI 文档辅助。",
+    delivery: "Gumroad 付款后交付安装包和 License Key",
+    action: "购买 Pro",
+    href: brand.purchaseUrl,
+  },
+  {
+    name: "使用指南",
+    tag: "指南",
+    platform: "在线查看",
+    bestFor: "安装、激活和常用功能操作步骤。",
+    delivery: "官网指南",
+    action: "打开指南",
+    href: "/zh/guide/",
+  },
+];
 ---
 
 <Layout
   lang="zh-CN"
   title="下载 Doclira PDF - Windows PDF 工具"
-  description="下载 Doclira PDF 免费 Lite 版，或查看付费版购买方案。"
+  description="下载 Doclira PDF Lite，购买完整 Windows 版本，或查看使用指南。"
 >
   <Header locale="zh" />
-  <main class="guide-page">
-    <section class="guide-intro">
+  <main class="download-page">
+    <section class="download-hero">
       <p class="kicker">下载</p>
-      <h1>先从免费 Lite 版开始体验。</h1>
-      <p>你可以先试用基础流程。如果需要商业使用、更多批量能力和 AI 次数，再升级到付费版。</p>
-      <div class="actions page-actions">
-        <a class="primary" href={brand.liteUrl} target="_blank" rel="noreferrer">下载免费 Lite 版</a>
-        <a class="secondary" href="/zh/buy/">查看付费方案</a>
-      </div>
+      <h1>下载 Doclira PDF</h1>
+      <p>选择免费 Lite 版、购买完整 Windows 工具，或打开使用指南。</p>
     </section>
 
-    <section class="guide-grid">
-      <article>
-        <p class="step-number">01</p>
-        <h2>下载 Lite</h2>
-        <p>打开公开 Lite 仓库，下载可用的 Windows 包或源码。</p>
-      </article>
-      <article>
-        <p class="step-number">02</p>
-        <h2>安装到 Windows</h2>
-        <p>Doclira 面向 Windows 10 / 11 64 位系统。建议先用非敏感文件测试。</p>
-      </article>
-      <article>
-        <p class="step-number">03</p>
-        <h2>测试常用任务</h2>
-        <p>试用 PDF 预览、基础处理流程和输出目录逻辑，确认是否适合你的日常工作。</p>
-      </article>
-      <article>
-        <p class="step-number">04</p>
-        <h2>需要再升级</h2>
-        <p>付费版解锁商业工作流、批量处理和更高 AI 使用额度。</p>
-      </article>
+    <section class="download-list" aria-label="Doclira PDF 下载选项">
+      {downloads.map((item) => (
+        <article class="download-row">
+          <div>
+            <span class="download-tag">{item.tag}</span>
+            <h2>{item.name}</h2>
+            <p>{item.bestFor}</p>
+          </div>
+          <div>
+            <span>系统</span>
+            <strong>{item.platform}</strong>
+          </div>
+          <div>
+            <span>交付方式</span>
+            <strong>{item.delivery}</strong>
+          </div>
+          <a class={item.primary ? "primary" : "secondary"} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>{item.action}</a>
+        </article>
+      ))}
     </section>
 
-    <section class="download-panel">
-      <div>
-        <p class="kicker">应该下载哪个版本？</p>
-        <h2>Lite 用来体验，付费版用于真实办公。</h2>
-        <p>Lite 适合了解基础体验。需要 License Key、批量处理、AI 次数和商业使用时，再选择付费版。</p>
-      </div>
-      <div class="download-cards">
-        <article>
-          <h3>免费 Lite</h3>
-          <p>适合先试用界面和基础流程。</p>
-          <a class="secondary inline-button" href={brand.liteUrl} target="_blank" rel="noreferrer">打开 Lite 下载</a>
-        </article>
-        <article>
-          <h3>付费版</h3>
-          <p>适合日常办公 PDF、批量处理和 AI 文档辅助。</p>
-          <a class="primary inline-button" href="/zh/buy/">查看付费方案</a>
-        </article>
-      </div>
+    <section class="download-note">
+      <h2>建议先这样做</h2>
+      <p>新用户建议先用 Lite 版测试非敏感 PDF。如果这个流程适合你的日常办公，再购买付费版用于商业工作、批量处理和 AI 点数。</p>
     </section>
   </main>
   <Footer locale="zh" />

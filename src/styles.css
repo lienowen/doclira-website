@@ -775,6 +775,86 @@ h1 { font-size: 64px; line-height: 1.02; margin-bottom: 18px; }
 .final-cta {
   max-width: 780px;
 }
+.download-page {
+  padding-bottom: 78px;
+}
+.download-hero {
+  padding: 72px 0 36px;
+  max-width: 760px;
+}
+.download-hero h1 {
+  font-size: 52px;
+  line-height: 1.04;
+  margin-bottom: 16px;
+}
+.download-hero p:last-child {
+  font-size: 19px;
+  line-height: 1.58;
+}
+.download-list {
+  display: grid;
+  gap: 14px;
+  padding: 22px 0 44px;
+  border-top: 1px solid var(--line);
+}
+.download-row {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.4fr) minmax(170px, .7fr) minmax(220px, .9fr) auto;
+  gap: 22px;
+  align-items: center;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+.download-row h2 {
+  margin: 8px 0 8px;
+  font-size: 24px;
+}
+.download-row p {
+  line-height: 1.55;
+}
+.download-row span:not(.download-tag) {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--soft-ink);
+  font-size: 12px;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+.download-row strong {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.45;
+}
+.download-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--mint-light);
+  color: var(--mint-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+.download-row .primary, .download-row .secondary {
+  min-width: 138px;
+  white-space: nowrap;
+}
+.download-note {
+  max-width: 850px;
+  padding: 30px 34px;
+  border-left: 4px solid var(--mint);
+  background: var(--mint-light);
+}
+.download-note h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.download-note p {
+  line-height: 1.62;
+}
 .review-layout {
   border-top: 1px solid var(--line);
   padding: 54px 0 76px;
@@ -873,6 +953,8 @@ footer a { color: var(--mint); font-weight: 650; }
   .download-panel, .purchase-note { grid-template-columns: 1fr; }
   .review-layout { grid-template-columns: 1fr; }
   .download-cards { grid-template-columns: 1fr; }
+  .download-row { grid-template-columns: 1fr 1fr; }
+  .download-row .primary, .download-row .secondary { width: 100%; }
   .task-guide.reverse div, .task-guide.reverse img { order: initial; }
   footer { align-items: start; }
 }
@@ -902,6 +984,9 @@ footer a { color: var(--mint); font-weight: 650; }
   .demo-content h3 { font-size: 23px; }
   .guide-intro { padding-top: 48px; }
   .guide-intro h1 { font-size: 38px; }
+  .download-hero { padding-top: 48px; }
+  .download-hero h1 { font-size: 38px; }
+  .download-row { grid-template-columns: 1fr; padding: 18px; }
   .limit-note { padding: 28px 24px; }
   .compare-row { grid-template-columns: minmax(145px, 1fr) 66px 66px; padding: 14px 10px; gap: 6px; }
   .compare-row span, .compare-row strong { font-size: 12px; }
