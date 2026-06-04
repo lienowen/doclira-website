@@ -1,0 +1,76 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { brand } from "../../brand.js";
+---
+
+<Layout
+  lang="zh-CN"
+  title="购买 Doclira PDF - 方案和 License"
+  description="选择 Doclira PDF 方案，通过 Gumroad 购买并获取 Windows 安装包和 License Key。"
+>
+  <Header locale="zh" />
+  <main class="guide-page">
+    <section class="guide-intro">
+      <p class="kicker">购买 DOCLIRA PDF</p>
+      <h1>按你的 PDF 工作量选择方案。</h1>
+      <p>购买通过 Gumroad 完成。付款后会收到 Windows 安装包和 License Key，用于激活软件。</p>
+      <div class="actions page-actions">
+        <a class="primary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">前往 Gumroad 安全结账</a>
+        <a class="secondary" href="/zh/download/">先下载免费 Lite</a>
+      </div>
+    </section>
+
+    <section class="plans standalone-plans">
+      {brand.pricing.map((plan) => (
+        <article class={`plan-card ${plan.highlight ? "highlight" : ""}`}>
+          {plan.highlight && <span class="plan-badge">推荐</span>}
+          <h2>{plan.name}</h2>
+          <p class="plan-price">{plan.price}</p>
+          <p>{plan.audience}</p>
+          <strong>{plan.ai}</strong>
+          <ul>{plan.features.map((item) => <li>{item}</li>)}</ul>
+        </article>
+      ))}
+    </section>
+
+    <section class="guide-grid">
+      <article>
+        <p class="step-number">01</p>
+        <h2>付款</h2>
+        <p>点击购买按钮，在 Gumroad 选择方案并完成付款。</p>
+      </article>
+      <article>
+        <p class="step-number">02</p>
+        <h2>下载安装包</h2>
+        <p>付款后从 Gumroad 收据或 Library 下载 Windows 安装包。</p>
+      </article>
+      <article>
+        <p class="step-number">03</p>
+        <h2>输入 License Key</h2>
+        <p>打开 Doclira PDF，输入收据里的 License Key，解锁对应方案。</p>
+      </article>
+      <article>
+        <p class="step-number">04</p>
+        <h2>需要时联系支持</h2>
+        <p>如果安装或宣传功能无法正常使用，请提供截图和不含敏感信息的复现说明。</p>
+      </article>
+    </section>
+
+    <section class="purchase-note">
+      <div>
+        <p class="kicker">购买前说明</p>
+        <h2>把预期说清楚</h2>
+        <p>Doclira 适合批量水印、转换、压缩、页面整理、图片导出和 AI 文档辅助。它不是 Acrobat 或 UPDF 这类复杂视觉 PDF 编辑器的完全替代品。</p>
+      </div>
+      <ul>
+        <li>支持 Windows 10 / 11 64 位。</li>
+        <li>核心 PDF 处理在本机完成。</li>
+        <li>AI 功能需要联网，并消耗对应方案的 AI 次数。</li>
+        <li>安装和宣传功能问题支持 7 天退款审核。</li>
+      </ul>
+    </section>
+  </main>
+  <Footer locale="zh" />
+</Layout>

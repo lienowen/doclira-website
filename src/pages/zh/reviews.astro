@@ -1,0 +1,80 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { brand } from "../../brand.js";
+
+const formAction = `https://formsubmit.co/${brand.supportEmail}`;
+---
+
+<Layout
+  lang="zh-CN"
+  title="评论和反馈 - Doclira PDF"
+  description="提交 Doclira PDF 的使用评论、问题反馈和改进建议。"
+>
+  <Header locale="zh" />
+  <main class="guide-page">
+    <section class="guide-intro">
+      <p class="kicker">评论和反馈</p>
+      <h1>告诉我们 Doclira PDF 是否好用。</h1>
+      <p>你可以在这里提交使用体验、问题反馈或改进建议。评论不会自动公开，我们会先审核。</p>
+    </section>
+
+    <section class="review-layout">
+      <div class="review-copy">
+        <p class="kicker">建议填写</p>
+        <h2>清楚的反馈能帮助我们更快改进产品。</h2>
+        <ul>
+          <li>你使用了哪个功能：批量水印、AI 助手、转换、压缩或其他流程。</li>
+          <li>结果是否符合预期。</li>
+          <li>如果是问题反馈，请写 Windows 版本和软件版本。</li>
+          <li>可以提供不含敏感信息的截图或样本说明。</li>
+        </ul>
+        <p class="review-note">请不要提交私密 PDF 内容、License Key 或付款信息。</p>
+      </div>
+
+      <form class="review-form" action={formAction} method="POST">
+        <input type="hidden" name="_subject" value="Doclira PDF review or feedback" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://doclira.com/zh/reviews/thanks/" />
+
+        <label>
+          姓名
+          <input name="name" type="text" placeholder="你的姓名或公司" required />
+        </label>
+
+        <label>
+          邮箱
+          <input name="email" type="email" placeholder="name@example.com" required />
+        </label>
+
+        <label>
+          评分
+          <select name="rating" required>
+            <option value="">请选择评分</option>
+            <option value="5">5 - 很有用</option>
+            <option value="4">4 - 不错</option>
+            <option value="3">3 - 还需要改进</option>
+            <option value="2">2 - 使用困难</option>
+            <option value="1">1 - 没解决我的问题</option>
+          </select>
+        </label>
+
+        <label>
+          订单邮箱或订单信息
+          <input name="order_reference" type="text" placeholder="可选，已购买用户填写" />
+        </label>
+
+        <label>
+          评论或反馈内容
+          <textarea name="message" rows="8" placeholder="你测试了什么？哪里好用？哪里需要改进？" required></textarea>
+        </label>
+
+        <button class="primary" type="submit">发送反馈</button>
+        <p class="form-disclaimer">表单会发送到 {brand.supportEmail}。请不要填写机密文件内容或激活码。</p>
+      </form>
+    </section>
+  </main>
+  <Footer locale="zh" />
+</Layout>

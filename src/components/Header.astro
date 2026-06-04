@@ -6,6 +6,9 @@ const isZh = locale === "zh";
 const prefix = isZh ? "/zh" : "";
 const guide = isZh ? "/zh/guide/" : "/guide/";
 const support = isZh ? "/zh/support/" : "/support/";
+const download = isZh ? "/zh/download/" : "/download/";
+const buy = isZh ? "/zh/buy/" : "/buy/";
+const reviews = isZh ? "/zh/reviews/" : "/reviews/";
 const swap = isZh ? "/" : "/zh/";
 ---
 
@@ -16,11 +19,13 @@ const swap = isZh ? "/" : "/zh/";
   </a>
   <nav aria-label={isZh ? "主导航" : "Primary navigation"}>
     <a href={`${prefix}/#features`}>{isZh ? "功能" : "Features"}</a>
-    <a href={`${prefix}/#examples`}>{isZh ? "效果" : "Examples"}</a>
+    <a href={`${prefix}/#examples`}>{isZh ? "示例" : "Examples"}</a>
     <a href={`${prefix}/#pricing`}>{isZh ? "价格" : "Pricing"}</a>
-    <a href={guide}>{isZh ? "使用指南" : "Guide"}</a>
+    <a href={download}>{isZh ? "下载" : "Download"}</a>
+    <a href={reviews}>{isZh ? "评论" : "Reviews"}</a>
+    <a href={guide}>{isZh ? "指南" : "Guide"}</a>
     <a href={support}>{isZh ? "支持" : "Support"}</a>
     <a class="language-link" href={swap}>{isZh ? "English" : "中文"}</a>
-    <a class="nav-buy" href={brand.purchaseUrl} target="_blank" rel="noreferrer">{isZh ? "购买" : "Buy now"}</a>
+    <a class="nav-buy" href={buy}>{isZh ? "购买" : "Buy now"}</a>
   </nav>
 </header>

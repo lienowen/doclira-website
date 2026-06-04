@@ -642,6 +642,7 @@ h1 { font-size: 64px; line-height: 1.02; margin-bottom: 18px; }
 }
 .guide-intro h1 { font-size: 52px; margin-bottom: 18px; }
 .guide-intro > p:last-child { font-size: 19px; line-height: 1.62; }
+.page-actions { margin-top: 28px; }
 .guide-grid {
   border-top: 1px solid var(--line);
   padding: 46px 0 66px;
@@ -707,6 +708,139 @@ h1 { font-size: 64px; line-height: 1.02; margin-bottom: 18px; }
 .policy-content ul { padding-left: 22px; margin: 0 0 10px; }
 .policy-content .note { margin-top: 14px; font-size: 14px; }
 .inline-button { margin-top: 30px; }
+.download-panel, .purchase-note, .final-cta {
+  border-top: 1px solid var(--line);
+  padding: 56px 0;
+}
+.download-panel {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 28px;
+  align-items: start;
+}
+.download-panel h2, .purchase-note h2, .final-cta h2 {
+  font-size: 34px;
+  line-height: 1.18;
+  margin-bottom: 14px;
+}
+.download-panel p, .purchase-note p, .final-cta p {
+  font-size: 16px;
+  line-height: 1.64;
+}
+.download-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.download-cards article {
+  min-height: 230px;
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+.download-cards h3 {
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+.standalone-plans {
+  margin-bottom: 18px;
+  padding: 0 0 52px;
+  border-bottom: 1px solid var(--line);
+}
+.standalone-plans .plan-card h2 {
+  color: white;
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+.purchase-note {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, .8fr);
+  gap: 32px;
+  align-items: start;
+}
+.purchase-note ul {
+  margin: 0;
+  padding: 24px 26px 24px 44px;
+  border: 1px solid #bfdcd7;
+  border-radius: 8px;
+  background: var(--mint-light);
+}
+.purchase-note li {
+  margin: 10px 0;
+  color: var(--mint-dark);
+  font-weight: 650;
+  line-height: 1.45;
+}
+.final-cta {
+  max-width: 780px;
+}
+.review-layout {
+  border-top: 1px solid var(--line);
+  padding: 54px 0 76px;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(360px, 1.1fr);
+  gap: 34px;
+  align-items: start;
+}
+.review-copy h2 {
+  font-size: 34px;
+  line-height: 1.18;
+  margin-bottom: 16px;
+}
+.review-copy ul {
+  margin: 20px 0;
+  padding-left: 22px;
+}
+.review-copy li {
+  margin: 11px 0;
+  color: var(--soft-ink);
+  line-height: 1.56;
+}
+.review-note, .form-disclaimer {
+  font-size: 14px;
+  line-height: 1.55;
+}
+.review-form {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+.review-form label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 17px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 750;
+}
+.review-form input, .review-form select, .review-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 12px 13px;
+  background: #fbfdfc;
+  color: var(--ink);
+  font: inherit;
+}
+.review-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+.review-form input:focus, .review-form select:focus, .review-form textarea:focus {
+  outline: 2px solid rgba(6, 124, 112, .18);
+  border-color: var(--mint);
+}
+.review-form button {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+}
+.form-disclaimer {
+  margin-top: 13px;
+  text-align: center;
+}
 footer {
   border-top: 1px solid var(--line);
   padding: 34px clamp(20px, 5vw, 64px);
@@ -736,6 +870,9 @@ footer a { color: var(--mint); font-weight: 650; }
   .demo-row { grid-template-columns: 1fr; }
   .pricing, .plans { grid-template-columns: 1fr; }
   .task-guide { grid-template-columns: 1fr; gap: 30px; }
+  .download-panel, .purchase-note { grid-template-columns: 1fr; }
+  .review-layout { grid-template-columns: 1fr; }
+  .download-cards { grid-template-columns: 1fr; }
   .task-guide.reverse div, .task-guide.reverse img { order: initial; }
   footer { align-items: start; }
 }

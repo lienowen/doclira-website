@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { brand } from "../brand.js";
+
+const formAction = `https://formsubmit.co/${brand.supportEmail}`;
+---
+
+<Layout
+  title="Reviews and Feedback - Doclira PDF"
+  description="Share feedback about Doclira PDF, report your experience and help improve the Windows PDF toolkit."
+>
+  <Header />
+  <main class="guide-page">
+    <section class="guide-intro">
+      <p class="kicker">REVIEWS</p>
+      <h1>Tell us how Doclira PDF worked for you.</h1>
+      <p>Use this page to send product feedback, report a workflow issue or leave a review after trying the Windows app.</p>
+    </section>
+
+    <section class="review-layout">
+      <div class="review-copy">
+        <p class="kicker">WHAT TO INCLUDE</p>
+        <h2>Useful feedback helps us improve the product faster.</h2>
+        <ul>
+          <li>Which task you tried: batch watermark, AI assistant, conversion, compression or another workflow.</li>
+          <li>Whether the result matched what you expected.</li>
+          <li>Your Windows version and app version if you are reporting a problem.</li>
+          <li>A non-sensitive sample description or screenshot when something fails.</li>
+        </ul>
+        <p class="review-note">Reviews are reviewed before being published. Please do not submit private documents, license keys or payment details.</p>
+      </div>
+
+      <form class="review-form" action={formAction} method="POST">
+        <input type="hidden" name="_subject" value="Doclira PDF review or feedback" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://doclira.com/reviews/thanks/" />
+
+        <label>
+          Name
+          <input name="name" type="text" placeholder="Your name or company" required />
+        </label>
+
+        <label>
+          Email
+          <input name="email" type="email" placeholder="name@example.com" required />
+        </label>
+
+        <label>
+          Rating
+          <select name="rating" required>
+            <option value="">Choose a rating</option>
+            <option value="5">5 - Very useful</option>
+            <option value="4">4 - Good</option>
+            <option value="3">3 - Needs improvement</option>
+            <option value="2">2 - Hard to use</option>
+            <option value="1">1 - Did not work for me</option>
+          </select>
+        </label>
+
+        <label>
+          Order email or reference
+          <input name="order_reference" type="text" placeholder="Optional, if you purchased" />
+        </label>
+
+        <label>
+          Your review or feedback
+          <textarea name="message" rows="8" placeholder="What did you try? What worked? What should be improved?" required></textarea>
+        </label>
+
+        <button class="primary" type="submit">Send feedback</button>
+        <p class="form-disclaimer">This form sends your message to {brand.supportEmail}. Do not include confidential PDF content or license keys.</p>
+      </form>
+    </section>
+  </main>
+  <Footer />
+</Layout>
