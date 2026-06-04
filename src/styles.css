@@ -855,6 +855,46 @@ h1 { font-size: 64px; line-height: 1.02; margin-bottom: 18px; }
 .download-note p {
   line-height: 1.62;
 }
+.credit-section {
+  border-top: 1px solid var(--line);
+  padding: 56px 0;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(360px, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+.credit-section h2 {
+  font-size: 34px;
+  line-height: 1.18;
+  margin-bottom: 14px;
+}
+.credit-section p {
+  font-size: 16px;
+  line-height: 1.64;
+}
+.credit-card {
+  padding: 28px;
+  border: 1px solid #bfdcd7;
+  border-radius: 8px;
+  background: var(--panel);
+}
+.credit-card h3 {
+  margin: 14px 0 10px;
+  font-size: 25px;
+}
+.credit-card ul {
+  margin: 18px 0 0;
+  padding-left: 20px;
+}
+.credit-card li {
+  margin: 9px 0;
+  color: var(--soft-ink);
+  line-height: 1.5;
+}
+.credit-note {
+  margin-top: 14px;
+  font-size: 13px !important;
+}
 .review-layout {
   border-top: 1px solid var(--line);
   padding: 54px 0 76px;
@@ -951,6 +991,7 @@ footer a { color: var(--mint); font-weight: 650; }
   .pricing, .plans { grid-template-columns: 1fr; }
   .task-guide { grid-template-columns: 1fr; gap: 30px; }
   .download-panel, .purchase-note { grid-template-columns: 1fr; }
+  .credit-section { grid-template-columns: 1fr; }
   .review-layout { grid-template-columns: 1fr; }
   .download-cards { grid-template-columns: 1fr; }
   .download-row { grid-template-columns: 1fr 1fr; }
