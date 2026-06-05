@@ -5,74 +5,35 @@ import Footer from "../../components/Footer.astro";
 import { brand } from "../../brand.js";
 
 const features = [
-  ["批量水印", "给选中的 PDF 批量添加文字或 Logo 水印，支持平铺、透明度、旋转角度和指定页码。"],
-  ["PDF 转 Word / 图片", "普通文本型 PDF 可导出为 DOCX，也可以把每一页导出为清晰 PNG。"],
-  ["压缩与页面整理", "压缩文件体积、合并 PDF、拆分页码、把图片合成为 PDF。"],
-  ["轻量文字修改", "替换短字段或增加少量文字，适合日期、姓名、编号、备注等小范围修正。"],
-  ["AI 文档助手", "对可提取文字的 PDF 进行总结、翻译、润色、提问，按套餐提供 AI 使用额度。"],
-  ["本地优先处理", "水印、转换、压缩、合并拆分等核心处理在 Windows 本机完成，输出目录由用户选择。"],
-];
-
-const proofPoints = [
-  "真实 Windows 软件截图，不是概念图",
-  "提供免费开源 Lite 版，可先体验基础流程",
-  "安装和宣传功能问题支持 7 天退款",
-  "明确说明复杂 PDF 和扫描件的处理边界",
-];
-
-const useCases = [
-  ["合同和预览文件", "对外发送前添加清晰的内部资料、保密或公司水印。"],
-  ["系统上传和门户要求", "当系统限制文件大小或要求图片格式时，压缩 PDF 或导出 PNG。"],
-  ["复用 PDF 内容", "把普通文本型 PDF 转成 Word，方便复制、修改和继续整理。"],
-  ["小范围修正", "修改日期、客户名称、项目编号或短备注，而不是重做整份 PDF。"],
+  ["批量加水印", "给多个 PDF 添加文字或 Logo 水印，支持透明度、旋转、平铺和指定输出目录。"],
+  ["PDF 转 Word / 图片", "普通文字型 PDF 可导出为 DOCX，也可以把页面导出为 PNG 图片。"],
+  ["压缩、合并、拆分", "适合邮件附件、系统上传、资料整理和日常办公归档。"],
+  ["AI 文档助手", "对可提取文字的 PDF 进行总结、翻译、提问和信息提取，按 AI 点数消耗。"],
+  ["轻量文字处理", "适合日期、姓名、编号、备注这类小范围补充和修正。"],
+  ["本地优先", "水印、转换、压缩、合并拆分等核心处理在 Windows 本机完成。"],
 ];
 
 const specs = [
   ["系统", "Windows 10 / 11，64 位"],
-  ["交付", "通过 Gumroad 交付安装包和 License Key"],
-  ["本地功能", "水印、转换、压缩、合并、拆分、图片导出"],
-  ["AI 功能", "需要联网，会使用提取出的 PDF 文本"],
-  ["适合场景", "日常办公 PDF 和批量处理"],
-  ["能力边界", "不是 Acrobat 或 UPDF 的复杂视觉编辑替代品"],
-];
-
-const pricing = [
-  {
-    name: "Pro",
-    price: "$29",
-    audience: "适合个人用户和日常 PDF 工作",
-    ai: "每月 50 次 AI 使用",
-    features: ["批量水印", "PDF 转 Word", "压缩、合并、拆分", "轻量文字修改"],
-  },
-  {
-    name: "Business",
-    price: "$59",
-    audience: "适合高频处理办公文件",
-    ai: "每月 200 次 AI 使用",
-    features: ["更高 AI 额度", "批量处理流程", "商业文档使用", "优先安装协助"],
-    highlight: true,
-  },
-  {
-    name: "Enterprise",
-    price: "$99",
-    audience: "适合团队和更重度使用",
-    ai: "每月 500 次 AI 使用",
-    features: ["最高 AI 额度", "适合团队使用", "批量文档流程", "升级支持"],
-  },
+  ["安装包", "从官网下载或 Release 下载"],
+  ["购买", "Gumroad 购买激活码，不是购买安装包"],
+  ["AI", "需要联网，并消耗 AI 点数余额"],
+  ["适合", "办公室 PDF 批量处理、资料整理、合同水印和轻量转换"],
+  ["边界", "不是 Acrobat / UPDF 级复杂视觉 PDF 编辑器"],
 ];
 
 const faq = [
-  ["会上传我的 PDF 吗？", "水印、转换、压缩、合并拆分等核心任务在本机完成。只有主动使用 AI 功能时，才会发送提取出的文本给 AI 服务。"],
-  ["能像 Word 一样任意修改 PDF 吗？", "不能承诺所有 PDF 都像 Word 一样自由编辑。Doclira 适合短字段替换、少量文字添加、批量水印和转换。复杂排版、特殊字体、扫描件可能需要转 Word、OCR 或人工检查。"],
-  ["购买后得到什么？", "Gumroad 会交付 Windows 安装包和 License Key。打开软件输入 Key 后，会自动解锁对应套餐。"],
-  ["支持哪些系统？", "当前支持 Windows 10 / Windows 11 的 64 位系统。"],
+  ["购买后得到什么？", "购买后得到 License Key。安装包可以先从官网下载，付款只是用于激活付费方案。"],
+  ["AI 点数是每月刷新吗？", "不是。当前设计是一次性点数余额，用完后可以单独购买 AI 点数包。"],
+  ["会上传我的 PDF 吗？", "水印、转换、压缩、合并拆分等核心功能在本机处理。只有主动使用 AI 时，会发送提取出的文字内容。"],
+  ["能像 Word 一样编辑所有 PDF 吗？", "不能承诺所有 PDF 都自然编辑。Doclira 更适合批量水印、转换、压缩、整理、AI 辅助和少量文字处理。"],
 ];
 ---
 
 <Layout
   lang="zh-CN"
   title="Doclira PDF - Windows PDF 办公工具"
-  description="Doclira PDF 是面向 Windows 的 PDF 工具，支持批量水印、转换、压缩、合并拆分、轻量文字修改和 AI 文档助手。"
+  description="Doclira PDF 是面向 Windows 的 PDF 工具，支持批量水印、转换、压缩、合并拆分、轻量文字处理和 AI 文档助手。"
 >
   <Header locale="zh" />
   <main>
@@ -92,33 +53,36 @@ const faq = [
             <aside><b>Output</b><span>Watermark</span><span>Convert</span><span>Compress</span></aside>
           </div>
         </div>
-        <p class="media-caption">首页使用更干净的产品预览图；真实操作放在下方演示视频里。</p>
+        <p class="media-caption">安装包可先下载，购买只用于激活付费功能。</p>
       </div>
       <div class="hero-content">
-        <p class="kicker">面向真实办公场景的 WINDOWS PDF 工具</p>
-        <h1>把重复的 PDF 工作集中到一个工具里完成。</h1>
-        <p class="hero-copy">Doclira PDF 支持水印、转换、压缩、合并拆分、少量文字修正，并提供可选 AI 文档助手，适合日常合同、资料、报告和内部文件处理。</p>
+        <p class="kicker">WINDOWS PDF TOOLKIT</p>
+        <h1>把重复的 PDF 办公工作集中到一个工具里完成。</h1>
+        <p class="hero-copy">Doclira PDF 适合批量加水印、PDF 转 Word/图片、压缩、合并拆分、轻量文字处理和 AI 文档问答。核心 PDF 处理优先在本机完成。</p>
         <div class="actions">
-          <a class="primary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">{brand.price} 起购买</a>
-          <a class="secondary" href={brand.liteUrl} target="_blank" rel="noreferrer">下载免费 Lite 版</a>
+          <a class="primary" href="/zh/download/">下载安装包</a>
+          <a class="secondary" href="/zh/buy/">购买激活码</a>
         </div>
         <div class="requirements">
           <span>{brand.platform}</span>
-          <span>PDF 核心处理在本机完成</span>
-          <span>购买后自动发 License Key</span>
+          <span>本地 PDF 处理</span>
+          <span>激活码解锁付费方案</span>
         </div>
       </div>
     </section>
 
     <section class="trust">
-      {proofPoints.map((point) => <span>{point}</span>)}
+      <span>先安装再激活</span>
+      <span>AI 点数可单独购买</span>
+      <span>7 天退款审核</span>
+      <span>清楚说明能力边界</span>
     </section>
 
     <section id="features" class="band">
       <div class="section-head">
         <p class="kicker">核心功能</p>
-        <h2>做常见 PDF 工作，同时把边界说清楚</h2>
-        <p class="intro">Doclira 重点解决日常办公里的高频 PDF 处理，尤其是批量处理和明确输出结果。</p>
+        <h2>围绕日常办公 PDF 任务设计</h2>
+        <p class="intro">不承诺替代所有专业 PDF 编辑器，重点把高频、重复、批量的工作做稳。</p>
       </div>
       <div class="feature-grid six">
         {features.map(([title, text], index) => (
@@ -133,90 +97,32 @@ const faq = [
 
     <section id="examples" class="examples clean-examples">
       <div class="section-head">
-        <p class="kicker">真实软件证据</p>
-        <h2>展示产品真的在工作，但页面保持清爽</h2>
-        <p class="intro">少量清晰真实图，比堆满对比海报更容易建立信任。</p>
+        <p class="kicker">工作流程</p>
+        <h2>选择文件、选择任务、检查输出</h2>
+        <p class="intro">Doclira 的商业价值来自清楚的批量处理流程，而不是复杂但不稳定的视觉编辑承诺。</p>
       </div>
       <div class="proof-layout">
         <div class="workflow-visual" aria-label="Doclira PDF 工作流程">
           <div><span>1</span><strong>添加 PDF</strong><p>选择一个或多个文件。</p></div>
           <div><span>2</span><strong>选择任务</strong><p>水印、转换、压缩或整理。</p></div>
-          <div><span>3</span><strong>保存结果</strong><p>在本机检查输出文件。</p></div>
+          <div><span>3</span><strong>保存输出</strong><p>在本机检查生成结果。</p></div>
         </div>
         <div class="proof-copy">
-          <h3>围绕“可见输出”设计</h3>
-          <p>用户选择文件、选择输出目录、执行任务，然后检查生成结果。对于日常 PDF 办公，这比复杂但不稳定的功能堆砌更重要。</p>
+          <h3>适合真实办公场景</h3>
+          <p>合同、报价单、内部资料、报告、表单和上传材料，经常需要批量处理。Doclira 把这些动作放进一个 Windows 工具里，降低重复操作。</p>
           <ul>
-            <li>水印和输出文件可以直接检查。</li>
-            <li>默认保留原文件，减少误操作风险。</li>
-            <li>批量处理前可以看到选中的文件。</li>
+            <li>默认保留原文件，生成新文件。</li>
+            <li>批量处理前可以看到文件列表。</li>
+            <li>AI 用完可以单独购买点数包。</li>
           </ul>
         </div>
-      </div>
-      <div class="demo-list minimal">
-        <article class="demo-row featured">
-          <div class="demo-content">
-            <p class="demo-index">01 / 批量保护</p>
-            <h3>添加文字或 Logo 平铺水印</h3>
-            <p>适合合同、内部资料、预览文件和对外发送材料，既能阅读，又能标记权属。</p>
-            <div class="demo-tags"><span>干净 PDF</span><strong>加水印</strong><span>带水印 PDF</span></div>
-          </div>
-          <img src="/assets/demo_watermark_zh.png" alt="PDF 添加平铺水印前后的效果图" />
-        </article>
-        <article class="demo-row">
-          <div class="demo-content">
-            <p class="demo-index">02 / 可编辑输出</p>
-            <h3>普通 PDF 转 Word</h3>
-            <p>文本型 PDF 可导出为 DOCX 继续编辑。复杂扫描件或特殊排版建议转换后检查。</p>
-            <div class="demo-tags"><span>PDF</span><strong>转换</strong><span>DOCX</span></div>
-          </div>
-          <img src="/assets/demo_pdf_to_word_zh.png" alt="PDF 转 Word 后的效果示例" />
-        </article>
-      </div>
-    </section>
-
-    <section id="use-cases" class="use-cases">
-      <div class="section-head">
-        <p class="kicker">适用场景</p>
-        <h2>适合重复的 PDF 办公工作，不做万能承诺</h2>
-        <p class="intro">Doclira 更像一个本地流程工具，适合经常处理 PDF 的用户。</p>
-      </div>
-      <div class="use-case-grid">
-        {useCases.map(([title, text]) => <article><h3>{title}</h3><p>{text}</p></article>)}
-      </div>
-    </section>
-
-    <section id="walkthrough" class="app-demo">
-      <div class="section-head">
-        <p class="kicker">操作视频</p>
-        <h2>从真实软件里演示批量水印流程</h2>
-        <p class="intro">视频展示打开示例 PDF、设置平铺水印、检查生成结果的完整过程。</p>
-      </div>
-      <video class="walkthrough-video" controls playsinline preload="metadata">
-        <source src="/media/doclira_watermark_tutorial_en_1920x1080_voice.mp4" type="video/mp4" />
-        当前浏览器不支持视频播放。
-      </video>
-    </section>
-
-    <section id="editions" class="editions">
-      <div class="section-head">
-        <p class="kicker">免费版和付费版</p>
-        <h2>先体验基础流程，再决定是否购买商业版</h2>
-        <p class="intro">Lite 是公开的基础版，适合先了解软件操作。付费版解锁商业流程、高级批量工具和 AI 额度。</p>
-      </div>
-      <div class="compare-table" role="table" aria-label="Doclira Lite 和付费版对比">
-        <div class="compare-row compare-head" role="row"><span>能力</span><strong>免费 Lite</strong><strong>付费版</strong></div>
-        <div class="compare-row" role="row"><span>预览和基础页面整理</span><strong>包含</strong><strong>包含</strong></div>
-        <div class="compare-row" role="row"><span>单文件基础水印</span><strong>包含</strong><strong>包含</strong></div>
-        <div class="compare-row" role="row"><span>高级批量水印、转换和输出流程</span><strong>-</strong><strong>包含</strong></div>
-        <div class="compare-row" role="row"><span>AI 文档助手和商业授权</span><strong>-</strong><strong>包含</strong></div>
       </div>
     </section>
 
     <section id="specs" class="specs">
       <div class="section-head">
-        <p class="kicker">技术规格</p>
-        <h2>购买前清楚知道自己买的是什么</h2>
+        <p class="kicker">购买前说明</p>
+        <h2>知道自己买的是什么</h2>
       </div>
       <div class="spec-grid">
         {specs.map(([label, value]) => <div><span>{label}</span><strong>{value}</strong></div>)}
@@ -225,12 +131,12 @@ const faq = [
 
     <section id="pricing" class="pricing">
       <div>
-        <p class="kicker">套餐价格</p>
-        <h2>按使用频率选择套餐，而不是猜功能</h2>
-        <p class="pricing-note">通过 Gumroad 安全结算并自动交付 License Key。所有套餐支持 Windows 10 / 11 64 位系统。</p>
+        <p class="kicker">授权方案</p>
+        <h2>下载安装包免费，付费用于激活功能</h2>
+        <p class="pricing-note">Gumroad 负责付款和 License Key 交付。你可以先下载安装包，再决定是否购买激活码。</p>
       </div>
       <div class="plans">
-        {pricing.map((plan) => (
+        {brand.pricing.map((plan) => (
           <article class={`plan-card ${plan.highlight ? "highlight" : ""}`}>
             {plan.highlight && <span class="plan-badge">推荐</span>}
             <h3>{plan.name}</h3>
@@ -241,22 +147,16 @@ const faq = [
           </article>
         ))}
       </div>
-      <a class="primary wide" href={brand.purchaseUrl} target="_blank" rel="noreferrer">前往 Gumroad 购买</a>
+      <a class="primary wide" href="/zh/buy/">查看购买方式</a>
     </section>
 
-    <section id="faq" class="faq">
+    <section class="faq">
       <div class="section-head">
-        <p class="kicker">购买前说明</p>
-        <h2>先说清楚，减少误解和售后</h2>
+        <p class="kicker">常见问题</p>
+        <h2>减少购买前疑问</h2>
       </div>
-      <div class="faq-grid">
-        {faq.map(([question, answer]) => <article><h3>{question}</h3><p>{answer}</p></article>)}
-      </div>
-      <div class="trust-strip">
-        <span>7 天退款政策</span>
-        <span>购买后交付安装包和 License Key</span>
-        <span>支持邮箱：{brand.supportEmail}</span>
-        <span>复杂 PDF 需转换后检查</span>
+      <div class="faq-list">
+        {faq.map(([q, a]) => <details><summary>{q}</summary><p>{a}</p></details>)}
       </div>
     </section>
   </main>

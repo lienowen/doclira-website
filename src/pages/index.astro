@@ -9,7 +9,7 @@ const features = [
   ["PDF to Word and images", "Convert ordinary text PDFs to DOCX, or export every page as a clear PNG for sharing and uploads."],
   ["Compress and organize", "Reduce file size, merge documents, split pages and combine images into PDFs from one file list."],
   ["Light PDF text correction", "Replace short fields or add small notes while saving a new PDF, useful for dates, names and brief corrections."],
-  ["AI document help", "Summarize, translate, polish or ask questions about selectable PDF text with plan-based AI allowances."],
+  ["AI document help", "Summarize, translate, polish or ask questions about selectable PDF text with AI credit balance."],
   ["Local-first workflow", "Most PDF processing runs on your Windows computer. You choose the output folder before processing."],
 ];
 
@@ -29,7 +29,7 @@ const useCases = [
 
 const specs = [
   ["System", "Windows 10 / 11, 64-bit"],
-  ["Delivery", "Windows installer and license key through Gumroad"],
+  ["Delivery", "Download installer first; Gumroad delivers the activation key"],
   ["Local tasks", "Watermark, conversion, compression, merge, split and image export"],
   ["AI tasks", "Requires internet and uses extracted PDF text"],
   ["Best fit", "Recurring office PDF work and batch processing"],
@@ -39,7 +39,7 @@ const specs = [
 const faq = [
   ["Does Doclira upload my PDFs?", "Core tasks such as watermarking, conversion, compression, merge and split run locally. AI features send extracted text to the AI service only when you use AI."],
   ["Can it edit every PDF like Word?", "No. It supports lightweight PDF text corrections. Complex design-heavy PDFs, unusual fonts and scanned files may require conversion to Word, OCR or manual cleanup."],
-  ["What do I receive after purchase?", "Gumroad delivers the Windows installer and a license key. Open the app, enter the key and the purchased plan is unlocked."],
+  ["What do I receive after purchase?", "Gumroad delivers a license key. Download the Windows installer from the website first, then enter the key in the app to unlock your plan."],
   ["Which Windows versions are supported?", "Windows 10 and Windows 11 on 64-bit systems."],
 ];
 ---
@@ -73,8 +73,8 @@ const faq = [
         <h1>Handle repeat PDF jobs without opening five different tools.</h1>
         <p class="hero-copy">Doclira PDF helps you watermark, convert, compress, merge, split and lightly correct PDFs on Windows, with optional AI help for document text.</p>
         <div class="actions">
-          <a class="primary" href="/buy/">Buy from {brand.price}</a>
-          <a class="secondary" href="/download/">Download free Lite</a>
+          <a class="primary" href="/download/">Download installer</a>
+          <a class="secondary" href="/buy/">Buy activation key</a>
         </div>
         <div class="requirements">
           <span>{brand.platform}</span>
@@ -228,7 +228,7 @@ const faq = [
       </div>
       <div class="trust-strip">
         <span>7-day refund policy</span>
-        <span>Installer and activation key after purchase</span>
+        <span>Installer download is separate from purchase</span>
         <span>Support: {brand.supportEmail}</span>
         <span>Complex PDFs may need review</span>
       </div>

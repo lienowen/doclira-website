@@ -6,30 +6,39 @@ import { brand } from "../../brand.js";
 
 const downloads = [
   {
-    name: "Doclira PDF Lite",
-    tag: "免费",
+    name: "Doclira PDF Windows 安装包",
+    tag: "安装包",
     platform: "Windows 10 / 11，64 位",
-    bestFor: "先体验基础界面和 PDF 工作流。",
-    delivery: "公开 GitHub 仓库",
-    action: "下载 Lite",
-    href: brand.liteUrl,
+    bestFor: "先安装软件，免费试用基础功能，之后再输入激活码解锁。",
+    delivery: "官网直接下载",
+    action: "下载安装包",
+    href: brand.installerUrl,
     primary: true,
   },
   {
-    name: "Doclira PDF Pro",
+    name: "软件激活码",
     tag: brand.price,
     platform: "Windows 10 / 11，64 位",
-    bestFor: "日常 PDF 办公、批量处理和 AI 文档辅助。",
-    delivery: "Gumroad 付款后交付安装包和 License Key",
-    action: "购买 Pro",
+    bestFor: "解锁付费批量工具、商业使用权限和内置 AI 点数。",
+    delivery: "Gumroad 自动交付 License Key",
+    action: "购买激活码",
     href: brand.purchaseUrl,
+  },
+  {
+    name: "AI 点数包",
+    tag: "加购",
+    platform: "已激活的软件",
+    bestFor: "内置 AI 点数用完后，额外购买文档问答、总结、提取信息点数。",
+    delivery: "Gumroad 自动交付 AI 点数兑换码",
+    action: "购买 AI 点数",
+    href: brand.aiCreditsUrl,
   },
   {
     name: "使用指南",
     tag: "指南",
     platform: "在线查看",
-    bestFor: "安装、激活和常用功能操作步骤。",
-    delivery: "官网指南",
+    bestFor: "安装、激活、下载、常用功能和售后说明。",
+    delivery: "官网文档",
     action: "打开指南",
     href: "/zh/guide/",
   },
@@ -39,14 +48,14 @@ const downloads = [
 <Layout
   lang="zh-CN"
   title="下载 Doclira PDF - Windows PDF 工具"
-  description="下载 Doclira PDF Lite，购买完整 Windows 版本，或查看使用指南。"
+  description="从官网直接下载 Doclira PDF Windows 安装包，购买激活码或 AI 点数，查看使用指南。"
 >
   <Header locale="zh" />
   <main class="download-page">
     <section class="download-hero">
       <p class="kicker">下载</p>
       <h1>下载 Doclira PDF</h1>
-      <p>选择免费 Lite 版、购买完整 Windows 工具，或打开使用指南。</p>
+      <p>安装包和购买是分开的。先从官网下载 Windows 安装包；付费只是获得激活码或 AI 点数兑换码。</p>
     </section>
 
     <section class="download-list" aria-label="Doclira PDF 下载选项">
@@ -72,7 +81,7 @@ const downloads = [
 
     <section class="download-note">
       <h2>建议先这样做</h2>
-      <p>新用户建议先用 Lite 版测试非敏感 PDF。如果这个流程适合你的日常办公，再购买付费版用于商业工作、批量处理和 AI 点数。</p>
+      <p>新用户建议先安装软件，用非敏感 PDF 测试预览、转 Word、导出图片、水印和批量流程。如果适合日常办公，再购买激活码解锁付费方案。</p>
     </section>
   </main>
   <Footer locale="zh" />

@@ -6,23 +6,32 @@ import { brand } from "../brand.js";
 
 const downloads = [
   {
-    name: "Doclira PDF Lite",
-    tag: "Free",
+    name: "Doclira PDF Windows Installer",
+    tag: "Installer",
     platform: "Windows 10 / 11, 64-bit",
-    bestFor: "Trying the basic interface and PDF workflow.",
-    delivery: "Public GitHub repository",
-    action: "Download Lite",
-    href: brand.liteUrl,
+    bestFor: "Install the app first, then use free features or activate a paid plan.",
+    delivery: "Direct installer / release download",
+    action: "Download Installer",
+    href: brand.installerUrl,
     primary: true,
   },
   {
-    name: "Doclira PDF Pro",
+    name: "Activation Key",
     tag: brand.price,
     platform: "Windows 10 / 11, 64-bit",
-    bestFor: "Daily PDF work, batch tools and AI document help.",
-    delivery: "Installer and license key after Gumroad checkout",
-    action: "Buy Pro",
+    bestFor: "Unlock paid batch tools, commercial use and included AI credits.",
+    delivery: "Gumroad license key",
+    action: "Buy License",
     href: brand.purchaseUrl,
+  },
+  {
+    name: "AI Credits",
+    tag: "Add-on",
+    platform: "Activated app",
+    bestFor: "Add more AI document credits after the included credits are used.",
+    delivery: "Gumroad credit key",
+    action: "Buy Credits",
+    href: brand.aiCreditsUrl,
   },
   {
     name: "User Guide",
@@ -38,14 +47,14 @@ const downloads = [
 
 <Layout
   title="Download Doclira PDF - Windows PDF Toolkit"
-  description="Download Doclira PDF Lite, purchase the full Windows edition, or open the user guide."
+  description="Download the Doclira PDF Windows installer, buy an activation key, or open the user guide."
 >
   <Header />
   <main class="download-page">
     <section class="download-hero">
       <p class="kicker">DOWNLOAD</p>
       <h1>Download Doclira PDF</h1>
-      <p>Choose the free Lite edition, purchase the full Windows toolkit, or open the guide.</p>
+      <p>The installer is separate from purchase. Download the Windows app first; payment only provides the activation key and optional AI credit keys.</p>
     </section>
 
     <section class="download-list" aria-label="Doclira PDF download options">
@@ -71,7 +80,7 @@ const downloads = [
 
     <section class="download-note">
       <h2>Recommended first step</h2>
-      <p>New users should try Lite first with non-sensitive PDFs. If the workflow fits your office tasks, use the paid edition for commercial work, batch processing and AI credits.</p>
+      <p>New users should install Doclira PDF and test non-sensitive PDFs first. If the workflow fits your office tasks, buy a license key to unlock the paid plan.</p>
     </section>
   </main>
   <Footer />
