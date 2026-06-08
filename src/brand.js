@@ -5,7 +5,7 @@ export const brand = {
   platform: "Windows 10 / 11 (64-bit)",
   price: "$29",
   purchaseUrl: "https://taixianglumark.gumroad.com/l/doclira-pdf",
-  aiCreditsUrl: "https://doclira.com/buy/#ai-credits",
+  aiCreditsUrl: "https://taixianglumark.gumroad.com/l/ipkbe",
   installerUrl: "https://github.com/lienowen/doclira-website/releases/download/v1.0.0/DocliraPDF_Setup_v1.0.0_Windows_x64_EN.exe",
   supportEmail: "lienowen@outlook.com",
   pricing: [
