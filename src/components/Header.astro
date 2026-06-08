@@ -5,7 +5,6 @@ const { locale = "en" } = Astro.props;
 const isZh = locale === "zh";
 const prefix = isZh ? "/zh" : "";
 const guide = isZh ? "/zh/guide/" : "/guide/";
-const download = isZh ? "/zh/download/" : "/download/";
 const swap = isZh ? "/" : "/zh/";
 ---
 
@@ -16,7 +15,7 @@ const swap = isZh ? "/" : "/zh/";
   </a>
   <nav aria-label="Primary navigation">
     <a href={`${prefix}/#features`}>{isZh ? "Features" : "Features"}</a>
-    <a href={download}>{isZh ? "Download" : "Download free"}</a>
+    <a href="/download/">{isZh ? "Download" : "Download free"}</a>
     <a href={guide}>{isZh ? "Guide" : "Guide"}</a>
     <a href="/feedback/">{isZh ? "Feedback" : "Feedback"}</a>
     <a href={`${prefix}/#faq`}>FAQ</a>
