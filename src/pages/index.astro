@@ -121,20 +121,23 @@ const faq = [
 
     <section id="pricing" class="pricing">
       <div>
-        <p class="kicker">WINDOWS DESKTOP LICENSE</p>
-        <h2>{brand.product}</h2>
-        <p class="price">{brand.price}</p>
-        <p class="pricing-note">Download the installer first. Gumroad delivers your activation key after purchase.</p>
+        <p class="kicker">HOW PURCHASE WORKS</p>
+        <h2>Download the app first. Buy the key only when you need paid tools.</h2>
+        <p class="pricing-note">The installer is separate from payment. Gumroad delivers the activation key, and the app unlocks the license level and included AI credits after activation.</p>
       </div>
-      <div class="included">
-        <p>Included</p>
-        <ul>
-          <li>Batch watermark and file tools</li>
-          <li>PDF to Word and page images</li>
-          <li>Redaction, audit and local exports</li>
-          <li>Activation key delivery after purchase</li>
-        </ul>
-        <a class="primary wide" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Purchase on Gumroad</a>
+      <div class="purchase-flow">
+        <article>
+          <span>1</span>
+          <h3>Free installer</h3>
+          <p>Install Doclira PDF and test basic workflows on Windows before buying.</p>
+          <a class="secondary wide" href="/download/">Download app</a>
+        </article>
+        <article>
+          <span>2</span>
+          <h3>Activation key</h3>
+          <p>Buy once on Gumroad to unlock paid features and included AI credits.</p>
+          <a class="primary wide" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Buy key from {brand.price}</a>
+        </article>
       </div>
     </section>
 

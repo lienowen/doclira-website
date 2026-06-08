@@ -13,30 +13,59 @@ import { brand } from "../brand.js";
   <main class="policy-page">
     <section class="policy-hero">
       <p class="kicker">BUY LICENSE</p>
-      <h1>Buy the activation key, not the installer.</h1>
-      <p>The installer can be downloaded first. Gumroad delivers the license key used to activate paid features in the Windows app.</p>
+      <h1>Buy an activation key after installing Doclira PDF.</h1>
+      <p>The Windows installer is downloaded from this website. Gumroad is used for payment and automatic key delivery.</p>
       <div class="actions">
-        <a class="primary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Purchase on Gumroad</a>
+        <a class="primary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Buy license on Gumroad</a>
         <a class="secondary" href="/download/">Download installer</a>
       </div>
     </section>
 
-    <section class="pricing">
-      <div>
-        <p class="kicker">ONE-TIME WINDOWS LICENSE</p>
-        <h2>{brand.product}</h2>
-        <p class="price">{brand.price}</p>
-        <p class="pricing-note">For Windows 10 / 11 64-bit. AI credits are visible in the app and can be topped up separately.</p>
+    <section class="band">
+      <div class="section-head">
+        <p class="kicker">LICENSE OPTIONS</p>
+        <h2>Choose by workload, not by installer.</h2>
+        <p class="intro">Every paid plan uses the same Windows installer. The activation key decides which limits and included AI credits are unlocked.</p>
       </div>
-      <div class="included">
-        <p>Good fit for</p>
-        <ul>
-          <li>Batch watermarking contracts and internal documents</li>
-          <li>PDF to Word, image export, merge, split and compression</li>
-          <li>Redaction, security audit and AI document help</li>
-          <li>Local-first processing with clear output files</li>
-        </ul>
-        <a class="primary wide" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Buy on Gumroad</a>
+      <div class="tier-grid">
+        {brand.pricing.map((plan) => (
+          <article class:list={["tier-card", plan.highlight && "highlight"]}>
+            {plan.highlight && <span class="tier-badge">Best for teams</span>}
+            <h3>{plan.name}</h3>
+            <p class="tier-price">{plan.price}</p>
+            <ul>
+              <li>{plan.ai}</li>
+              <li>Batch watermark, merge, split, compress and convert tools</li>
+              <li>Local PDF processing with activation key delivery</li>
+            </ul>
+            <a class="primary wide" href={plan.url} target="_blank" rel="noreferrer">{plan.cta}</a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="ai-credits" class="band soft-band">
+      <div class="section-head">
+        <p class="kicker">AI CREDIT PACKS</p>
+        <h2>AI usage is a visible balance.</h2>
+        <p class="intro">Credits are consumed only when users run AI tasks such as summarizing, translating or asking questions about PDF text.</p>
+      </div>
+      <div class="credit-grid">
+        <article>
+          <h3>100 credits</h3>
+          <p>For light AI use and testing document Q&A.</p>
+        </article>
+        <article>
+          <h3>300 credits</h3>
+          <p>For regular weekly PDF summary and translation work.</p>
+        </article>
+        <article>
+          <h3>1000 credits</h3>
+          <p>For teams processing long manuals, forms and reports.</p>
+        </article>
+      </div>
+      <div class="center-actions">
+        <a class="primary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Buy or add credits on Gumroad</a>
       </div>
     </section>
   </main>

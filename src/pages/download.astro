@@ -13,11 +13,11 @@ import { brand } from "../brand.js";
   <main class="download-page">
     <section class="download-hero">
       <p class="kicker">DOWNLOAD</p>
-      <h1>Download Doclira PDF</h1>
-      <p>Install the Windows app first. Purchase is only for the activation key and optional AI credit packs.</p>
+      <h1>Download the Windows app first.</h1>
+      <p>The installer is free to download. Payment only gives you an activation key or extra AI credits.</p>
       <div class="actions">
         <a class="primary" href={brand.installerUrl}>Download Windows installer</a>
-        <a class="secondary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Buy activation key</a>
+        <a class="secondary" href="/buy/">View license options</a>
       </div>
     </section>
 
@@ -26,7 +26,7 @@ import { brand } from "../brand.js";
         <div>
           <span class="download-tag">Installer</span>
           <h2>Doclira PDF Windows Installer</h2>
-          <p>Windows 10 / 11, 64-bit. Download from the website, then test the workflow with non-sensitive PDFs.</p>
+          <p>Windows 10 / 11, 64-bit. Download, install and test with non-sensitive PDFs before activation.</p>
         </div>
         <div><span>Delivery</span><strong>Direct installer download</strong></div>
         <a class="primary" href={brand.installerUrl}>Download</a>
@@ -35,10 +35,19 @@ import { brand } from "../brand.js";
         <div>
           <span class="download-tag">License</span>
           <h2>Activation key</h2>
-          <p>Unlock paid tools, commercial use and included AI credits after installing the app.</p>
+          <p>Buy after installing if the workflow fits. Your Gumroad receipt includes the key used inside the app.</p>
         </div>
         <div><span>Delivery</span><strong>Gumroad license key</strong></div>
-        <a class="secondary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Buy key</a>
+        <a class="secondary" href="/buy/">Compare plans</a>
+      </article>
+      <article class="download-row">
+        <div>
+          <span class="download-tag">AI Credits</span>
+          <h2>AI credit packs</h2>
+          <p>Use AI for summaries, translation and document Q&A. Credits are visible in the app and can be topped up separately.</p>
+        </div>
+        <div><span>Delivery</span><strong>Gumroad credit key</strong></div>
+        <a class="secondary" href="/buy/#ai-credits">View credits</a>
       </article>
     </section>
   </main>
