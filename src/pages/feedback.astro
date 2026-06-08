@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { brand } from "../brand.js";
+
+const subject = encodeURIComponent("Doclira PDF feedback");
+const body = encodeURIComponent(`Hi Doclira team,
+
+Issue type:
+PDF feature:
+Windows version:
+Doclira version:
+What I expected:
+What happened:
+Steps to reproduce:
+
+Please attach screenshots or a short screen recording if possible.
+Do not send private or sensitive PDF files unless you are comfortable sharing them.`);
+const mailLink = `mailto:${brand.supportEmail}?subject=${subject}&body=${body}`;
+---
+
+<Layout
+  title="Feedback and Bug Reports - Doclira PDF"
+  description="Send feedback, bug reports, feature requests and PDF workflow questions for Doclira PDF. Include steps, screenshots and your Windows version."
+>
+  <Header />
+  <main class="feedback-page">
+    <section class="policy-hero">
+      <p class="kicker">FEEDBACK</p>
+      <h1>Report a problem or request a PDF workflow.</h1>
+      <p>Good feedback helps us fix the right things first. Tell us what file type, operation and output result you expected.</p>
+      <div class="actions">
+        <a class="primary" href={mailLink}>Email feedback</a>
+        <a class="secondary" href="/guide/">Read user guide</a>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="section-head">
+        <p class="kicker">WHAT TO INCLUDE</p>
+        <h2>Send enough detail to reproduce the issue.</h2>
+        <p class="intro">This reduces back-and-forth and makes support faster.</p>
+      </div>
+      <div class="feedback-grid">
+        <article>
+          <h3>1. Operation</h3>
+          <p>Example: batch watermark, PDF to Word, AI chat, compression, merge or split.</p>
+        </article>
+        <article>
+          <h3>2. File type</h3>
+          <p>Text PDF, scanned PDF, form, invoice, contract, manual, image-heavy PDF or protected PDF.</p>
+        </article>
+        <article>
+          <h3>3. Result</h3>
+          <p>Tell us if output was missing, unreadable, too slow, wrong folder, or visually incorrect.</p>
+        </article>
+        <article>
+          <h3>4. Evidence</h3>
+          <p>Attach a screenshot, error message, short recording, and Windows version when possible.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="band soft-band">
+      <div class="report-template">
+        <p class="kicker">COPY TEMPLATE</p>
+        <h2>Support message template</h2>
+        <pre>Issue type:
+PDF feature:
+Windows version:
+Doclira version:
+What I expected:
+What happened:
+Steps to reproduce:
+Screenshot or recording attached: yes / no</pre>
+        <a class="primary" href={mailLink}>Open email with template</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

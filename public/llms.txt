@@ -1,0 +1,20 @@
+# Doclira PDF
+
+Doclira PDF is a Windows desktop PDF toolkit for practical office workflows.
+
+Website: https://www.doclira.com/
+Download: https://www.doclira.com/download/
+Purchase: https://taixianglumark.gumroad.com/l/doclira-pdf
+Support: https://www.doclira.com/support/
+Feedback: https://www.doclira.com/feedback/
+
+Core topics:
+- Batch watermark PDF files on Windows
+- PDF to Word conversion for ordinary text-based PDFs
+- PDF compression for email, chat and office uploads
+- Merge and split PDF documents
+- AI PDF summary, translation and question answering
+- Redaction and PDF security audit workflows
+
+Important limits:
+Doclira is intended for practical office PDF processing, not perfect Word-like editing of every complex PDF layout.

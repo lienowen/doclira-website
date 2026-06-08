@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { brand } from "../brand.js";
+---
+
+<Layout
+  title="Support - Doclira PDF"
+  description="Get support for Doclira PDF installation, activation, AI credits and PDF processing workflows."
+>
+  <Header />
+  <main class="policy-page">
+    <section class="policy-hero">
+      <p class="kicker">SUPPORT</p>
+      <h1>Installation, activation and PDF workflow help.</h1>
+      <p>Email support with your Windows version, Doclira version, license or AI credit issue, and screenshots of any error message.</p>
+      <div class="actions">
+        <a class="primary" href={`mailto:${brand.supportEmail}`}>Contact support</a>
+        <a class="secondary" href="/feedback/">Report a problem</a>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="section-head">
+        <p class="kicker">FAST CHECKS</p>
+        <h2>Before contacting support</h2>
+      </div>
+      <div class="faq-grid">
+        <article><h3>Activation key</h3><p>Copy the full Gumroad license key with no extra spaces. First activation requires internet access.</p></article>
+        <article><h3>AI credits</h3><p>AI credit pack keys are redeemed from the AI Credits dialog inside the app.</p></article>
+        <article><h3>PDF output</h3><p>Generated files are saved to the selected output folder. Use Open Folder after batch processing.</p></article>
+        <article><h3>Complex PDFs</h3><p>Scanned, protected or highly designed PDFs may need OCR or manual cleanup after conversion.</p></article>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

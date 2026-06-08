@@ -1,11 +1,35 @@
 ---
 import "../styles.css";
+import { brand } from "../brand.js";
 
 const {
   title = "Doclira PDF - Desktop PDF Toolkit for Windows",
   description = "Batch watermark, convert, compress, merge and lightly edit PDF files locally on Windows.",
   lang = "en",
+  canonical,
+  image = "/assets/gumroad_cover_en_1280x720.png",
+  structuredData,
 } = Astro.props;
+
+const siteUrl = "https://www.doclira.com";
+const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).toString();
+const imageUrl = image.startsWith("http") ? image : new URL(image, siteUrl).toString();
+const defaultStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: brand.product,
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Windows 10, Windows 11",
+  offers: {
+    "@type": "Offer",
+    price: "29",
+    priceCurrency: "USD",
+    url: brand.purchaseUrl,
+  },
+  url: siteUrl,
+  description,
+};
+const schema = structuredData || defaultStructuredData;
 ---
 
 <!doctype html>
@@ -15,8 +39,19 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#067c70" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   </head>
   <body>
     <slot />

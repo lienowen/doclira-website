@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { brand } from "../brand.js";
+---
+
+<Layout
+  title="Reviews and User Feedback - Doclira PDF"
+  description="Read and leave feedback for Doclira PDF. Early users can report issues, request workflows and review the Gumroad product."
+>
+  <Header />
+  <main class="policy-page">
+    <section class="policy-hero">
+      <p class="kicker">REVIEWS</p>
+      <h1>Early user feedback shapes the product.</h1>
+      <p>Doclira is improving around real PDF workflows: watermarking, conversion, redaction, AI document help and batch processing.</p>
+      <div class="actions">
+        <a class="primary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Review on Gumroad</a>
+        <a class="secondary" href="/feedback/">Send product feedback</a>
+      </div>
+    </section>
+    <section class="band">
+      <div class="section-head">
+        <p class="kicker">WHAT WE WANT TO LEARN</p>
+        <h2>Tell us which PDF jobs save you time.</h2>
+        <p class="intro">Useful reviews mention the task, file type and output result, not just a star rating.</p>
+      </div>
+      <div class="feedback-grid">
+        <article><h3>Batch watermark</h3><p>Did it protect contracts, invoices or internal files clearly?</p></article>
+        <article><h3>PDF to Word</h3><p>Was the converted document usable enough for editing?</p></article>
+        <article><h3>AI help</h3><p>Did summary, translation or Q&A reduce document reading time?</p></article>
+        <article><h3>Support</h3><p>Was installation, activation or output folder behavior clear?</p></article>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

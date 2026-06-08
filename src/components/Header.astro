@@ -14,12 +14,13 @@ const swap = isZh ? "/" : "/zh/";
     <span class="brand-mark">D</span>
     <span>{brand.product}</span>
   </a>
-  <nav aria-label={isZh ? "主导航" : "Primary navigation"}>
-    <a href={`${prefix}/#features`}>{isZh ? "功能" : "Features"}</a>
-    <a href={download}>{isZh ? "免费下载" : "Download free"}</a>
-    <a href={guide}>{isZh ? "使用指南" : "Guide"}</a>
-    <a href={`${prefix}/#faq`}>{isZh ? "常见问题" : "FAQ"}</a>
+  <nav aria-label="Primary navigation">
+    <a href={`${prefix}/#features`}>{isZh ? "Features" : "Features"}</a>
+    <a href={download}>{isZh ? "Download" : "Download free"}</a>
+    <a href={guide}>{isZh ? "Guide" : "Guide"}</a>
+    <a href="/feedback/">{isZh ? "Feedback" : "Feedback"}</a>
+    <a href={`${prefix}/#faq`}>FAQ</a>
     <a class="language-link" href={swap}>{isZh ? "EN" : "中文"}</a>
-    <a class="nav-buy" href={brand.purchaseUrl} target="_blank" rel="noreferrer">{isZh ? "立即购买" : "Buy now"}</a>
+    <a class="nav-buy" href={brand.purchaseUrl} target="_blank" rel="noreferrer">{isZh ? "Buy now" : "Buy now"}</a>
   </nav>
 </header>
