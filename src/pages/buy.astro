@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { brand } from "../brand.js";
+---
+
+<Layout
+  title="Buy Doclira PDF - Windows PDF Toolkit"
+  description="Buy a Doclira PDF activation key. Download the installer first, then use the key to unlock paid Windows PDF tools."
+>
+  <Header />
+  <main class="policy-page">
+    <section class="policy-hero">
+      <p class="kicker">BUY LICENSE</p>
+      <h1>Buy the activation key, not the installer.</h1>
+      <p>The installer can be downloaded first. Gumroad delivers the license key used to activate paid features in the Windows app.</p>
+      <div class="actions">
+        <a class="primary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Purchase on Gumroad</a>
+        <a class="secondary" href="/download/">Download installer</a>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div>
+        <p class="kicker">ONE-TIME WINDOWS LICENSE</p>
+        <h2>{brand.product}</h2>
+        <p class="price">{brand.price}</p>
+        <p class="pricing-note">For Windows 10 / 11 64-bit. AI credits are visible in the app and can be topped up separately.</p>
+      </div>
+      <div class="included">
+        <p>Good fit for</p>
+        <ul>
+          <li>Batch watermarking contracts and internal documents</li>
+          <li>PDF to Word, image export, merge, split and compression</li>
+          <li>Redaction, security audit and AI document help</li>
+          <li>Local-first processing with clear output files</li>
+        </ul>
+        <a class="primary wide" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Buy on Gumroad</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

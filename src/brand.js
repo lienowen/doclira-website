@@ -5,13 +5,13 @@ export const brand = {
   platform: "Windows 10 / 11 (64-bit)",
   price: "$29",
   purchaseUrl: "https://taixianglumark.gumroad.com/l/doclira-pdf",
+  aiCreditsUrl: "https://doclira.com/buy/#ai-credits",
+  installerUrl: "https://github.com/lienowen/doclira-website/releases/download/v1.0.0/DocliraPDF_Setup_v1.0.0_Windows_x64_EN.exe",
   supportEmail: "lienowen@outlook.com",
-  // Pricing tiers
   pricing: [
-    { name: "Pro", price: "$29", ai: "50/mo", redact: "—", audit: "—", cta: "Buy Now", url: "https://taixianglumark.gumroad.com/l/doclira-pro" },
-    { name: "Business", price: "$59", ai: "200/mo", redact: "✅", audit: "—", cta: "Buy Now", url: "https://taixianglumark.gumroad.com/l/doclira-business", highlight: true },
-    { name: "Enterprise", price: "$99", ai: "500/mo", redact: "✅", audit: "✅", cta: "Buy Now", url: "https://taixianglumark.gumroad.com/l/doclira-enterprise" },
+    { name: "Pro", price: "$29", ai: "50 included AI credits", redact: "Basic", audit: "Basic", cta: "Buy Pro", url: "https://taixianglumark.gumroad.com/l/doclira-pdf" },
+    { name: "Business", price: "$59", ai: "200 included AI credits", redact: "Included", audit: "Included", cta: "Buy Business", url: "https://taixianglumark.gumroad.com/l/doclira-pdf", highlight: true },
+    { name: "Enterprise", price: "$99", ai: "500 included AI credits", redact: "Included", audit: "Included", cta: "Buy Enterprise", url: "https://taixianglumark.gumroad.com/l/doclira-pdf" },
   ],
-  // YouTube video ID
   youtubeVideoId: "ndXgTT8T9go",
 };

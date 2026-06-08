@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { brand } from "../brand.js";
+---
+
+<Layout
+  title="Download Doclira PDF for Windows"
+  description="Download the Doclira PDF Windows installer. Install first, then activate paid features with your Gumroad license key."
+>
+  <Header />
+  <main class="download-page">
+    <section class="download-hero">
+      <p class="kicker">DOWNLOAD</p>
+      <h1>Download Doclira PDF</h1>
+      <p>Install the Windows app first. Purchase is only for the activation key and optional AI credit packs.</p>
+      <div class="actions">
+        <a class="primary" href={brand.installerUrl}>Download Windows installer</a>
+        <a class="secondary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Buy activation key</a>
+      </div>
+    </section>
+
+    <section class="download-list">
+      <article class="download-row">
+        <div>
+          <span class="download-tag">Installer</span>
+          <h2>Doclira PDF Windows Installer</h2>
+          <p>Windows 10 / 11, 64-bit. Download from the website, then test the workflow with non-sensitive PDFs.</p>
+        </div>
+        <div><span>Delivery</span><strong>Direct installer download</strong></div>
+        <a class="primary" href={brand.installerUrl}>Download</a>
+      </article>
+      <article class="download-row">
+        <div>
+          <span class="download-tag">License</span>
+          <h2>Activation key</h2>
+          <p>Unlock paid tools, commercial use and included AI credits after installing the app.</p>
+        </div>
+        <div><span>Delivery</span><strong>Gumroad license key</strong></div>
+        <a class="secondary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Buy key</a>
+      </article>
+    </section>
+  </main>
+  <Footer />
+</Layout>

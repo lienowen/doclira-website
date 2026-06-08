@@ -5,112 +5,147 @@ import Footer from "../components/Footer.astro";
 import { brand } from "../brand.js";
 
 const features = [
-  ["Smart Redaction", "Auto-detect and redact phone numbers, emails, IDs, bank cards, and amounts before sharing. GDPR-ready."],
-  ["Security Audit", "Scan PDFs for hidden metadata, embedded files, scripts, and tracking annotations."],
-  ["AI Chat", "Chat with your PDFs — ask questions, summarize, translate, and extract data. Files stay local."],
-  ["Batch Watermark", "Text or logo watermarks — tiled, diagonal, footer. Opacity, rotation, font control."],
-  ["PDF to Word", "Convert PDFs to editable .docx while preserving layout."],
-  ["Merge, Split & Compress", "Combine, separate, or shrink PDFs. Plus images to PDF and lightweight text edits."],
+  ["Smart redaction", "Detect and cover sensitive text patterns before sharing PDFs outside your team."],
+  ["Security audit", "Check PDFs for metadata, attachments, scripts and unresolved annotations."],
+  ["AI chat", "Ask questions, summarize, translate and extract key information from readable PDF text."],
+  ["Batch watermark", "Add text or logo watermarks with tiling, opacity, rotation and page range controls."],
+  ["PDF to Word", "Convert ordinary text-based PDFs to editable DOCX files for continued office work."],
+  ["Merge, split and compress", "Combine documents, split page ranges, reduce file size and export page images."],
 ];
 
-const faq = [
-  ["Is this a subscription?", "No. Pay once, use forever. No monthly bills, no feature gates, no forced upgrades."],
-  ["Are my files uploaded to a server?", "No. Watermark, conversion, compression, redaction, merge and split all run locally. AI chat sends document text to process your request — but the original PDF never leaves your computer."],
-  ["Can it edit any PDF like Word?", "Short text corrections work well for names, dates and notes. For complex layouts, convert to Word first — that's why the converter is built in."],
-  ["What do I get after purchase?", "A Windows installer download, an activation key, and access to the visual user guide. Install on one computer, use offline after first activation."],
+const seoPages = [
+  ["Batch watermark PDF on Windows", "Protect contracts, reports and review copies with tiled text or logo watermarks.", "/batch-watermark-pdf-windows/"],
+  ["PDF to Word converter for Windows", "Convert ordinary text-based PDFs into DOCX files for continued editing.", "/pdf-to-word-converter-windows/"],
+  ["Compress PDF on Windows", "Reduce PDF size before email, chat, portals or internal office uploads.", "/compress-pdf-windows/"],
+  ["Merge and split PDF files", "Combine documents, split page ranges and organize PDF packages.", "/merge-split-pdf-windows/"],
+  ["AI PDF summary tool", "Summarize long PDFs and ask questions about extracted document text.", "/ai-pdf-summary/"],
 ];
 
 const steps = [
-  "Add one or more PDF files to the list.",
-  "Select which files to process.",
-  "Choose an output folder and the operation.",
-  "Check progress and review the generated results.",
+  "Download and install the Windows app.",
+  "Open one PDF or select a batch of files.",
+  "Choose watermark, convert, compress, merge, split, redact or AI.",
+  "Save new output files and review the result locally.",
 ];
 
-const purchaseLink = brand.purchaseUrl || "#pricing";
-const hasPurchaseLink = !!brand.purchaseUrl;
+const faq = [
+  ["Is this a subscription?", "No. Doclira is positioned as a one-time Windows license. AI credits are a visible usage balance."],
+  ["Are my PDFs uploaded?", "Core PDF tasks run locally on your computer. AI features send extracted text only when you choose to use AI."],
+  ["Can it edit any PDF like Word?", "No. Doclira is best for practical office tasks, light corrections and conversion workflows, not complex visual PDF redesign."],
+  ["What happens after purchase?", "Gumroad delivers an activation key. Download the installer from the website, then activate the app."],
+];
 ---
 
-<Layout title="Doclira PDF — No Subscription. Local-First PDF Toolkit for Windows" description="One-time purchase PDF toolkit. Watermark, redact, convert, compress, merge, split. Files stay on your PC. No cloud uploads.">
+<Layout
+  title="Doclira PDF - No Subscription. Local-First PDF Toolkit for Windows"
+  description="One-time purchase PDF toolkit for Windows. Watermark, redact, convert, compress, merge, split and use AI document help. Files stay on your PC."
+>
   <Header />
   <main>
     <section class="hero">
-      <div class="hero-media"><img src="/assets/hero_redaction_en.png" alt="Doclira PDF Smart Redaction before and after" /></div>
+      <div class="hero-media">
+        <img src="/assets/hero_redaction_en.png" alt="Doclira PDF smart redaction preview" />
+      </div>
       <div class="hero-content">
         <p class="kicker">{brand.tagline}</p>
         <h1>Stop Paying Adobe Every Month</h1>
-        <p class="hero-copy">Watermark NDAs &amp; contracts, redact sensitive data before sharing, convert PDFs to Word, compress for email, merge &amp; split documents — all on your Windows PC. No subscription. No cloud uploads.</p>
+        <p class="hero-copy">Watermark contracts, redact sensitive data, convert PDFs to Word, compress for email, merge and split documents, and use AI document help on your Windows PC.</p>
         <div class="actions">
-          <a class="primary" href={purchaseLink} target="_blank" rel="noreferrer">Buy once – {brand.price}</a>
-          <a class="secondary" href="#features">See what's included</a>
+          <a class="primary" href="/download/">Download free</a>
+          <a class="secondary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Buy once - {brand.price}</a>
         </div>
-        <div class="requirements"><span>Local processing</span><span>{brand.platform}</span><span>One-time purchase</span></div>
+        <div class="requirements">
+          <span>Local processing</span>
+          <span>{brand.platform}</span>
+          <span>Activation key after purchase</span>
+        </div>
       </div>
     </section>
 
     <section id="features" class="band">
-      <div class="section-head"><p class="kicker">FEATURES</p><h2>Tools for PDF jobs that keep coming back</h2></div>
+      <div class="section-head">
+        <p class="kicker">FEATURES</p>
+        <h2>Tools for PDF jobs that keep coming back</h2>
+        <p class="intro">Doclira focuses on repeat office PDF work: batch operations, visible output, clear limits and a simple Windows workflow.</p>
+      </div>
       <div class="feature-grid">
-        {features.map(([title, text], index) => <article><span class="feature-index">0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}
+        {features.map(([title, text], index) => (
+          <article>
+            <span class="feature-index">0{index + 1}</span>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="seo-entry band">
+      <div class="section-head">
+        <p class="kicker">PDF TASK GUIDES</p>
+        <h2>Find the workflow that matches your problem</h2>
+        <p class="intro">These pages are built for people searching for a specific PDF task on Windows.</p>
+      </div>
+      <div class="tool-link-grid rich">
+        {seoPages.map(([title, text, href]) => (
+          <a href={href}>
+            <strong>{title}</strong>
+            <span>{text}</span>
+          </a>
+        ))}
       </div>
     </section>
 
     {brand.youtubeVideoId && (
       <section id="demo" class="band">
-        <div class="section-head"><p class="kicker">SEE IT IN ACTION</p><h2>Watch the walkthrough</h2></div>
-        <div class="video-wrapper" style="max-width:800px;margin:0 auto;">
+        <div class="section-head">
+          <p class="kicker">SEE IT IN ACTION</p>
+          <h2>Watch the walkthrough</h2>
+          <p class="intro">Use the video as proof on the website and as a reusable asset for SEO pages and social posts.</p>
+        </div>
+        <div class="video-wrapper">
           <iframe width="100%" height="450" src={`https://www.youtube.com/embed/${brand.youtubeVideoId}`} title="Doclira PDF demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </section>
     )}
 
-    <section id="examples" class="examples">
-      <div class="section-head"><p class="kicker">HIGHLIGHTS</p><h2>The features that set us apart</h2></div>
-      <div class="demo-list">
-        <article class="demo-row featured">
-          <div class="demo-content">
-            <p class="demo-index">01</p>
-            <h3>🔒 Smart Redaction</h3>
-            <p>Auto-detect phone numbers, emails, SSNs, bank cards, addresses, and monetary amounts — then wipe them with one click before sharing. GDPR-ready. No manual black rectangles.</p>
-          </div>
-        </article>
-        <article class="demo-row">
-          <div class="demo-content">
-            <p class="demo-index">02</p>
-            <h3>🔍 Security Audit</h3>
-            <p>Scan any PDF for hidden metadata, embedded files, scripts, and unresolved annotations. Get a full report before you send — know exactly what's inside your document.</p>
-          </div>
-        </article>
-        <article class="demo-row">
-          <div class="demo-content">
-            <p class="demo-index">03</p>
-            <h3>🤖 AI Chat with Documents</h3>
-            <p>Ask questions, summarize clauses, extract key dates and amounts, translate. Only text is sent to AI — your PDF stays on your computer.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
     <section id="workflow" class="workflow">
-      <div class="section-head"><p class="kicker">WORKFLOW</p><h2>From source file to output in four steps</h2></div>
+      <div class="section-head">
+        <p class="kicker">WORKFLOW</p>
+        <h2>From source file to output in four steps</h2>
+      </div>
       <ol>
         {steps.map((step, index) => <li><span>{index + 1}</span><p>{step}</p></li>)}
       </ol>
-      <a class="text-link" href="/guide/">Read the full user guide →</a>
+      <a class="text-link" href="/guide/">Read the full user guide</a>
     </section>
 
     <section id="pricing" class="pricing">
-      <div><p class="kicker">WINDOWS DESKTOP LICENSE</p><h2>{brand.product}</h2><p class="price">{brand.price}</p><p class="pricing-note">One-time Windows 64-bit license. Gumroad automatically delivers your activation key.</p></div>
+      <div>
+        <p class="kicker">WINDOWS DESKTOP LICENSE</p>
+        <h2>{brand.product}</h2>
+        <p class="price">{brand.price}</p>
+        <p class="pricing-note">Download the installer first. Gumroad delivers your activation key after purchase.</p>
+      </div>
       <div class="included">
         <p>Included</p>
-        <ul><li>Batch watermark and file tools</li><li>PDF to Word and page images</li><li>Light text changes and local exports</li><li>Activation key delivery after purchase</li></ul>
-        <a class="primary wide" href={purchaseLink} target="_blank" rel="noreferrer">{hasPurchaseLink ? "Purchase on Gumroad" : "Gumroad link added at launch"}</a>
+        <ul>
+          <li>Batch watermark and file tools</li>
+          <li>PDF to Word and page images</li>
+          <li>Redaction, audit and local exports</li>
+          <li>Activation key delivery after purchase</li>
+        </ul>
+        <a class="primary wide" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Purchase on Gumroad</a>
       </div>
     </section>
 
     <section id="faq" class="faq">
-      <div class="section-head"><p class="kicker">FAQ</p><h2>Clear expectations, fewer surprises</h2></div>
-      <div class="faq-grid">{faq.map(([question, answer]) => <article><h3>{question}</h3><p>{answer}</p></article>)}</div>
+      <div class="section-head">
+        <p class="kicker">FAQ</p>
+        <h2>Clear expectations, fewer surprises</h2>
+      </div>
+      <div class="faq-grid">
+        {faq.map(([question, answer]) => <article><h3>{question}</h3><p>{answer}</p></article>)}
+      </div>
     </section>
   </main>
   <Footer />

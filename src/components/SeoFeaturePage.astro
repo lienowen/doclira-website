@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+import { brand } from "../brand.js";
+
+const {
+  title,
+  description,
+  kicker,
+  h1,
+  intro,
+  primaryTask,
+  painPoints = [],
+  steps = [],
+  features = [],
+  faq = [],
+  related = [],
+} = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <main class="seo-page">
+    <section class="seo-hero">
+      <div>
+        <p class="kicker">{kicker}</p>
+        <h1>{h1}</h1>
+        <p>{intro}</p>
+        <div class="actions">
+          <a class="primary" href={brand.installerUrl}>Download free installer</a>
+          <a class="secondary" href="/buy/">View paid plans</a>
+        </div>
+      </div>
+      <aside class="seo-card">
+        <span>Best for</span>
+        <strong>{primaryTask}</strong>
+        <p>Install Doclira PDF first. Purchase only unlocks the paid workflow and AI credits.</p>
+      </aside>
+    </section>
+
+    <section class="seo-section">
+      <div class="section-head">
+        <p class="kicker">WHY PEOPLE SEARCH FOR THIS</p>
+        <h2>Common PDF pain points</h2>
+      </div>
+      <div class="feature-grid three">
+        {painPoints.map((item) => <article><h3>{item[0]}</h3><p>{item[1]}</p></article>)}
+      </div>
+    </section>
+
+    <section class="seo-section">
+      <div class="section-head">
+        <p class="kicker">HOW IT WORKS</p>
+        <h2>A simple Windows workflow</h2>
+      </div>
+      <ol class="seo-steps">
+        {steps.map((step, index) => <li><span>{index + 1}</span><strong>{step[0]}</strong><p>{step[1]}</p></li>)}
+      </ol>
+    </section>
+
+    <section class="seo-section">
+      <div class="section-head">
+        <p class="kicker">WHAT DOCLIRA ADDS</p>
+        <h2>Built for practical office use</h2>
+      </div>
+      <div class="use-case-grid">
+        {features.map((item) => <article><h3>{item[0]}</h3><p>{item[1]}</p></article>)}
+      </div>
+    </section>
+
+    {faq.length > 0 && (
+      <section class="seo-section">
+        <div class="section-head">
+          <p class="kicker">FAQ</p>
+          <h2>Before you download</h2>
+        </div>
+        <div class="faq-grid">
+          {faq.map((item) => <article><h3>{item[0]}</h3><p>{item[1]}</p></article>)}
+        </div>
+      </section>
+    )}
+
+    {related.length > 0 && (
+      <section class="seo-section related-tools">
+        <div class="section-head">
+          <p class="kicker">RELATED PDF TOOLS</p>
+          <h2>More workflows</h2>
+        </div>
+        <div class="tool-link-grid">
+          {related.map((item) => <a href={item[1]}>{item[0]}</a>)}
+        </div>
+      </section>
+    )}
+  </main>
+  <Footer />
+</Layout>
