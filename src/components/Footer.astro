@@ -1,0 +1,14 @@
+---
+import { brand } from "../brand.js";
+const { locale = "en" } = Astro.props;
+const isZh = locale === "zh";
+---
+
+<footer>
+  <div class="brand footer-brand">
+    <span class="brand-mark">D</span>
+    <span>{brand.product}</span>
+  </div>
+  <p>{isZh ? "本地处理的 Windows PDF 工具，日常文档工作更利落。" : "Practical PDF tools for Windows. Core processing stays on your device."}</p>
+  {brand.supportEmail ? <a href={`mailto:${brand.supportEmail}`}>{brand.supportEmail}</a> : <span class="footer-pending">{isZh ? "上架时填写售后邮箱" : "Support contact added at launch"}</span>}
+</footer>

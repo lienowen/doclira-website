@@ -1,0 +1,24 @@
+---
+import "../styles.css";
+
+const {
+  title = "Doclira PDF - Desktop PDF Toolkit for Windows",
+  description = "Batch watermark, convert, compress, merge and lightly edit PDF files locally on Windows.",
+  lang = "en",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#067c70" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

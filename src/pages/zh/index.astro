@@ -1,0 +1,117 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { brand } from "../../brand.js";
+const features = [
+  ["批量加水印", "支持文字或 Logo 水印、平铺、透明度、角度及指定页范围，适合合同和内部资料。"],
+  ["PDF 转 Word", "将普通文本型 PDF 转为可继续编辑的 Word，方便复制、改字和归档。"],
+  ["导出与压缩", "将 PDF 页面导出为清晰图片，或通过质量档位减小文件大小。"],
+  ["合并与拆分", "通过可见文件列表选择处理文件，完成合并、拆分或图片转 PDF。"],
+];
+const faq = [
+  ["文件会上传到服务器吗？", "不会。水印、转换、压缩、合并拆分等核心处理均在本机执行。"],
+  ["能像 Word 一样任意修改所有 PDF 吗？", "不能承诺。少量文字替换和添加适合简单修正；复杂排版、扫描件、特殊字体仍可能需要人工处理。"],
+  ["支持什么系统？", "当前版本支持 Windows 10 / Windows 11 的 64 位系统。"],
+  ["付款后会收到什么？", "你会收到 Windows 安装程序下载说明、激活码以及图文教程入口。"],
+];
+const purchaseLink = brand.purchaseUrl || "#pricing";
+---
+
+<Layout lang="zh-CN" title="Doclira PDF - Windows 本地 PDF 办公工具" description="批量加水印、转换、压缩、合并拆分与简单文字填改的 Windows PDF 工具。">
+  <Header locale="zh" />
+  <main>
+    <section class="hero">
+      <div class="hero-media"><img src="/assets/demo_text_edit_zh.png" alt="Doclira PDF 简单文字修改前后结果对照" /></div>
+      <div class="hero-content">
+        <p class="kicker">WINDOWS 本地 PDF 工具</p>
+        <h1>{brand.product}</h1>
+        <p class="hero-copy">把高频 PDF 工作集中在一处：批量水印、格式转换、压缩、合并拆分和少量文字填改。</p>
+        <div class="actions">
+          <a class="primary" href={purchaseLink} target="_blank" rel="noreferrer">立即购买</a>
+          <a class="secondary" href="#examples">查看真实效果</a>
+        </div>
+        <div class="requirements"><span>本机处理</span><span>Windows 10 / 11 64位</span><span>一次购买</span></div>
+      </div>
+    </section>
+    <section id="features" class="band">
+      <div class="section-head"><p class="kicker">核心功能</p><h2>真正会反复使用的 PDF 工具</h2></div>
+      <div class="feature-grid">
+        {features.map(([title, text], index) => <article><span class="feature-index">0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}
+      </div>
+    </section>
+    <section id="examples" class="examples">
+      <div class="section-head"><p class="kicker">效果展示</p><h2>每个功能，对应一个明确结果</h2><p class="intro">不把几个功能混在一起展示。下面按实际用途说明输入文件、执行动作和输出文件。</p></div>
+      <div class="demo-list">
+        <article class="demo-row featured">
+          <div class="demo-content">
+            <p class="demo-index">01 / 简单修改</p>
+            <h3>PDF 文字填改</h3>
+            <p>选中短文字进行替换并生成新 PDF，适合公司名、姓名、日期或备注等小范围修正。</p>
+            <div class="demo-tags"><span>原 PDF</span><strong>替换一处</strong><span>新 PDF</span></div>
+          </div>
+          <img src="/assets/demo_text_edit_zh.png" alt="PDF 中一处客户名称替换前后的清晰对照" />
+        </article>
+        <article class="demo-row">
+          <div class="demo-content">
+            <p class="demo-index">02 / 格式转换</p>
+            <h3>PDF 转图片</h3>
+            <p>将一份多页 PDF 按页导出为 PNG。适合上传系统、发送单页材料、制作预览图或归档。</p>
+            <div class="demo-tags"><span>3 页 PDF</span><strong>导出</strong><span>3 张 PNG</span></div>
+          </div>
+          <img src="/assets/demo_pdf_to_images_zh.png" alt="一份三页 PDF 导出为三张 PNG 图片的清晰对照" />
+        </article>
+        <article class="demo-row">
+          <div class="demo-content">
+            <p class="demo-index">03 / 文档保护</p>
+            <h3>批量加水印</h3>
+            <p>给合同、资料或预览文件叠加平铺水印。原文仍可阅读，权属标记清楚可见。</p>
+            <div class="demo-tags"><span>无水印 PDF</span><strong>添加</strong><span>平铺水印 PDF</span></div>
+          </div>
+          <img src="/assets/demo_watermark_zh.png" alt="PDF 添加平铺水印前后的对照" />
+        </article>
+        <article class="demo-row">
+          <div class="demo-content">
+            <p class="demo-index">04 / 页面整理</p>
+            <h3>合并与拆分</h3>
+            <p>拆分时把多页文件变成单页 PDF；合并时把多个文件整理成一个交付文件。</p>
+            <div class="demo-tags"><span>1 ↔ 3</span><strong>页面</strong><span>PDF 文件</span></div>
+          </div>
+          <img src="/assets/demo_merge_split_zh.png" alt="PDF 合并与拆分的输入输出数量对照" />
+        </article>
+        <article class="demo-row compact">
+          <div class="demo-content">
+            <p class="demo-index">05 / 可继续编辑</p>
+            <h3>PDF 转 Word</h3>
+            <p>普通文本型 PDF 可生成 `.docx`，方便复制内容和继续调整。复杂扫描件仍应检查结果。</p>
+            <div class="demo-tags"><span>PDF</span><strong>转换</strong><span>DOCX</span></div>
+          </div>
+          <img src="/assets/demo_pdf_to_word_zh.png" alt="PDF 转 Word 的输出结果示例" />
+        </article>
+      </div>
+    </section>
+    <section class="workflow">
+      <div class="section-head"><p class="kicker">使用流程</p><h2>选择文件，明确输出，直接处理</h2></div>
+      <ol>
+        <li><span>1</span><p>添加一个或多个文件。</p></li>
+        <li><span>2</span><p>在列表中选择需要处理的文件。</p></li>
+        <li><span>3</span><p>指定输出目录和处理功能。</p></li>
+        <li><span>4</span><p>查看进度并检查生成结果。</p></li>
+      </ol>
+      <a class="text-link" href="/zh/guide/">打开图文使用指南</a>
+    </section>
+    <section id="pricing" class="pricing">
+      <div><p class="kicker">WINDOWS 桌面授权</p><h2>{brand.product}</h2><p class="price">{brand.price}</p><p class="pricing-note">Windows 64 位版本，通过 Gumroad 购买并自动获取激活码。</p></div>
+      <div class="included">
+        <p>包含功能</p>
+        <ul><li>批量水印与 PDF 工具</li><li>PDF 转 Word、转图片</li><li>简单文字填改与本地输出</li><li>购买后发送激活码</li></ul>
+        <a class="primary wide" href={purchaseLink} target="_blank" rel="noreferrer">前往 Gumroad 购买</a>
+      </div>
+    </section>
+    <section id="faq" class="faq">
+      <div class="section-head"><p class="kicker">常见问题</p><h2>功能边界说清楚，买得放心</h2></div>
+      <div class="faq-grid">{faq.map(([question, answer]) => <article><h3>{question}</h3><p>{answer}</p></article>)}</div>
+    </section>
+  </main>
+  <Footer locale="zh" />
+</Layout>
