@@ -22,10 +22,10 @@ const seoPages = [
 ];
 
 const steps = [
-  "Download and install the Windows app.",
-  "Open one PDF or select a batch of files.",
-  "Choose watermark, convert, compress, merge, split, redact or AI.",
-  "Save new output files and review the result locally.",
+  "Download the installer from doclira.com.",
+  "Open a PDF or select multiple files for batch work.",
+  "Run watermark, convert, compress, merge, split, redact or AI tools.",
+  "Save new output files so the original documents stay untouched.",
 ];
 
 const faq = [
@@ -48,18 +48,25 @@ const faq = [
       </div>
       <div class="hero-content">
         <p class="kicker">{brand.tagline}</p>
-        <h1>Stop Paying Adobe Every Month</h1>
-        <p class="hero-copy">Watermark contracts, redact sensitive data, convert PDFs to Word, compress for email, merge and split documents, and use AI document help on your Windows PC.</p>
+        <h1>Practical PDF Tools for Windows Office Work</h1>
+        <p class="hero-copy">Download the app for free, test the workflow locally, then buy an activation key only when you need paid tools or more AI credits.</p>
         <div class="actions">
-          <a class="primary" href="/download/">Download free</a>
-          <a class="secondary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Buy once - {brand.price}</a>
+          <a class="primary" href="/download/">Download Windows app</a>
+          <a class="secondary" href="/buy/">View licenses and AI credits</a>
         </div>
         <div class="requirements">
+          <span>Free installer</span>
           <span>Local processing</span>
           <span>{brand.platform}</span>
-          <span>Activation key after purchase</span>
+          <span>Activation key unlocks paid features</span>
         </div>
       </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Doclira purchase flow">
+      <div><strong>1</strong><span>Install first</span><p>No payment is needed to download the Windows installer.</p></div>
+      <div><strong>2</strong><span>Test the workflow</span><p>Try the app with non-sensitive PDFs and check output quality.</p></div>
+      <div><strong>3</strong><span>Activate when ready</span><p>Gumroad delivers the key used inside Doclira PDF.</p></div>
     </section>
 
     <section id="features" class="band">
@@ -122,21 +129,21 @@ const faq = [
     <section id="pricing" class="pricing">
       <div>
         <p class="kicker">HOW PURCHASE WORKS</p>
-        <h2>Download the app first. Buy the key only when you need paid tools.</h2>
-        <p class="pricing-note">The installer is separate from payment. Gumroad delivers the activation key, and the app unlocks the license level and included AI credits after activation.</p>
+        <h2>The installer is free. Payment unlocks the license.</h2>
+        <p class="pricing-note">This avoids confusion after checkout: users install Doclira PDF from the website, then paste the Gumroad activation key in the app. AI credits are visible and can be topped up later.</p>
       </div>
       <div class="purchase-flow">
         <article>
           <span>1</span>
           <h3>Free installer</h3>
-          <p>Install Doclira PDF and test basic workflows on Windows before buying.</p>
+          <p>Download and install the same Windows app used by every license level.</p>
           <a class="secondary wide" href="/download/">Download app</a>
         </article>
         <article>
           <span>2</span>
           <h3>Activation key</h3>
-          <p>Buy once on Gumroad to unlock paid features and included AI credits.</p>
-          <a class="primary wide" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Buy key from {brand.price}</a>
+          <p>Buy a license or AI credit pack on Gumroad, then activate inside the app.</p>
+          <a class="primary wide" href="/buy/">Compare options</a>
         </article>
       </div>
     </section>

@@ -13,42 +13,61 @@ import { brand } from "../brand.js";
   <main class="download-page">
     <section class="download-hero">
       <p class="kicker">DOWNLOAD</p>
-      <h1>Download the Windows app first.</h1>
-      <p>The installer is free to download. Payment only gives you an activation key or extra AI credits.</p>
+      <h1>Download Doclira PDF for Windows.</h1>
+      <p>Install the app first. The installer is free; payment is only for a license key or extra AI credits.</p>
       <div class="actions">
         <a class="primary" href={brand.installerUrl}>Download Windows installer</a>
         <a class="secondary" href="/buy/">View license options</a>
       </div>
     </section>
 
+    <section class="download-summary" aria-label="Download summary">
+      <article><span>Platform</span><strong>{brand.platform}</strong></article>
+      <article><span>Delivery</span><strong>Direct download</strong></article>
+      <article><span>Activation</span><strong>Gumroad key inside app</strong></article>
+      <article><span>AI</span><strong>Visible credit balance</strong></article>
+    </section>
+
     <section class="download-list">
       <article class="download-row">
         <div>
-          <span class="download-tag">Installer</span>
+          <span class="download-tag">Step 1</span>
           <h2>Doclira PDF Windows Installer</h2>
-          <p>Windows 10 / 11, 64-bit. Download, install and test with non-sensitive PDFs before activation.</p>
+          <p>Download, install and test with non-sensitive PDFs before activation. Use this same installer for Free, Pro, Business and Enterprise.</p>
         </div>
-        <div><span>Delivery</span><strong>Direct installer download</strong></div>
+        <div><span>File</span><strong>Windows x64 EXE</strong></div>
         <a class="primary" href={brand.installerUrl}>Download</a>
       </article>
       <article class="download-row">
         <div>
-          <span class="download-tag">License</span>
+          <span class="download-tag">Step 2</span>
           <h2>Activation key</h2>
-          <p>Buy after installing if the workflow fits. Your Gumroad receipt includes the key used inside the app.</p>
+          <p>Buy after installing if the workflow fits. Your Gumroad receipt includes the key used in the Activate window.</p>
         </div>
-        <div><span>Delivery</span><strong>Gumroad license key</strong></div>
+        <div><span>Unlocks</span><strong>Paid tools and included credits</strong></div>
         <a class="secondary" href="/buy/">Compare plans</a>
       </article>
       <article class="download-row">
         <div>
-          <span class="download-tag">AI Credits</span>
+          <span class="download-tag">Optional</span>
           <h2>AI credit packs</h2>
-          <p>Use AI for summaries, translation and document Q&A. Credits are visible in the app and can be topped up separately.</p>
+          <p>Use AI for summaries, translation and document Q&A. Credits are shown in the top bar and can be topped up separately.</p>
         </div>
-        <div><span>Delivery</span><strong>Gumroad credit key</strong></div>
+        <div><span>Use for</span><strong>AI Assistant tasks</strong></div>
         <a class="secondary" href="/buy/#ai-credits">View credits</a>
       </article>
+    </section>
+
+    <section class="install-steps">
+      <div class="section-head">
+        <p class="kicker">AFTER DOWNLOAD</p>
+        <h2>Install, open, activate.</h2>
+      </div>
+      <ol>
+        <li><strong>Run the installer</strong><p>Install Doclira PDF on Windows 10 or Windows 11.</p></li>
+        <li><strong>Open a PDF</strong><p>Check the preview, batch tools and output folder before using important files.</p></li>
+        <li><strong>Paste your key</strong><p>After purchase, use the activation key from Gumroad inside the app.</p></li>
+      </ol>
     </section>
   </main>
   <Footer />
