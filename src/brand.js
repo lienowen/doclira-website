@@ -13,5 +13,5 @@ export const brand = {
     { name: "Enterprise", price: "$99", ai: "500/mo", redact: "✅", audit: "✅", cta: "Buy Now", url: "https://taixianglumark.gumroad.com/l/doclira-enterprise" },
   ],
   // YouTube video ID
-  youtubeVideoId: "",
+  youtubeVideoId: "ndXgTT8T9go",
 };
