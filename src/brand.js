@@ -5,7 +5,7 @@ export const brand = {
   platform: "Windows 10 / 11 (64-bit)",
   price: "$29",
   purchaseUrl: "https://taixianglumark.gumroad.com/l/doclira-pdf",
-  supportEmail: "taixianglumark@gmail.com",
+  supportEmail: "lienowen@outlook.com",
   // Pricing tiers
   pricing: [
     { name: "Pro", price: "$29", ai: "50/mo", redact: "—", audit: "—", cta: "Buy Now", url: "https://taixianglumark.gumroad.com/l/doclira-pro" },
