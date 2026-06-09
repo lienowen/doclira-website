@@ -6,7 +6,7 @@ export const brand = {
   price: "$29",
   purchaseUrl: "https://taixianglumark.gumroad.com/l/doclira-pdf",
   aiCreditsUrl: "https://taixianglumark.gumroad.com/l/ipkbe",
-  installerUrl: "https://github.com/lienowen/doclira-website/releases/download/v1.0.0/DocliraPDF_Setup_v1.0.0_Windows_x64_EN.exe",
+  installerUrl: "https://github.com/lienowen/doclira-website/releases/download/v1.0.5/DocliraPDF_Setup_v1.0.5_Windows_x64_EN.exe",
   supportEmail: "lienowen@outlook.com",
   pricing: [
     { name: "Pro", price: "$29", ai: "50 included AI credits", redact: "Basic", audit: "Basic", cta: "Buy Pro", url: "https://taixianglumark.gumroad.com/l/doclira-pdf" },
