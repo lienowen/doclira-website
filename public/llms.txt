@@ -1,6 +1,6 @@
 # Doclira PDF
 
-Doclira PDF is a Windows desktop PDF toolkit for practical office workflows.
+Doclira PDF is a local-first Windows desktop PDF toolkit for practical office workflows, with a focus on checking and redacting sensitive PDF data before sharing documents.
 
 Website: https://www.doclira.com/
 Download: https://www.doclira.com/download/
@@ -9,6 +9,10 @@ Support: https://www.doclira.com/support/
 Feedback: https://www.doclira.com/feedback/
 
 Core topics:
+- PDF redaction tool for Windows
+- Redact sensitive information in PDFs
+- PDF security audit for metadata, annotations, links, forms and embedded files
+- Free PDF privacy checker workflow for Windows users
 - Batch watermark PDF files on Windows
 - PDF to Word conversion for ordinary text-based PDFs
 - PDF compression for email, chat and office uploads
@@ -17,4 +21,4 @@ Core topics:
 - Redaction and PDF security audit workflows
 
 Important limits:
-Doclira is intended for practical office PDF processing, not perfect Word-like editing of every complex PDF layout.
+Doclira is intended for practical office PDF processing, redaction, security audit and batch workflows, not perfect Word-like editing of every complex PDF layout.

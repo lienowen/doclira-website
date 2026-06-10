@@ -193,6 +193,13 @@ h1 {
   background: var(--teal-dark);
 }
 
+.hero-primary {
+  min-width: 230px;
+  min-height: 54px;
+  font-size: 16px;
+  box-shadow: 0 16px 34px rgba(15, 159, 143, .22);
+}
+
 .secondary {
   border: 1px solid var(--line);
   background: white;
@@ -224,6 +231,34 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+}
+
+.problem-strip {
+  max-width: 1180px;
+  margin: 0 auto 20px;
+  padding: 0 clamp(18px, 4vw, 32px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.problem-strip article {
+  min-height: 132px;
+  padding: 22px;
+  border: 1px solid #b9ddd8;
+  border-radius: 8px;
+  background: #f8fffd;
+}
+
+.problem-strip strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.problem-strip p {
+  font-size: 14px;
 }
 
 .trust-strip div {
@@ -1141,6 +1176,7 @@ footer a {
   .credit-grid,
   .feedback-grid,
   .trust-strip,
+  .problem-strip,
   .download-summary,
   .install-steps ol {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1199,6 +1235,7 @@ footer a {
   .credit-grid,
   .feedback-grid,
   .trust-strip,
+  .problem-strip,
   .download-summary,
   .install-steps ol {
     grid-template-columns: 1fr;

@@ -5,8 +5,9 @@ import Footer from "../components/Footer.astro";
 import { brand } from "../brand.js";
 
 const features = [
-  ["Smart redaction", "Detect and cover sensitive text patterns before sharing PDFs outside your team."],
-  ["Security audit", "Check PDFs for metadata, attachments, scripts and unresolved annotations."],
+  ["Smart redaction", "Find emails, phone numbers, ID-style numbers, card-like numbers and amounts, then apply real PDF redaction."],
+  ["Security audit", "Check PDFs for metadata, attachments, links, forms, scripts and unresolved annotations before sharing."],
+  ["Local-first workflow", "Core PDF processing runs on your Windows computer. AI only uses extracted text when you choose AI."],
   ["AI chat", "Ask questions, summarize, translate and extract key information from readable PDF text."],
   ["Batch watermark", "Add text or logo watermarks with tiling, opacity, rotation and page range controls."],
   ["PDF to Word", "Convert ordinary text-based PDFs to editable DOCX files for continued office work."],
@@ -14,8 +15,12 @@ const features = [
 ];
 
 const seoPages = [
+  ["PDF redaction tool for Windows", "Find and remove sensitive information before sending contracts and client files.", "/pdf-redaction-tool-windows/"],
+  ["Redact sensitive information in PDFs", "A practical workflow for emails, phone numbers, IDs, cards and amounts.", "/redact-sensitive-information-pdf/"],
+  ["PDF security audit tool", "Check metadata, links, attachments, forms and annotations before sharing a PDF.", "/pdf-security-audit-tool/"],
   ["Batch watermark PDF on Windows", "Protect contracts, reports and review copies with tiled text or logo watermarks.", "/batch-watermark-pdf-windows/"],
   ["PDF to Word converter for Windows", "Convert ordinary text-based PDFs into DOCX files for continued editing.", "/pdf-to-word-converter-windows/"],
+  ["Free PDF privacy checker", "Install the Windows app and test basic PDF privacy checks before buying.", "/free-pdf-privacy-checker-windows/"],
   ["Compress PDF on Windows", "Reduce PDF size before email, chat, portals or internal office uploads.", "/compress-pdf-windows/"],
   ["Merge and split PDF files", "Combine documents, split page ranges and organize PDF packages.", "/merge-split-pdf-windows/"],
   ["AI PDF summary tool", "Summarize long PDFs and ask questions about extracted document text.", "/ai-pdf-summary/"],
@@ -34,6 +39,12 @@ const faq = [
   ["Can it edit any PDF like Word?", "No. Doclira is best for practical office tasks, light corrections and conversion workflows, not complex visual PDF redesign."],
   ["What happens after purchase?", "Gumroad delivers an activation key. Download the installer from the website, then activate the app."],
 ];
+
+const targetUsers = [
+  ["Contracts", "Redact client names, emails, phone numbers and internal notes before sending PDFs outside your company."],
+  ["Invoices", "Check vendor files, payment references and customer details before emailing or uploading documents."],
+  ["Forms", "Audit forms for leftover annotations, links, metadata and attachments that people often forget."],
+];
 ---
 
 <Layout
@@ -47,20 +58,29 @@ const faq = [
         <img src="/assets/hero_redaction_en.png" alt="Doclira PDF smart redaction preview" />
       </div>
       <div class="hero-content">
-        <p class="kicker">{brand.tagline}</p>
-        <h1>Practical PDF Tools for Windows Office Work</h1>
-        <p class="hero-copy">Download the app for free, test the workflow locally, then buy an activation key only when you need paid tools or more AI credits.</p>
+        <p class="kicker">LOCAL WINDOWS PDF PRIVACY TOOL</p>
+        <h1>Before you send a PDF, check what it leaks.</h1>
+        <p class="hero-copy">Doclira PDF helps you detect and redact sensitive data in contracts, invoices, forms and client files. Install free, test locally, then activate only when it fits your workflow.</p>
         <div class="actions">
-          <a class="primary" href="/download/">Download Windows app</a>
-          <a class="secondary" href="/buy/">View licenses and AI credits</a>
+          <a class="primary hero-primary" href="/download/">Download Free Windows App</a>
+          <a class="secondary" href="/buy/">Buy License</a>
         </div>
         <div class="requirements">
-          <span>Free installer</span>
+          <span>Free trial included</span>
           <span>Local processing</span>
           <span>{brand.platform}</span>
-          <span>Activation key unlocks paid features</span>
+          <span>Redaction, audit, AI and batch tools</span>
         </div>
       </div>
+    </section>
+
+    <section class="problem-strip" aria-label="PDF privacy problem">
+      {targetUsers.map(([title, text]) => (
+        <article>
+          <strong>{title}</strong>
+          <p>{text}</p>
+        </article>
+      ))}
     </section>
 
     <section class="trust-strip" aria-label="Doclira purchase flow">
@@ -72,8 +92,8 @@ const faq = [
     <section id="features" class="band">
       <div class="section-head">
         <p class="kicker">FEATURES</p>
-        <h2>Tools for PDF jobs that keep coming back</h2>
-        <p class="intro">Doclira focuses on repeat office PDF work: batch operations, visible output, clear limits and a simple Windows workflow.</p>
+        <h2>Focused on the PDF tasks people repeat every week</h2>
+        <p class="intro">The main use case is simple: check a PDF before sending it, remove sensitive data, then handle the everyday conversion and batch work around it.</p>
       </div>
       <div class="feature-grid">
         {features.map(([title, text], index) => (
@@ -89,8 +109,8 @@ const faq = [
     <section class="seo-entry band">
       <div class="section-head">
         <p class="kicker">PDF TASK GUIDES</p>
-        <h2>Find the workflow that matches your problem</h2>
-        <p class="intro">These pages are built for people searching for a specific PDF task on Windows.</p>
+        <h2>More ways people find Doclira</h2>
+        <p class="intro">Each page targets a narrow search intent: redaction, privacy checks, security audit, watermarking, conversion and batch office work.</p>
       </div>
       <div class="tool-link-grid rich">
         {seoPages.map(([title, text, href]) => (

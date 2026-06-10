@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.doclira.com/</loc><lastmod>2026-06-08</lastmod><priority>1.0</priority></url>
-  <url><loc>https://www.doclira.com/download/</loc><lastmod>2026-06-08</lastmod><priority>0.9</priority></url>
-  <url><loc>https://www.doclira.com/buy/</loc><lastmod>2026-06-08</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.doclira.com/guide/</loc><lastmod>2026-06-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.doclira.com/support/</loc><lastmod>2026-06-08</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.doclira.com/feedback/</loc><lastmod>2026-06-08</lastmod><priority>0.65</priority></url>
-  <url><loc>https://www.doclira.com/reviews/</loc><lastmod>2026-06-08</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.doclira.com/batch-watermark-pdf-windows/</loc><lastmod>2026-06-08</lastmod><priority>0.9</priority></url>
-  <url><loc>https://www.doclira.com/pdf-to-word-converter-windows/</loc><lastmod>2026-06-08</lastmod><priority>0.9</priority></url>
-  <url><loc>https://www.doclira.com/compress-pdf-windows/</loc><lastmod>2026-06-08</lastmod><priority>0.85</priority></url>
-  <url><loc>https://www.doclira.com/merge-split-pdf-windows/</loc><lastmod>2026-06-08</lastmod><priority>0.85</priority></url>
-  <url><loc>https://www.doclira.com/ai-pdf-summary/</loc><lastmod>2026-06-08</lastmod><priority>0.85</priority></url>
-  <url><loc>https://www.doclira.com/zh/</loc><lastmod>2026-06-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.doclira.com/zh/guide/</loc><lastmod>2026-06-08</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.doclira.com/</loc><lastmod>2026-06-10</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.doclira.com/download/</loc><lastmod>2026-06-10</lastmod><priority>0.95</priority></url>
+  <url><loc>https://www.doclira.com/buy/</loc><lastmod>2026-06-10</lastmod><priority>0.85</priority></url>
+  <url><loc>https://www.doclira.com/guide/</loc><lastmod>2026-06-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.doclira.com/support/</loc><lastmod>2026-06-10</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.doclira.com/feedback/</loc><lastmod>2026-06-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.doclira.com/reviews/</loc><lastmod>2026-06-10</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.doclira.com/pdf-redaction-tool-windows/</loc><lastmod>2026-06-10</lastmod><priority>0.95</priority></url>
+  <url><loc>https://www.doclira.com/redact-sensitive-information-pdf/</loc><lastmod>2026-06-10</lastmod><priority>0.95</priority></url>
+  <url><loc>https://www.doclira.com/pdf-security-audit-tool/</loc><lastmod>2026-06-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.doclira.com/free-pdf-privacy-checker-windows/</loc><lastmod>2026-06-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.doclira.com/batch-watermark-pdf-windows/</loc><lastmod>2026-06-10</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.doclira.com/pdf-to-word-converter-windows/</loc><lastmod>2026-06-10</lastmod><priority>0.85</priority></url>
+  <url><loc>https://www.doclira.com/compress-pdf-windows/</loc><lastmod>2026-06-10</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.doclira.com/merge-split-pdf-windows/</loc><lastmod>2026-06-10</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.doclira.com/ai-pdf-summary/</loc><lastmod>2026-06-10</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.doclira.com/zh/</loc><lastmod>2026-06-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.doclira.com/zh/guide/</loc><lastmod>2026-06-10</lastmod><priority>0.6</priority></url>
 </urlset>

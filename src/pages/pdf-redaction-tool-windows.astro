@@ -1,0 +1,40 @@
+---
+import SeoFeaturePage from "../components/SeoFeaturePage.astro";
+---
+
+<SeoFeaturePage
+  title="PDF Redaction Tool for Windows - Doclira PDF"
+  description="Use Doclira PDF to detect and redact sensitive information in PDF files on Windows before sharing contracts, invoices, forms and client documents."
+  kicker="PDF REDACTION TOOL FOR WINDOWS"
+  h1="Redact sensitive PDF data before sending client files."
+  intro="Doclira PDF is built for the practical office moment before a PDF leaves your computer: scan for sensitive data, apply real redaction, and save a new PDF for sharing."
+  primaryTask="Redact emails, phone numbers, IDs, card-like numbers and amounts"
+  painPoints={[
+    ["Manual checking misses details", "A contract or invoice can contain emails, phone numbers, IDs, addresses, amounts and internal notes in different parts of the file."],
+    ["Black boxes are not always enough", "A visual cover is not the same as removing searchable text. Redaction should create a new PDF with sensitive text removed."],
+    ["People need a quick pre-send check", "Most users do not want a complex editor. They want to know whether a PDF is safe enough to send."],
+  ]}
+  steps={[
+    ["Open the PDF", "Load the contract, invoice, form or client document in the Windows app."],
+    ["Run Smart Redaction", "Let Doclira detect common sensitive data patterns and review the matches."],
+    ["Save a new PDF", "Apply redaction and save an output copy so the original document stays untouched."],
+  ]}
+  features={[
+    ["Pattern detection", "Find common office data such as emails, phone numbers, ID-style numbers, bank-card-like numbers and amounts."],
+    ["Real output file", "Save a new PDF after redaction instead of only drawing over the original view."],
+    ["Local-first handling", "Core PDF processing runs on your Windows computer."],
+    ["Works with audit", "Use Security Audit to check metadata, annotations, links and attachments around the same workflow."],
+  ]}
+  faq={[
+    ["Is this the same as editing a PDF like Word?", "No. Doclira is focused on practical redaction and office PDF tasks, not full visual redesign of complex PDFs."],
+    ["Should I test before sending important files?", "Yes. Always test the output with non-sensitive files first and search the saved PDF for values you expected to redact."],
+    ["Does the original PDF change?", "The workflow is designed to save a new output PDF so you can keep your original file."],
+    ["Can it redact scanned PDFs?", "Scanned documents may need OCR first. The current workflow is strongest on readable text-based PDFs."],
+  ]}
+  related={[
+    ["Redact sensitive information", "/redact-sensitive-information-pdf/"],
+    ["PDF security audit", "/pdf-security-audit-tool/"],
+    ["Free PDF privacy checker", "/free-pdf-privacy-checker-windows/"],
+    ["Batch watermark PDFs", "/batch-watermark-pdf-windows/"],
+  ]}
+/>
