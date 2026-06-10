@@ -6,16 +6,16 @@ import { brand } from "../brand.js";
 ---
 
 <Layout
-  title="Buy Doclira PDF - License Keys and AI Credits"
-  description="Buy a Doclira PDF activation key or AI credit pack. Download the Windows installer first, then activate paid features inside the app."
+  title="Buy Doclira PDF - Windows PDF License"
+  description="Buy a Doclira PDF activation key for local Windows PDF tools. Download the installer first, then activate paid features inside the app."
 >
   <Header />
   <main class="policy-page">
     <section class="policy-hero buy-hero">
       <div>
         <p class="kicker">BUY LICENSE</p>
-        <h1>Buy the key. Download the app separately.</h1>
-        <p>The Windows installer is free on the Download page. Gumroad handles payment and sends the activation key used inside Doclira PDF.</p>
+        <h1>Buy the Windows PDF license. Install the app first.</h1>
+        <p>Doclira PDF is a local Windows toolkit for invoice/table workflows, redaction, watermarking, conversion, compression and batch PDF work. Gumroad delivers the activation key used inside the app.</p>
         <div class="actions">
           <a class="primary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Open Gumroad checkout</a>
           <a class="secondary" href="/download/">Download installer first</a>
@@ -25,8 +25,8 @@ import { brand } from "../brand.js";
         <span>Purchase flow</span>
         <ol>
           <li>Download Doclira PDF from this website.</li>
-          <li>Buy a license or AI credit pack on Gumroad.</li>
-          <li>Paste the key in the app to unlock features or add credits.</li>
+          <li>Buy a Pro, Business or Enterprise license on Gumroad.</li>
+          <li>Paste the key in the app to unlock paid PDF tools.</li>
         </ol>
         <p>Keep the Gumroad receipt. It is your delivery record.</p>
       </aside>
@@ -35,8 +35,8 @@ import { brand } from "../brand.js";
     <section class="band">
       <div class="section-head">
         <p class="kicker">LICENSE OPTIONS</p>
-        <h2>Choose the license by workload.</h2>
-        <p class="intro">Every plan uses the same installer. The activation key decides feature limits and included AI credits.</p>
+        <h2>Choose the license by PDF workload.</h2>
+        <p class="intro">Every plan uses the same installer. The activation key unlocks local PDF tools, batch workflows and included AI credits.</p>
       </div>
       <div class="tier-grid">
         {brand.pricing.map((plan) => (
@@ -45,9 +45,10 @@ import { brand } from "../brand.js";
             <h3>{plan.name}</h3>
             <p class="tier-price">{plan.price}</p>
             <ul>
+              <li>Invoice/table workflows, redaction, watermark, conversion, compress, merge and split</li>
+              <li>Batch tools for repeated office PDFs</li>
+              <li>Local PDF processing; AI is optional and uses extracted text only when used</li>
               <li>{plan.ai}</li>
-              <li>Batch watermark, PDF to Word, images, compress, merge and split</li>
-              <li>Local PDF processing; AI sends extracted text only when used</li>
               <li>Activation key delivered by Gumroad after checkout</li>
             </ul>
             <a class="primary wide" href={plan.url} target="_blank" rel="noreferrer">{plan.cta}</a>
@@ -59,8 +60,8 @@ import { brand } from "../brand.js";
     <section id="ai-credits" class="band soft-band">
       <div class="section-head">
         <p class="kicker">AI CREDIT PACKS</p>
-        <h2>Buy extra AI credits when you need them.</h2>
-        <p class="intro">License plans include starter credits. Extra packs are for heavier AI summaries, translation and document Q&A.</p>
+        <h2>Optional: add AI credits later.</h2>
+        <p class="intro">Doclira is sold as a PDF toolkit first. AI credits are only for optional summaries, translation and document Q&A when you choose to use AI.</p>
       </div>
       <div class="credit-grid">
         {brand.creditPacks.map((pack) => (

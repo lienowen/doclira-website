@@ -9,6 +9,11 @@ Support: https://www.doclira.com/support/
 Feedback: https://www.doclira.com/feedback/
 
 Core topics:
+- PDF invoice to Excel workflows for Windows
+- Bank statement PDF to CSV workflows
+- Extract tables from readable PDFs
+- Offline PDF to Excel for sensitive office files
+- Batch PDF tools for Windows
 - PDF redaction tool for Windows
 - Redact sensitive information in PDFs
 - Redact PDF contracts before sharing

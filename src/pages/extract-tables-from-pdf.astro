@@ -1,0 +1,40 @@
+---
+import SeoFeaturePage from "../components/SeoFeaturePage.astro";
+---
+
+<SeoFeaturePage
+  title="Extract Tables from PDF on Windows - Doclira PDF"
+  description="Extract table-like data from readable PDFs into Excel or CSV workflows locally on Windows."
+  kicker="EXTRACT TABLES FROM PDF"
+  h1="Turn readable PDF tables into spreadsheet-friendly data."
+  intro="Many PDFs look like tables but behave like fixed pages. Doclira PDF helps Windows users extract readable rows and columns from invoices, statements, forms and office reports into data that can be reviewed outside the PDF."
+  primaryTask="PDF table extraction for Excel and CSV"
+  painPoints={[
+    ["PDF tables are hard to reuse", "Users often copy rows manually because PDF pages are not spreadsheets."],
+    ["Sensitive tables should stay local", "Reports, invoices and financial files may not be safe to upload to free online converters."],
+    ["Extraction needs review", "A useful workflow should show extracted data so the user can check it before using it."],
+  ]}
+  steps={[
+    ["Open a readable PDF", "Start with invoices, reports, forms or statements that contain selectable text."],
+    ["Extract table-like data", "Prepare rows and columns for Excel or CSV review."],
+    ["Save office output", "Export the result and keep the original PDF unchanged."],
+  ]}
+  features={[
+    ["Readable PDF focus", "Best for text-based PDFs. Scanned image PDFs may need OCR first."],
+    ["Excel / CSV workflows", "Use extracted data in spreadsheets instead of retyping from the PDF page."],
+    ["Batch support direction", "Batch workflows help users process repeated office documents."],
+    ["Redaction and audit", "Check sensitive data before sharing extracted or converted outputs."],
+  ]}
+  faq={[
+    ["Is this OCR?", "Not by default. The first workflow is strongest for readable text-based PDFs; OCR is a separate workflow."],
+    ["Can it extract complex tables perfectly?", "No. Complex layouts need review. Doclira aims for practical extraction, not magic."],
+    ["Why not use an online converter?", "For sensitive invoices, statements and client files, local processing can reduce upload risk."],
+    ["Can I export to Excel?", "The goal is Excel and CSV-friendly output for office review."],
+  ]}
+  related={[
+    ["PDF invoice to Excel", "/pdf-invoice-to-excel/"],
+    ["Bank statement PDF to CSV", "/bank-statement-pdf-to-csv/"],
+    ["Offline PDF to Excel", "/offline-pdf-to-excel-windows/"],
+    ["PDF redaction tool", "/pdf-redaction-tool-windows/"],
+  ]}
+/>

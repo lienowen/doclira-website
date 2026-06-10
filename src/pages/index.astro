@@ -5,16 +5,21 @@ import Footer from "../components/Footer.astro";
 import { brand } from "../brand.js";
 
 const features = [
-  ["Smart redaction", "Find emails, phone numbers, ID-style numbers, card-like numbers and amounts, then apply real PDF redaction."],
+  ["PDF tables to Excel / CSV", "Extract table-like data from readable PDFs and prepare office-friendly Excel or CSV output workflows."],
+  ["Invoice and statement workflows", "Handle invoices, forms, statements and client files without uploading sensitive documents to random online tools."],
+  ["Local-first processing", "Core PDF processing runs on your Windows computer. AI only uses extracted text when you choose AI."],
+  ["Smart redaction", "Find emails, phone numbers, ID-style numbers, card-like numbers and amounts, then save a redacted copy."],
   ["Security audit", "Check PDFs for metadata, attachments, links, forms, scripts and unresolved annotations before sharing."],
-  ["Local-first workflow", "Core PDF processing runs on your Windows computer. AI only uses extracted text when you choose AI."],
-  ["AI chat", "Ask questions, summarize, translate and extract key information from readable PDF text."],
   ["Batch watermark", "Add text or logo watermarks with tiling, opacity, rotation and page range controls."],
-  ["PDF to Word", "Convert ordinary text-based PDFs to editable DOCX files for continued office work."],
-  ["Merge, split and compress", "Combine documents, split page ranges, reduce file size and export page images."],
+  ["Convert, merge, split, compress", "Convert ordinary PDFs to Word or images, combine documents, split page ranges and reduce file size."],
 ];
 
 const seoPages = [
+  ["PDF invoice to Excel", "Extract invoice tables and line-item style data from readable PDFs for office review.", "/pdf-invoice-to-excel/"],
+  ["Bank statement PDF to CSV", "Prepare statement-style PDF data for CSV workflows without using online upload tools.", "/bank-statement-pdf-to-csv/"],
+  ["Extract tables from PDF", "Turn readable PDF tables into spreadsheet-friendly data on Windows.", "/extract-tables-from-pdf/"],
+  ["Offline PDF to Excel for Windows", "Work on sensitive PDFs locally instead of uploading them to a browser tool.", "/offline-pdf-to-excel-windows/"],
+  ["Batch PDF tools for Windows", "Process many PDFs for watermarking, conversion, compression, merge and split.", "/batch-pdf-tools-windows/"],
   ["PDF redaction tool for Windows", "Find and remove sensitive information before sending contracts and client files.", "/pdf-redaction-tool-windows/"],
   ["Redact sensitive information in PDFs", "A practical workflow for emails, phone numbers, IDs, cards and amounts.", "/redact-sensitive-information-pdf/"],
   ["PDF security audit tool", "Check metadata, links, attachments, forms and annotations before sharing a PDF.", "/pdf-security-audit-tool/"],
@@ -31,8 +36,8 @@ const seoPages = [
 
 const steps = [
   "Download the installer from doclira.com.",
-  "Open a PDF or select multiple files for batch work.",
-  "Run watermark, convert, compress, merge, split, redact or AI tools.",
+  "Open an invoice, statement, form, contract or select multiple files for batch work.",
+  "Run table extraction, watermark, convert, compress, merge, split, redact or AI tools.",
   "Save new output files so the original documents stay untouched.",
 ];
 
@@ -44,15 +49,15 @@ const faq = [
 ];
 
 const targetUsers = [
-  ["Contracts", "Redact client names, emails, phone numbers and internal notes before sending PDFs outside your company.", "/redact-pdf-contracts-windows/"],
-  ["Invoices", "Check vendor files, payment references and customer details before emailing or uploading documents.", "/redact-pdf-invoices-windows/"],
-  ["Forms", "Audit forms for leftover annotations, links, metadata and attachments that people often forget.", "/redact-pdf-forms-windows/"],
+  ["Invoices", "Extract line items, totals and table-like data into Excel or CSV while keeping files on Windows.", "/pdf-invoice-to-excel/"],
+  ["Statements", "Prepare bank statement PDFs for CSV review instead of uploading financial files online.", "/bank-statement-pdf-to-csv/"],
+  ["Sensitive files", "Redact contracts, audit forms and watermark office PDFs before sharing them externally.", "/redact-sensitive-information-pdf/"],
 ];
 ---
 
 <Layout
-  title="Doclira PDF - No Subscription. Local-First PDF Toolkit for Windows"
-  description="One-time purchase PDF toolkit for Windows. Watermark, redact, convert, compress, merge, split and use AI document help. Files stay on your PC."
+  title="Doclira PDF - Offline PDF to Excel, Redaction and Batch Tools for Windows"
+  description="Convert invoices, statements and tables from PDF to Excel or CSV workflows locally on Windows. Redact sensitive data, watermark, compress, merge and split PDFs."
 >
   <Header />
   <main>
@@ -61,9 +66,9 @@ const targetUsers = [
         <img src="/assets/hero_redaction_en.png" alt="Doclira PDF smart redaction preview" />
       </div>
       <div class="hero-content">
-        <p class="kicker">LOCAL WINDOWS PDF PRIVACY TOOL</p>
-        <h1>Before you send a PDF, check what it leaks.</h1>
-        <p class="hero-copy">Doclira PDF helps you detect and redact sensitive data in contracts, invoices, forms and client files. Install free, test locally, then activate only when it fits your workflow.</p>
+        <p class="kicker">OFFLINE PDF TO OFFICE WORKFLOWS</p>
+        <h1>Turn sensitive PDFs into clean office files locally.</h1>
+        <p class="hero-copy">Doclira PDF helps Windows users extract tables from invoices and statements, convert PDFs, redact private data, watermark batches and process office files without uploading them to random online tools.</p>
         <div class="actions">
           <a class="primary hero-primary" href="/download/">Download Free Windows App</a>
           <a class="secondary" href="/buy/">Buy License</a>
@@ -72,7 +77,7 @@ const targetUsers = [
           <span>Free trial included</span>
           <span>Local processing</span>
           <span>{brand.platform}</span>
-          <span>Redaction, audit, AI and batch tools</span>
+          <span>Excel / CSV, redaction and batch tools</span>
         </div>
       </div>
     </section>
@@ -97,7 +102,7 @@ const targetUsers = [
       <div class="section-head">
         <p class="kicker">FEATURES</p>
         <h2>Focused on the PDF tasks people repeat every week</h2>
-        <p class="intro">The main use case is simple: check a PDF before sending it, remove sensitive data, then handle the everyday conversion and batch work around it.</p>
+        <p class="intro">The main use case is practical: turn readable PDFs into useful office files, keep sensitive documents local, and handle the conversion, redaction and batch work around them.</p>
       </div>
       <div class="feature-grid">
         {features.map(([title, text], index) => (
@@ -114,7 +119,7 @@ const targetUsers = [
       <div class="section-head">
         <p class="kicker">PDF TASK GUIDES</p>
         <h2>More ways people find Doclira</h2>
-        <p class="intro">Each page targets a narrow search intent: redaction, privacy checks, security audit, watermarking, conversion and batch office work.</p>
+        <p class="intro">Each page targets a narrow search intent: invoice extraction, statement CSV workflows, table extraction, local privacy checks, conversion and batch office work.</p>
       </div>
       <div class="tool-link-grid rich">
         {seoPages.map(([title, text, href]) => (
