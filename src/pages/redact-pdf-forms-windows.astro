@@ -1,0 +1,40 @@
+---
+import SeoFeaturePage from "../components/SeoFeaturePage.astro";
+---
+
+<SeoFeaturePage
+  title="Redact PDF Forms on Windows - Doclira PDF"
+  description="Review and redact sensitive information in PDF forms before sharing HR, tax, onboarding, vendor or customer documents."
+  kicker="PDF FORM PRIVACY"
+  h1="Review PDF forms before they leave your desktop."
+  intro="Forms often contain high-risk data: names, contact details, ID numbers, addresses, signatures and account information. Doclira PDF helps you run a practical privacy check before forwarding or uploading the file."
+  primaryTask="Privacy review for HR, tax, onboarding and customer forms"
+  painPoints={[
+    ["Forms contain structured personal data", "Names, addresses, emails, phone numbers and ID-style fields are often placed in small table cells."],
+    ["PDF forms may contain hidden objects", "Annotations, widgets, links, embedded files and metadata can remain inside the document even when the page looks clean."],
+    ["People need a repeatable checklist", "A simple scan-and-review flow reduces mistakes before files are sent to clients, vendors or internal teams."],
+  ]}
+  steps={[
+    ["Open the form PDF", "Load the file and fit it to width so the form is readable."],
+    ["Run privacy checks", "Use redaction for sensitive text and Security Audit for metadata, links, annotations and attachments."],
+    ["Save and verify", "Save a new output PDF, then search or review the output before sending it."],
+  ]}
+  features={[
+    ["Smart Redaction", "Detect common sensitive data patterns in readable text-based forms."],
+    ["Security Audit", "Check metadata, annotations, links, forms/widgets and embedded files."],
+    ["AI Assistant", "Ask questions, summarize form content or extract key fields using AI credits."],
+    ["Local-first design", "Normal PDF processing stays on your computer."],
+  ]}
+  faq={[
+    ["Can it handle government or tax forms?", "It can help review readable text-based forms, but you should always verify the output manually before submission or sharing."],
+    ["Can it remove form fields?", "Security Audit can help identify form/widget objects. Full form redesign is outside Doclira's main focus."],
+    ["Does AI see my whole PDF?", "AI is optional. When used, extracted text is sent for the AI task; core PDF tools remain local."],
+    ["Can I try without paying?", "Yes. Download the installer first and test the free workflow before activating paid features."],
+  ]}
+  related={[
+    ["Free PDF privacy checker", "/free-pdf-privacy-checker-windows/"],
+    ["Redact sensitive information", "/redact-sensitive-information-pdf/"],
+    ["Security audit for PDFs", "/pdf-security-audit-tool/"],
+    ["Download installer", "/download/"],
+  ]}
+/>

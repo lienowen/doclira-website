@@ -261,6 +261,18 @@ h1 {
   font-size: 14px;
 }
 
+.problem-strip a {
+  display: inline-flex;
+  margin-top: 14px;
+  color: var(--teal-dark);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.problem-strip a:hover {
+  color: var(--teal);
+}
+
 .trust-strip div {
   min-height: 132px;
   padding: 22px;

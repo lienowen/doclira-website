@@ -18,6 +18,9 @@ const seoPages = [
   ["PDF redaction tool for Windows", "Find and remove sensitive information before sending contracts and client files.", "/pdf-redaction-tool-windows/"],
   ["Redact sensitive information in PDFs", "A practical workflow for emails, phone numbers, IDs, cards and amounts.", "/redact-sensitive-information-pdf/"],
   ["PDF security audit tool", "Check metadata, links, attachments, forms and annotations before sharing a PDF.", "/pdf-security-audit-tool/"],
+  ["Redact PDF contracts", "Review client and vendor agreements before emailing or uploading them.", "/redact-pdf-contracts-windows/"],
+  ["Redact PDF invoices", "Clean invoice PDFs, billing files and customer references before forwarding.", "/redact-pdf-invoices-windows/"],
+  ["Redact PDF forms", "Check HR, tax, onboarding and customer forms for sensitive information.", "/redact-pdf-forms-windows/"],
   ["Batch watermark PDF on Windows", "Protect contracts, reports and review copies with tiled text or logo watermarks.", "/batch-watermark-pdf-windows/"],
   ["PDF to Word converter for Windows", "Convert ordinary text-based PDFs into DOCX files for continued editing.", "/pdf-to-word-converter-windows/"],
   ["Free PDF privacy checker", "Install the Windows app and test basic PDF privacy checks before buying.", "/free-pdf-privacy-checker-windows/"],
@@ -41,9 +44,9 @@ const faq = [
 ];
 
 const targetUsers = [
-  ["Contracts", "Redact client names, emails, phone numbers and internal notes before sending PDFs outside your company."],
-  ["Invoices", "Check vendor files, payment references and customer details before emailing or uploading documents."],
-  ["Forms", "Audit forms for leftover annotations, links, metadata and attachments that people often forget."],
+  ["Contracts", "Redact client names, emails, phone numbers and internal notes before sending PDFs outside your company.", "/redact-pdf-contracts-windows/"],
+  ["Invoices", "Check vendor files, payment references and customer details before emailing or uploading documents.", "/redact-pdf-invoices-windows/"],
+  ["Forms", "Audit forms for leftover annotations, links, metadata and attachments that people often forget.", "/redact-pdf-forms-windows/"],
 ];
 ---
 
@@ -75,10 +78,11 @@ const targetUsers = [
     </section>
 
     <section class="problem-strip" aria-label="PDF privacy problem">
-      {targetUsers.map(([title, text]) => (
+      {targetUsers.map(([title, text, href]) => (
         <article>
           <strong>{title}</strong>
           <p>{text}</p>
+          <a href={href}>View workflow</a>
         </article>
       ))}
     </section>

@@ -11,6 +11,9 @@ Feedback: https://www.doclira.com/feedback/
 Core topics:
 - PDF redaction tool for Windows
 - Redact sensitive information in PDFs
+- Redact PDF contracts before sharing
+- Redact PDF invoices before forwarding
+- Redact PDF forms before uploading or emailing
 - PDF security audit for metadata, annotations, links, forms and embedded files
 - Free PDF privacy checker workflow for Windows users
 - Batch watermark PDF files on Windows
