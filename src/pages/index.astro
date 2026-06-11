@@ -5,13 +5,13 @@ import Footer from "../components/Footer.astro";
 import { brand } from "../brand.js";
 
 const features = [
-  ["PDF tables to Excel / CSV", "Extract table-like data from readable PDFs and prepare office-friendly Excel or CSV output workflows."],
-  ["Invoice and statement workflows", "Handle invoices, forms, statements and client files without uploading sensitive documents to random online tools."],
-  ["Local-first processing", "Core PDF processing runs on your Windows computer. AI only uses extracted text when you choose AI."],
-  ["Smart redaction", "Find emails, phone numbers, ID-style numbers, card-like numbers and amounts, then save a redacted copy."],
-  ["Security audit", "Check PDFs for metadata, attachments, links, forms, scripts and unresolved annotations before sharing."],
-  ["Batch watermark", "Add text or logo watermarks with tiling, opacity, rotation and page range controls."],
-  ["Convert, merge, split, compress", "Convert ordinary PDFs to Word or images, combine documents, split page ranges and reduce file size."],
+  ["Invoice PDF to CSV", "Extract line-item tables, quantities, unit prices and totals from readable invoice PDFs into spreadsheet-friendly CSV files."],
+  ["Bank statement PDF to CSV", "Turn statement-style tables into clean CSV rows for review, bookkeeping and reconciliation workflows."],
+  ["Local sensitive-file workflow", "Process client files, invoices and contracts on your Windows computer instead of uploading them to browser tools."],
+  ["Smart redaction", "Find emails, phone numbers, ID-style numbers, card-like numbers, amounts and addresses before sharing PDFs."],
+  ["Security audit", "Check metadata, attachments, links, forms, scripts and unresolved annotations before sending external documents."],
+  ["Batch watermark", "Apply text or logo watermarks to many contracts, reports and internal files with tiling, opacity and page controls."],
+  ["Office PDF utilities", "Convert to Word or images, compress, merge, split and organize PDFs around the main table and privacy workflow."],
 ];
 
 const seoPages = [
@@ -49,15 +49,15 @@ const faq = [
 ];
 
 const targetUsers = [
-  ["Invoices", "Extract line items, totals and table-like data into Excel or CSV while keeping files on Windows.", "/pdf-invoice-to-excel/"],
-  ["Statements", "Prepare bank statement PDFs for CSV review instead of uploading financial files online.", "/bank-statement-pdf-to-csv/"],
-  ["Sensitive files", "Redact contracts, audit forms and watermark office PDFs before sharing them externally.", "/redact-sensitive-information-pdf/"],
+  ["For invoices", "Open a PDF invoice, export the table to CSV, then review line items in Excel without retyping.", "/pdf-invoice-to-excel/"],
+  ["For statements", "Convert readable bank statement PDFs into CSV rows for bookkeeping and reconciliation.", "/bank-statement-pdf-to-csv/"],
+  ["For sensitive PDFs", "Run redaction, security audit and watermarking before sending contracts or client files.", "/redact-sensitive-information-pdf/"],
 ];
 ---
 
 <Layout
   title="Doclira PDF - Offline PDF to Excel, Redaction and Batch Tools for Windows"
-  description="Convert invoices, statements and tables from PDF to Excel or CSV workflows locally on Windows. Redact sensitive data, watermark, compress, merge and split PDFs."
+  description="Convert PDF invoices, bank statements and tables to CSV locally on Windows. Redact sensitive data, audit PDFs, watermark, compress, merge and split files."
 >
   <Header />
   <main>
@@ -66,9 +66,9 @@ const targetUsers = [
         <img src="/assets/hero_redaction_en.png" alt="Doclira PDF smart redaction preview" />
       </div>
       <div class="hero-content">
-        <p class="kicker">OFFLINE PDF TO OFFICE WORKFLOWS</p>
-        <h1>Turn sensitive PDFs into clean office files locally.</h1>
-        <p class="hero-copy">Doclira PDF helps Windows users extract tables from invoices and statements, convert PDFs, redact private data, watermark batches and process office files without uploading them to random online tools.</p>
+        <p class="kicker">LOCAL PDF TO CSV + PRIVACY TOOLS</p>
+        <h1>Convert invoices and bank statements to CSV without uploading PDFs.</h1>
+        <p class="hero-copy">Doclira PDF is a Windows app for office PDFs that contain financial or client data. Extract tables to CSV, redact sensitive information, audit hidden PDF risks, watermark batches and keep the original files on your computer.</p>
         <div class="actions">
           <a class="primary hero-primary" href="/download/">Download Free Windows App</a>
           <a class="secondary" href="/buy/">Buy License</a>
@@ -77,7 +77,7 @@ const targetUsers = [
           <span>Free trial included</span>
           <span>Local processing</span>
           <span>{brand.platform}</span>
-          <span>Excel / CSV, redaction and batch tools</span>
+          <span>Invoice and statement CSV workflows</span>
         </div>
       </div>
     </section>
@@ -101,8 +101,8 @@ const targetUsers = [
     <section id="features" class="band">
       <div class="section-head">
         <p class="kicker">FEATURES</p>
-        <h2>Focused on the PDF tasks people repeat every week</h2>
-        <p class="intro">The main use case is practical: turn readable PDFs into useful office files, keep sensitive documents local, and handle the conversion, redaction and batch work around them.</p>
+        <h2>Packaged around real office jobs, not a random tool list</h2>
+        <p class="intro">Start with a concrete job: extract invoice or statement tables, clean sensitive information, then batch watermark, compress or convert the files that support that workflow.</p>
       </div>
       <div class="feature-grid">
         {features.map(([title, text], index) => (
@@ -158,8 +158,8 @@ const targetUsers = [
     <section id="pricing" class="pricing">
       <div>
         <p class="kicker">HOW PURCHASE WORKS</p>
-        <h2>The installer is free. Payment unlocks the license.</h2>
-        <p class="pricing-note">This avoids confusion after checkout: users install Doclira PDF from the website, then paste the Gumroad activation key in the app. AI credits are visible and can be topped up later.</p>
+        <h2>Download first. Pay when the workflow is useful.</h2>
+        <p class="pricing-note">Use the installer from doclira.com, test with sample or non-sensitive PDFs, then activate with the Gumroad key when CSV export, privacy checks and batch tools fit your work.</p>
       </div>
       <div class="purchase-flow">
         <article>
