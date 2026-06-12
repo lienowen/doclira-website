@@ -5,9 +5,9 @@ import Footer from "../components/Footer.astro";
 import { brand } from "../brand.js";
 
 const features = [
-  ["Extract data", "Turn readable invoice, statement and table PDFs into CSV you can review in Excel."],
-  ["Remove sensitive details", "Find and permanently redact personal information before a document is shared."],
-  ["Prepare files in batches", "Watermark, convert, compress, merge and split repeated office documents locally."],
+  ["Invoice PDF to CSV", "Extract line items, quantities, prices and totals from readable invoice PDFs."],
+  ["Bank statements to CSV", "Turn statement rows into spreadsheet-ready data for bookkeeping and reconciliation."],
+  ["Review before export", "Check and correct detected cells in a table preview, then save a local CSV for Excel."],
 ];
 
 const steps = [
@@ -27,8 +27,8 @@ const faq = [
 ---
 
 <Layout
-  title="Doclira PDF - Offline PDF to Excel, Redaction and Batch Tools for Windows"
-  description="Convert PDF invoices, bank statements and tables to CSV locally on Windows. Redact sensitive data, audit PDFs, watermark, compress, merge and split files."
+  title="Doclira PDF - Invoice and Bank Statement PDF to CSV for Windows"
+  description="Extract invoice, bank statement and financial table data from PDF to reviewable CSV locally on Windows."
 >
   <Header />
   <main>
@@ -37,9 +37,9 @@ const faq = [
         <img src="/assets/hero_redaction_en.png" alt="Doclira PDF smart redaction preview" />
       </div>
       <div class="hero-content">
-        <p class="kicker">LOCAL PDF DATA WORKSPACE FOR WINDOWS</p>
-        <h1>Get usable data from sensitive PDFs.</h1>
-        <p class="hero-copy">A local Windows workspace for PDF-to-CSV extraction, permanent redaction and repeated office document processing.</p>
+        <p class="kicker">LOCAL PDF TO CSV FOR FINANCE TEAMS</p>
+        <h1>Turn financial PDFs into Excel-ready data.</h1>
+        <p class="hero-copy">Extract invoices, bank statements and financial tables to reviewable CSV on Windows. Correct detected cells before export and keep confidential source files on your computer.</p>
         <div class="actions">
           <a class="primary hero-primary" href="/download/">Download free for Windows</a>
           <a class="secondary" href="#pricing">See plans from $29</a>
@@ -56,8 +56,8 @@ const faq = [
     <section id="features" class="band">
       <div class="section-head">
         <p class="kicker">FEATURES</p>
-        <h2>One workspace. Three clear outcomes.</h2>
-        <p class="intro">Start with the result you need instead of searching through a wall of PDF tools.</p>
+        <h2>Stop retyping financial documents row by row.</h2>
+        <p class="intro">Doclira focuses on the repetitive work between receiving a PDF and getting clean data into Excel.</p>
       </div>
       <div class="feature-grid">
         {features.map(([title, text], index) => (
@@ -74,8 +74,8 @@ const faq = [
       <section id="demo" class="band">
         <div class="section-head">
           <p class="kicker">SEE IT IN ACTION</p>
-          <h2>Watch the walkthrough</h2>
-          <p class="intro">See the local workflow before installing.</p>
+          <h2>See PDF data become a reviewable table</h2>
+          <p class="intro">Preview the finance workflow before installing.</p>
         </div>
         <div class="video-wrapper">
           <iframe width="100%" height="450" src={`https://www.youtube.com/embed/${brand.youtubeVideoId}`} title="Doclira PDF demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -86,7 +86,7 @@ const faq = [
     <section id="workflow" class="workflow">
       <div class="section-head">
         <p class="kicker">WORKFLOW</p>
-        <h2>From source file to output in four steps</h2>
+        <h2>From financial PDF to reviewed CSV</h2>
       </div>
       <ol>
         {steps.map((step, index) => <li><span>{index + 1}</span><p>{step}</p></li>)}
@@ -97,8 +97,8 @@ const faq = [
     <section id="pricing" class="band pricing-section">
       <div class="section-head">
         <p class="kicker">ONE-TIME WINDOWS LICENSES</p>
-        <h2>Start at $29. Pay more only when the workflow carries more risk.</h2>
-        <p class="intro">Pro covers everyday conversion. Business adds redaction and repeated client work. Enterprise adds deeper security review. AI credits are included once, not billed monthly.</p>
+        <h2>Start at $29. Upgrade when document volume and risk increase.</h2>
+        <p class="intro">Pro is for individual finance work. Business adds repeated batch workflows and redaction. Enterprise adds deeper security review for sensitive financial documents.</p>
       </div>
       <div class="tier-grid">
         {brand.pricing.map((plan) => (
