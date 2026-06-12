@@ -14,7 +14,7 @@ import { brand } from "../brand.js";
     <section class="download-hero">
       <p class="kicker">DOWNLOAD</p>
       <h1>Download Doclira PDF for Windows.</h1>
-      <p>Install the app first. The installer is free; payment is only for a license key or extra AI credits.</p>
+      <p>Install version {brand.installerVersion} first. The installer is free; payment is only for a license key or extra AI credits.</p>
       <div class="actions">
         <a class="primary" href={brand.installerUrl}>Download Windows installer</a>
         <a class="secondary" href="/buy/">View license options</a>
@@ -23,7 +23,7 @@ import { brand } from "../brand.js";
 
     <section class="download-summary" aria-label="Download summary">
       <article><span>Platform</span><strong>{brand.platform}</strong></article>
-      <article><span>Delivery</span><strong>Direct download</strong></article>
+      <article><span>Version</span><strong>{brand.installerVersion}</strong></article>
       <article><span>Activation</span><strong>Gumroad key inside app</strong></article>
       <article><span>AI</span><strong>Visible credit balance</strong></article>
     </section>

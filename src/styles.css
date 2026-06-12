@@ -317,6 +317,55 @@ h1 {
   display: block;
 }
 
+.problem-solution {
+  padding: 72px clamp(28px, 5vw, 80px);
+  border-bottom: 1px solid var(--line);
+  background: #f4f7fb;
+}
+
+.problem-solution-flow {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.problem-solution-flow article {
+  min-height: 210px;
+  padding: 30px;
+  border-right: 1px solid var(--line);
+}
+
+.problem-solution-flow article:last-child {
+  border-right: 0;
+}
+
+.problem-solution-flow .solution-step {
+  border-top: 3px solid var(--teal);
+  background: #f7fcfb;
+}
+
+.problem-solution-flow span {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.problem-solution-flow h3 {
+  margin-bottom: 10px;
+  font-size: 21px;
+}
+
+.problem-solution-flow p {
+  font-size: 14px;
+}
+
 .outcome-strip strong {
   margin-bottom: 5px;
   color: var(--ink);
@@ -1442,7 +1491,8 @@ footer a {
   }
 
   .hero-trust,
-  .outcome-strip {
+  .outcome-strip,
+  .problem-solution-flow {
     grid-template-columns: 1fr;
   }
 
@@ -1457,6 +1507,21 @@ footer a {
   }
 
   .outcome-strip div:last-child {
+    border-bottom: 0;
+  }
+
+  .problem-solution {
+    padding-inline: 18px;
+  }
+
+  .problem-solution-flow article,
+  .problem-solution-flow article:last-child {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .problem-solution-flow article:last-child {
     border-bottom: 0;
   }
 

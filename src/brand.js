@@ -6,6 +6,7 @@ export const brand = {
   price: "$29",
   purchaseUrl: "https://taixianglumark.gumroad.com/l/doclira-pdf",
   aiCreditsUrl: "https://taixianglumark.gumroad.com/l/ipkbe",
+  installerVersion: "1.1.0",
   installerUrl: "https://github.com/lienowen/doclira-website/releases/download/v1.1.0/DocliraPDF_Setup_v1.1.0_Windows_x64_EN.exe",
   supportEmail: "lienowen@outlook.com",
   pricing: [
