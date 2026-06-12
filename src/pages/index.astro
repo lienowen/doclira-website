@@ -5,33 +5,9 @@ import Footer from "../components/Footer.astro";
 import { brand } from "../brand.js";
 
 const features = [
-  ["Invoice PDF to CSV", "Extract line-item tables, quantities, unit prices and totals from readable invoice PDFs into spreadsheet-friendly CSV files."],
-  ["Bank statement PDF to CSV", "Turn statement-style tables into clean CSV rows for review, bookkeeping and reconciliation workflows."],
-  ["Local sensitive-file workflow", "Process client files, invoices and contracts on your Windows computer instead of uploading them to browser tools."],
-  ["Smart redaction", "Find emails, phone numbers, ID-style numbers, card-like numbers, amounts and addresses before sharing PDFs."],
-  ["Security audit", "Check metadata, attachments, links, forms, scripts and unresolved annotations before sending external documents."],
-  ["Batch watermark", "Apply text or logo watermarks to many contracts, reports and internal files with tiling, opacity and page controls."],
-  ["Office PDF utilities", "Convert to Word or images, compress, merge, split and organize PDFs around the main table and privacy workflow."],
-];
-
-const seoPages = [
-  ["PDF invoice to Excel", "Extract invoice tables and line-item style data from readable PDFs for office review.", "/pdf-invoice-to-excel/"],
-  ["Bank statement PDF to CSV", "Prepare statement-style PDF data for CSV workflows without using online upload tools.", "/bank-statement-pdf-to-csv/"],
-  ["Extract tables from PDF", "Turn readable PDF tables into spreadsheet-friendly data on Windows.", "/extract-tables-from-pdf/"],
-  ["Offline PDF to Excel for Windows", "Work on sensitive PDFs locally instead of uploading them to a browser tool.", "/offline-pdf-to-excel-windows/"],
-  ["Batch PDF tools for Windows", "Process many PDFs for watermarking, conversion, compression, merge and split.", "/batch-pdf-tools-windows/"],
-  ["PDF redaction tool for Windows", "Find and remove sensitive information before sending contracts and client files.", "/pdf-redaction-tool-windows/"],
-  ["Redact sensitive information in PDFs", "A practical workflow for emails, phone numbers, IDs, cards and amounts.", "/redact-sensitive-information-pdf/"],
-  ["PDF security audit tool", "Check metadata, links, attachments, forms and annotations before sharing a PDF.", "/pdf-security-audit-tool/"],
-  ["Redact PDF contracts", "Review client and vendor agreements before emailing or uploading them.", "/redact-pdf-contracts-windows/"],
-  ["Redact PDF invoices", "Clean invoice PDFs, billing files and customer references before forwarding.", "/redact-pdf-invoices-windows/"],
-  ["Redact PDF forms", "Check HR, tax, onboarding and customer forms for sensitive information.", "/redact-pdf-forms-windows/"],
-  ["Batch watermark PDF on Windows", "Protect contracts, reports and review copies with tiled text or logo watermarks.", "/batch-watermark-pdf-windows/"],
-  ["PDF to Word converter for Windows", "Convert ordinary text-based PDFs into DOCX files for continued editing.", "/pdf-to-word-converter-windows/"],
-  ["Free PDF privacy checker", "Install the Windows app and test basic PDF privacy checks before buying.", "/free-pdf-privacy-checker-windows/"],
-  ["Compress PDF on Windows", "Reduce PDF size before email, chat, portals or internal office uploads.", "/compress-pdf-windows/"],
-  ["Merge and split PDF files", "Combine documents, split page ranges and organize PDF packages.", "/merge-split-pdf-windows/"],
-  ["AI PDF summary tool", "Summarize long PDFs and ask questions about extracted document text.", "/ai-pdf-summary/"],
+  ["Extract data", "Turn readable invoice, statement and table PDFs into CSV you can review in Excel."],
+  ["Remove sensitive details", "Find and permanently redact personal information before a document is shared."],
+  ["Prepare files in batches", "Watermark, convert, compress, merge and split repeated office documents locally."],
 ];
 
 const steps = [
@@ -48,11 +24,6 @@ const faq = [
   ["What happens after purchase?", "Gumroad delivers an activation key. Download the installer from the website, then activate the app."],
 ];
 
-const targetUsers = [
-  ["For invoices", "Open a PDF invoice, export the table to CSV, then review line items in Excel without retyping.", "/pdf-invoice-to-excel/"],
-  ["For statements", "Convert readable bank statement PDFs into CSV rows for bookkeeping and reconciliation.", "/bank-statement-pdf-to-csv/"],
-  ["For sensitive PDFs", "Run redaction, security audit and watermarking before sending contracts or client files.", "/redact-sensitive-information-pdf/"],
-];
 ---
 
 <Layout
@@ -67,8 +38,8 @@ const targetUsers = [
       </div>
       <div class="hero-content">
         <p class="kicker">LOCAL PDF DATA WORKSPACE FOR WINDOWS</p>
-        <h1>Turn sensitive PDFs into usable data. Keep the files on your computer.</h1>
-        <p class="hero-copy">Extract invoice, statement and table data to reviewable CSV. Redact personal information, audit hidden PDF risks and batch-process client documents before they leave your computer.</p>
+        <h1>Get usable data from sensitive PDFs.</h1>
+        <p class="hero-copy">A local Windows workspace for PDF-to-CSV extraction, permanent redaction and repeated office document processing.</p>
         <div class="actions">
           <a class="primary hero-primary" href="/download/">Download free for Windows</a>
           <a class="secondary" href="#pricing">See plans from $29</a>
@@ -82,27 +53,11 @@ const targetUsers = [
       </div>
     </section>
 
-    <section class="problem-strip" aria-label="PDF privacy problem">
-      {targetUsers.map(([title, text, href]) => (
-        <article>
-          <strong>{title}</strong>
-          <p>{text}</p>
-          <a href={href}>View workflow</a>
-        </article>
-      ))}
-    </section>
-
-    <section class="trust-strip" aria-label="Doclira purchase flow">
-      <div><strong>1</strong><span>Install first</span><p>No payment is needed to download the Windows installer.</p></div>
-      <div><strong>2</strong><span>Test the workflow</span><p>Try the app with non-sensitive PDFs and check output quality.</p></div>
-      <div><strong>3</strong><span>Activate when ready</span><p>Gumroad delivers the key used inside Doclira PDF.</p></div>
-    </section>
-
     <section id="features" class="band">
       <div class="section-head">
         <p class="kicker">FEATURES</p>
-        <h2>Three jobs Doclira is built to finish</h2>
-        <p class="intro">Extract business data, remove information that should not be shared, then prepare many PDFs for delivery. The familiar PDF utilities support that workflow instead of competing for attention.</p>
+        <h2>One workspace. Three clear outcomes.</h2>
+        <p class="intro">Start with the result you need instead of searching through a wall of PDF tools.</p>
       </div>
       <div class="feature-grid">
         {features.map(([title, text], index) => (
@@ -115,28 +70,12 @@ const targetUsers = [
       </div>
     </section>
 
-    <section class="seo-entry band">
-      <div class="section-head">
-        <p class="kicker">PDF TASK GUIDES</p>
-        <h2>More ways people find Doclira</h2>
-        <p class="intro">Each page targets a narrow search intent: invoice extraction, statement CSV workflows, table extraction, local privacy checks, conversion and batch office work.</p>
-      </div>
-      <div class="tool-link-grid rich">
-        {seoPages.map(([title, text, href]) => (
-          <a href={href}>
-            <strong>{title}</strong>
-            <span>{text}</span>
-          </a>
-        ))}
-      </div>
-    </section>
-
     {brand.youtubeVideoId && (
       <section id="demo" class="band">
         <div class="section-head">
           <p class="kicker">SEE IT IN ACTION</p>
           <h2>Watch the walkthrough</h2>
-          <p class="intro">Use the video as proof on the website and as a reusable asset for SEO pages and social posts.</p>
+          <p class="intro">See the local workflow before installing.</p>
         </div>
         <div class="video-wrapper">
           <iframe width="100%" height="450" src={`https://www.youtube.com/embed/${brand.youtubeVideoId}`} title="Doclira PDF demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
