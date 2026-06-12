@@ -5,9 +5,9 @@ import Footer from "../components/Footer.astro";
 import { brand } from "../brand.js";
 
 const features = [
-  ["Invoice PDF to CSV", "Extract line items, quantities, prices and totals from readable invoice PDFs."],
-  ["Bank statements to CSV", "Turn statement rows into spreadsheet-ready data for bookkeeping and reconciliation."],
-  ["Review before export", "Check and correct detected cells in a table preview, then save a local CSV for Excel."],
+  ["Invoices to CSV", "Extract line items, quantities, prices and totals from supplier and customer invoices."],
+  ["Bank statements to CSV", "Turn transaction rows into structured data for bookkeeping and categorization."],
+  ["Monthly reconciliation", "Review balances and transaction details before moving clean data into Excel."],
 ];
 
 const steps = [
@@ -32,39 +32,46 @@ const faq = [
 >
   <Header />
   <main>
-    <section class="hero">
-      <div class="hero-media">
-        <img src="/assets/hero_redaction_en.png" alt="Doclira PDF smart redaction preview" />
-      </div>
+    <section class="hero finance-hero">
       <div class="hero-content">
-        <p class="kicker">LOCAL PDF TO CSV FOR FINANCE TEAMS</p>
-        <h1>Turn financial PDFs into Excel-ready data.</h1>
-        <p class="hero-copy">Extract invoices, bank statements and financial tables to reviewable CSV on Windows. Correct detected cells before export and keep confidential source files on your computer.</p>
+        <p class="kicker">FOR ACCOUNTANTS &amp; BOOKKEEPERS</p>
+        <h1>Stop retyping invoices and bank statements.</h1>
+        <p class="hero-copy">Turn financial PDFs into Excel-ready data you can review before export. Sensitive source files stay on your Windows computer.</p>
         <div class="actions">
           <a class="primary hero-primary" href="/download/">Download free for Windows</a>
           <a class="secondary" href="#pricing">See plans from $29</a>
         </div>
-        <div class="requirements">
-          <span>Try before buying</span>
-          <span>Core tools run locally</span>
-          <span>{brand.platform}</span>
-          <span>One-time license</span>
+        <p class="hero-meta">{brand.platform} <span>•</span> One-time license</p>
+        <div class="hero-trust">
+          <div><strong>Runs locally</strong><span>Files never leave your computer</span></div>
+          <div><strong>Review first</strong><span>Correct cells before export</span></div>
+          <div><strong>Your data stays yours</strong><span>No cloud document storage</span></div>
         </div>
+      </div>
+      <div class="hero-media finance-product">
+        <img src="/assets/finance-statement-extraction.png" alt="Doclira PDF showing a bank statement beside an editable extracted data table" />
       </div>
     </section>
 
-    <section id="features" class="band">
+    <section class="outcome-strip" aria-label="Doclira finance workflow benefits">
+      <div><strong>Less manual entry</strong><span>Move from copying rows to reviewing them.</span></div>
+      <div><strong>Review before export</strong><span>Check every detected value in a clear grid.</span></div>
+      <div><strong>Local by default</strong><span>Financial PDFs remain on your Windows PC.</span></div>
+    </section>
+
+    <section id="features" class="band finance-use-cases">
       <div class="section-head">
-        <p class="kicker">FEATURES</p>
-        <h2>Stop retyping financial documents row by row.</h2>
-        <p class="intro">Doclira focuses on the repetitive work between receiving a PDF and getting clean data into Excel.</p>
+        <p class="kicker">BUILT FOR EVERYDAY FINANCE WORK</p>
+        <h2>From document to clean data.</h2>
+        <p class="intro">Use one repeatable workflow for the financial PDFs that arrive every week and every month.</p>
       </div>
       <div class="feature-grid">
         {features.map(([title, text], index) => (
           <article>
-            <span class="feature-index">0{index + 1}</span>
+            <span class="feature-index">{index + 1}</span>
             <h3>{title}</h3>
             <p>{text}</p>
+            <a href={index === 0 ? "/pdf-invoice-to-excel/" : index === 1 ? "/bank-statement-pdf-to-csv/" : "/extract-tables-from-pdf/"}>Learn more</a>
           </article>
         ))}
       </div>
