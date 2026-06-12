@@ -14,7 +14,7 @@ import { brand } from "../brand.js";
     <section class="policy-hero buy-hero">
       <div>
         <p class="kicker">BUY LICENSE</p>
-        <h1>Unlock local PDF to CSV, redaction and batch workflows.</h1>
+        <h1>Choose by the risk and repetition in your PDF workflow.</h1>
         <p>Doclira PDF is packaged for people who handle invoices, statements, contracts and client files. Download the installer first, test with a sample PDF, then use the Gumroad key to unlock paid tools inside the app.</p>
         <div class="actions">
           <a class="primary" href={brand.purchaseUrl} target="_blank" rel="noreferrer">Open Gumroad checkout</a>
@@ -36,21 +36,19 @@ import { brand } from "../brand.js";
       <div class="section-head">
         <p class="kicker">LICENSE OPTIONS</p>
         <h2>Choose the license by document workload.</h2>
-        <p class="intro">Every plan uses the same installer. The key unlocks local CSV extraction, privacy workflows, batch tools and included AI credits.</p>
+        <p class="intro">Every plan is a one-time Windows license. Pro handles everyday conversion, Business adds redaction and commercial workflows, and Enterprise adds deeper security review.</p>
       </div>
       <div class="tier-grid">
         {brand.pricing.map((plan) => (
           <article class:list={["tier-card", plan.highlight && "highlight"]}>
-            {plan.highlight && <span class="tier-badge">Best for teams</span>}
+            {plan.highlight && <span class="tier-badge">{plan.badge}</span>}
             <h3>{plan.name}</h3>
+            <p class="plan-audience">{plan.audience}</p>
             <p class="tier-price">{plan.price}</p>
+            <p class="one-time">One-time license</p>
             <ul>
-              <li>Invoice and statement PDF to CSV workflows</li>
-              <li>Redaction, PDF security audit, watermark, convert, compress, merge and split</li>
-              <li>Batch tools for repeated office documents</li>
-              <li>Local PDF processing; AI is optional and uses extracted text only when used</li>
+              {plan.features.map((feature) => <li>{feature}</li>)}
               <li>{plan.ai}</li>
-              <li>Activation key delivered by Gumroad after checkout</li>
             </ul>
             <a class="primary wide" href={plan.url} target="_blank" rel="noreferrer">{plan.cta}</a>
           </article>

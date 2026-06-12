@@ -703,6 +703,19 @@ h1 {
   font-size: 22px;
 }
 
+.plan-audience {
+  min-height: 46px;
+  margin: 8px 0 16px;
+  font-size: 14px;
+}
+
+.one-time {
+  margin: -10px 0 20px;
+  color: var(--teal-dark);
+  font-size: 13px;
+  font-weight: 900;
+}
+
 .tier-price {
   margin-bottom: 18px;
   color: var(--ink);
@@ -722,6 +735,52 @@ h1 {
   margin: 11px 0;
   color: var(--muted);
   line-height: 1.55;
+}
+
+.tier-card li::before {
+  content: "✓";
+  margin-right: 9px;
+  color: var(--teal);
+  font-weight: 900;
+}
+
+.pricing-section {
+  background: #101827;
+}
+
+.pricing-section .section-head h2,
+.pricing-section .tier-card h3 {
+  color: white;
+}
+
+.pricing-section .intro,
+.pricing-section .plan-audience {
+  color: #cbd5e1;
+}
+
+.pricing-section .tier-card {
+  border-color: #2a3a50;
+  background: #172233;
+}
+
+.pricing-section .tier-card.highlight {
+  border-color: #5eead4;
+}
+
+.pricing-section .tier-price {
+  color: white;
+}
+
+.pricing-section .tier-card li {
+  color: #d6e1e7;
+}
+
+.pricing-footnote {
+  max-width: 760px;
+  margin: 24px auto 0;
+  color: #94a3b8;
+  text-align: center;
+  font-size: 14px;
 }
 
 .credit-grid {
